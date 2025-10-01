@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "Seguridad y desarrollo"
+version = "0.0.1"
+description = "Analisis sobre el indice de desarrollo y seguridad por municipio"
+authors = [
+  { name = "Esthefania Ortega, Jose Cazares, Marcel Herrera, Joel Perez" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["Seguridad y desarrollo"]
+include = ["pyproject.toml", "Seguridad y desarrollo/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["Seguridad y desarrollo"]
+force-sort-within-sections = true
+
