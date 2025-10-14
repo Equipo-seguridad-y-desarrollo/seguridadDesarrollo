@@ -1,8 +1,10 @@
 awscli
 loguru
 mkdocs
+pandas
 pip
 python-dotenv
+requests
 ruff
 tqdm
 typer
