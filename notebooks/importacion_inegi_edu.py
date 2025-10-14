@@ -61,6 +61,7 @@ valores = []
 #Obtencion de datos para cada estado
 for estado in id_estado:
     inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
+    #inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/070000{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
     response = requests.get(inegi_url)
     data = response.json()
     for indicador in data['Series']: 
@@ -68,11 +69,14 @@ for estado in id_estado:
             indicador_actual = indicador['INDICADOR']
             fecha = observacion['TIME_PERIOD']
             valor = observacion['OBS_VALUE']
-            valores.append({"estado": estado, "indicador": indicador_actual, "indicador_nombre": id_ind[indicador_actual], "año" : fecha, "valor" : valor})
+            valores.append({"id_estado": id_estado[estado], "estado": estado, "indicador": indicador_actual, "indicador_nombre": id_ind[indicador_actual], "año" : fecha, "valor" : valor})
 
 #Creacion del dataframe
 df_edu = pd.DataFrame(valores)
-
+df_edu['valor'] = pd.to_numeric(df_edu['valor'], errors='coerce')
+df_edu_wide = df_edu.pivot_table(index=['id_estado','estado', 'año'], columns = 'indicador_nombre', values = 'valor').reset_index()
+df_edu_wide.columns = ['id_estado','estado', 'fecha', 'derhab', 'pob_bac', 'pob_edbas', 'pob_edsup', 'porc_analf', 'porc_sined', 'promedio_ed']
+df_edu_wide.head()
 
 #Guardado de dataframe en archivo CSV como raw
 nombre_carpeta = '../.data/raw/'
@@ -83,5 +87,5 @@ if not os.path.exists(nombre_carpeta):
     print("Se creó la carpeta .data/raw/")
 
 ruta_guardado = os.path.join(nombre_carpeta, nombre_archivo)
-df_edu.to_csv(ruta_guardado, index=False, encoding='utf-8')
+df_edu_wide.to_csv(ruta_guardado, index=False, encoding='utf-8')
 print("Archivo con dataframe de educacion y salud creado")
