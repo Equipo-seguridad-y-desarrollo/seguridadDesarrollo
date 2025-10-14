@@ -1,483 +1,87 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 40,
-   "id": "ad9fb6d0-5106-4322-ba9b-26e02ff01558",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import requests\n",
-    "import pandas as pd\n",
-    "import pprint\n",
-    "import os\n",
-    "from dotenv import load_dotenv"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 42,
-   "id": "66d043eb-1891-4ee3-af13-6d35706d488c",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "#Lectura e importacion de datos\n",
-    "id_ind = {'3108001001' : 'Porcentaje analfabetismo',\n",
-    "          '1005000038' : 'Promedio escolaridad',\n",
-    "          '6200205239' : 'Poblacion con educacion basica',\n",
-    "          '6200205241' : 'Poblacion con bachillerato',\n",
-    "          '6200205242' : 'Poblacion con estudios superiores',\n",
-    "          '6207019020' : 'Porcentaje sin escolaridad',\n",
-    "          '1004000001' : 'Derechohabientes'\n",
-    "          }\n",
-    "\n",
-    "id_estado = {\n",
-    "    \"Aguascalientes\": \"01\",\n",
-    "    \"Baja California\": \"02\",\n",
-    "    \"Baja California Sur\": \"03\",\n",
-    "    \"Campeche\": \"04\",\n",
-    "    \"Coahuila de Zaragoza\": \"05\",\n",
-    "    \"Colima\": \"06\",\n",
-    "    \"Chiapas\": \"07\",\n",
-    "    \"Chihuahua\": \"08\",\n",
-    "    \"Ciudad de México\": \"09\",\n",
-    "    \"Durango\": \"10\",\n",
-    "    \"Guanajuato\": \"11\",\n",
-    "    \"Guerrero\": \"12\",\n",
-    "    \"Hidalgo\": \"13\",\n",
-    "    \"Jalisco\": \"14\",\n",
-    "    \"México\": \"15\",\n",
-    "    \"Michoacán de Ocampo\": \"16\",\n",
-    "    \"Morelos\": \"17\",\n",
-    "    \"Nayarit\": \"18\",\n",
-    "    \"Nuevo León\": \"19\",\n",
-    "    \"Oaxaca\": \"20\",\n",
-    "    \"Puebla\": \"21\",\n",
-    "    \"Querétaro\": \"22\",\n",
-    "    \"Quintana Roo\": \"23\",\n",
-    "    \"San Luis Potosí\": \"24\",\n",
-    "    \"Sinaloa\": \"25\",\n",
-    "    \"Sonora\": \"26\",\n",
-    "    \"Tabasco\": \"27\",\n",
-    "    \"Tamaulipas\": \"28\",\n",
-    "    \"Tlaxcala\": \"29\",\n",
-    "    \"Veracruz\": \"30\",\n",
-    "    \"Yucatán\": \"31\",\n",
-    "    \"Zacatecas\": \"32\"\n",
-    "}\n",
-    "\n",
-    "load_dotenv()\n",
-    "token_inegi = os.getenv(\"token_inegi\")\n",
-    "\n",
-    "indicadores = (\",\".join(list(id_ind.keys()))).strip()\n",
-    "valores = []\n",
-    "\n",
-    "for estado in id_estado:\n",
-    "    inegi_url = f\"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json\"\n",
-    "    #inegi_url = f\"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/070000{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json\"\n",
-    "    response = requests.get(inegi_url)\n",
-    "    data = response.json()\n",
-    "    for indicador in data['Series']: \n",
-    "        for observacion in indicador['OBSERVATIONS']:\n",
-    "            indicador_actual = indicador['INDICADOR']\n",
-    "            fecha = observacion['TIME_PERIOD']\n",
-    "            valor = observacion['OBS_VALUE']\n",
-    "            valores.append({\"estado\": estado, \"indicador\": indicador_actual, \"indicador_nombre\": id_ind[indicador_actual], \"año\" : fecha, \"valor\" : valor})\n",
-    "\n",
-    "#print(pprint.pp(valores))\n",
-    "        "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 46,
-   "id": "a0e01084-17c5-4acb-91e6-26990db951ae",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>estado</th>\n",
-       "      <th>indicador</th>\n",
-       "      <th>indicador_nombre</th>\n",
-       "      <th>año</th>\n",
-       "      <th>valor</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>Aguascalientes</td>\n",
-       "      <td>1004000001</td>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2000</td>\n",
-       "      <td>523201.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>Aguascalientes</td>\n",
-       "      <td>1004000001</td>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2005</td>\n",
-       "      <td>758160.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>Aguascalientes</td>\n",
-       "      <td>1004000001</td>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2010</td>\n",
-       "      <td>930149.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>Aguascalientes</td>\n",
-       "      <td>1004000001</td>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>1161139.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>Aguascalientes</td>\n",
-       "      <td>1005000038</td>\n",
-       "      <td>Promedio escolaridad</td>\n",
-       "      <td>1995</td>\n",
-       "      <td>None</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "           estado   indicador      indicador_nombre   año  \\\n",
-       "0  Aguascalientes  1004000001      Derechohabientes  2000   \n",
-       "1  Aguascalientes  1004000001      Derechohabientes  2005   \n",
-       "2  Aguascalientes  1004000001      Derechohabientes  2010   \n",
-       "3  Aguascalientes  1004000001      Derechohabientes  2020   \n",
-       "4  Aguascalientes  1005000038  Promedio escolaridad  1995   \n",
-       "\n",
-       "                          valor  \n",
-       "0   523201.00000000000000000000  \n",
-       "1   758160.00000000000000000000  \n",
-       "2   930149.00000000000000000000  \n",
-       "3  1161139.00000000000000000000  \n",
-       "4                          None  "
-      ]
-     },
-     "execution_count": 46,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "#Creacion del dataframe\n",
-    "df_edu = pd.DataFrame(valores)\n",
-    "df_edu.head(5)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 48,
-   "id": "4365f924-7669-49f8-a2cb-e6c8dac00501",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Archivo con dataframe de educacion y salud creado\n"
-     ]
-    }
-   ],
-   "source": [
-    "#Guardado de dataframe\n",
-    "nombre_carpeta = '../.data/raw/'\n",
-    "nombre_archivo = 'educacionysalud.csv'\n",
-    "\n",
-    "if not os.path.exists(nombre_carpeta):\n",
-    "    os.makedirs(nombre_carpeta)\n",
-    "    print(\"Se creó la carpeta .data/raw/\")\n",
-    "\n",
-    "ruta_guardado = os.path.join(nombre_carpeta, nombre_archivo)\n",
-    "df_edu.to_csv(ruta_guardado, index=False, encoding='utf-8')\n",
-    "print(\"Archivo con dataframe de educacion y salud creado\")\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 28,
-   "id": "884acb06-328b-43a7-90af-da21a50f28ef",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "      <th>indicador_nombre</th>\n",
-       "      <th>año</th>\n",
-       "      <th>valor</th>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>estado</th>\n",
-       "      <th>indicador</th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th rowspan=\"5\" valign=\"top\">Aguascalientes</th>\n",
-       "      <th>1004000001</th>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2000</td>\n",
-       "      <td>523201.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1004000001</th>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2005</td>\n",
-       "      <td>758160.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1004000001</th>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2010</td>\n",
-       "      <td>930149.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1004000001</th>\n",
-       "      <td>Derechohabientes</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>1161139.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1005000038</th>\n",
-       "      <td>Promedio escolaridad</td>\n",
-       "      <td>1995</td>\n",
-       "      <td>None</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>...</th>\n",
-       "      <th>...</th>\n",
-       "      <td>...</td>\n",
-       "      <td>...</td>\n",
-       "      <td>...</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th rowspan=\"5\" valign=\"top\">Zacatecas</th>\n",
-       "      <th>6200205242</th>\n",
-       "      <td>Poblacion con estudios superiores</td>\n",
-       "      <td>1990</td>\n",
-       "      <td>24384.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6200205242</th>\n",
-       "      <td>Poblacion con estudios superiores</td>\n",
-       "      <td>2000</td>\n",
-       "      <td>49138.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6200205242</th>\n",
-       "      <td>Poblacion con estudios superiores</td>\n",
-       "      <td>2010</td>\n",
-       "      <td>98050.00000000000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6207019020</th>\n",
-       "      <td>Porcentaje sin escolaridad</td>\n",
-       "      <td>2015</td>\n",
-       "      <td>4.92437210000000000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>6207019020</th>\n",
-       "      <td>Porcentaje sin escolaridad</td>\n",
-       "      <td>2020</td>\n",
-       "      <td>3.93774817559726000000</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "<p>1088 rows × 3 columns</p>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "                                            indicador_nombre   año  \\\n",
-       "estado         indicador                                             \n",
-       "Aguascalientes 1004000001                   Derechohabientes  2000   \n",
-       "               1004000001                   Derechohabientes  2005   \n",
-       "               1004000001                   Derechohabientes  2010   \n",
-       "               1004000001                   Derechohabientes  2020   \n",
-       "               1005000038               Promedio escolaridad  1995   \n",
-       "...                                                      ...   ...   \n",
-       "Zacatecas      6200205242  Poblacion con estudios superiores  1990   \n",
-       "               6200205242  Poblacion con estudios superiores  2000   \n",
-       "               6200205242  Poblacion con estudios superiores  2010   \n",
-       "               6207019020         Porcentaje sin escolaridad  2015   \n",
-       "               6207019020         Porcentaje sin escolaridad  2020   \n",
-       "\n",
-       "                                                  valor  \n",
-       "estado         indicador                                 \n",
-       "Aguascalientes 1004000001   523201.00000000000000000000  \n",
-       "               1004000001   758160.00000000000000000000  \n",
-       "               1004000001   930149.00000000000000000000  \n",
-       "               1004000001  1161139.00000000000000000000  \n",
-       "               1005000038                          None  \n",
-       "...                                                 ...  \n",
-       "Zacatecas      6200205242    24384.00000000000000000000  \n",
-       "               6200205242    49138.00000000000000000000  \n",
-       "               6200205242    98050.00000000000000000000  \n",
-       "               6207019020        4.92437210000000000000  \n",
-       "               6207019020        3.93774817559726000000  \n",
-       "\n",
-       "[1088 rows x 3 columns]"
-      ]
-     },
-     "execution_count": 28,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "#Configuramos multi-indice por estado e indicador\n",
-    "df_edu.set_index(['estado','indicador'], inplace = True)\n",
-    "df_edu"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 108,
-   "id": "b828aaba-53d0-45de-8eaa-2ef260828319",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "<class 'pandas.core.frame.DataFrame'>\n",
-      "MultiIndex: 1088 entries, ('Aguascalientes', '1004000001') to ('Zacatecas', '6207019020')\n",
-      "Data columns (total 3 columns):\n",
-      " #   Column            Non-Null Count  Dtype \n",
-      "---  ------            --------------  ----- \n",
-      " 0   indicador_nombre  1088 non-null   object\n",
-      " 1   año               1088 non-null   object\n",
-      " 2   valor             1055 non-null   object\n",
-      "dtypes: object(3)\n",
-      "memory usage: 29.4+ KB\n"
-     ]
-    }
-   ],
-   "source": [
-    "df_edu.info()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 110,
-   "id": "154cfc8a-8e08-4eec-9673-49ad5d59788b",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "indicador_nombre     0\n",
-       "año                  0\n",
-       "valor               33\n",
-       "dtype: int64"
-      ]
-     },
-     "execution_count": 110,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "#Revisamos si hay valores nulos\n",
-    "df_edu.isna().sum()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 112,
-   "id": "17c1d296-0959-4263-aa79-4751139561cd",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "indicador_nombre    0\n",
-       "año                 0\n",
-       "valor               0\n",
-       "dtype: int64"
-      ]
-     },
-     "execution_count": 112,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "#Limpieza de valores nulos\n",
-    "df_edu_drop = df_edu.dropna(subset = ['valor'])\n",
-    "df_edu_drop.isna().sum()"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python [conda env:base] *",
-   "language": "python",
-   "name": "conda-base-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.7"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
+#Importacion de librerias
+import requests
+import pandas as pd
+import pprint
+import os
+from dotenv import load_dotenv
+
+#Lectura e importacion de datos
+#Indicadores de educacion y salud
+id_ind = {'3108001001' : 'Porcentaje analfabetismo',
+          '1005000038' : 'Promedio escolaridad',
+          '6200205239' : 'Poblacion con educacion basica',
+          '6200205241' : 'Poblacion con bachillerato',
+          '6200205242' : 'Poblacion con estudios superiores',
+          '6207019020' : 'Porcentaje sin escolaridad',
+          '1004000001' : 'Derechohabientes'
+          }
+#Identificadores de estados
+id_estado = {
+    "Aguascalientes": "01",
+    "Baja California": "02",
+    "Baja California Sur": "03",
+    "Campeche": "04",
+    "Coahuila de Zaragoza": "05",
+    "Colima": "06",
+    "Chiapas": "07",
+    "Chihuahua": "08",
+    "Ciudad de México": "09",
+    "Durango": "10",
+    "Guanajuato": "11",
+    "Guerrero": "12",
+    "Hidalgo": "13",
+    "Jalisco": "14",
+    "México": "15",
+    "Michoacán de Ocampo": "16",
+    "Morelos": "17",
+    "Nayarit": "18",
+    "Nuevo León": "19",
+    "Oaxaca": "20",
+    "Puebla": "21",
+    "Querétaro": "22",
+    "Quintana Roo": "23",
+    "San Luis Potosí": "24",
+    "Sinaloa": "25",
+    "Sonora": "26",
+    "Tabasco": "27",
+    "Tamaulipas": "28",
+    "Tlaxcala": "29",
+    "Veracruz": "30",
+    "Yucatán": "31",
+    "Zacatecas": "32"
 }
+
+#API KEY de INEGI
+load_dotenv()
+token_inegi = os.getenv("token_inegi")
+
+indicadores = (",".join(list(id_ind.keys()))).strip()
+valores = []
+
+#Obtencion de datos para cada estado
+for estado in id_estado:
+    inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
+    response = requests.get(inegi_url)
+    data = response.json()
+    for indicador in data['Series']: 
+        for observacion in indicador['OBSERVATIONS']:
+            indicador_actual = indicador['INDICADOR']
+            fecha = observacion['TIME_PERIOD']
+            valor = observacion['OBS_VALUE']
+            valores.append({"estado": estado, "indicador": indicador_actual, "indicador_nombre": id_ind[indicador_actual], "año" : fecha, "valor" : valor})
+
+#Creacion del dataframe
+df_edu = pd.DataFrame(valores)
+
+
+#Guardado de dataframe en archivo CSV como raw
+nombre_carpeta = '../.data/raw/'
+nombre_archivo = 'educacionysalud.csv'
+
+if not os.path.exists(nombre_carpeta):
+    os.makedirs(nombre_carpeta)
+    print("Se creó la carpeta .data/raw/")
+
+ruta_guardado = os.path.join(nombre_carpeta, nombre_archivo)
+df_edu.to_csv(ruta_guardado, index=False, encoding='utf-8')
+print("Archivo con dataframe de educacion y salud creado")
