@@ -1,8 +1,5 @@
 # Data
-#/data/
-
-# Generated data files in notebooks
-notebooks/*.csv
+/data/
 
 # Mac OS-specific storage files
 .DS_Store
