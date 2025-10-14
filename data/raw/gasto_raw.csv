@@ -1,0 +1,1480 @@
+State ID,State,Functional Group ID,Functional Group,Amount Executed,Year
+1,Aguascalientes,1,Gobierno,2597413637.3799996,2013
+1,Aguascalientes,2,Desarrollo Social,18276017602.179996,2013
+1,Aguascalientes,3,Desarrollo Económico,1687886421.1499996,2013
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,5921017322.0,2013
+2,Baja California,1,Gobierno,3469177983.8599997,2013
+2,Baja California,2,Desarrollo Social,42591508038.47999,2013
+2,Baja California,3,Desarrollo Económico,15096356750.429998,2013
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,14767317968.0,2013
+3,Baja California Sur,1,Gobierno,820453889.9800001,2013
+3,Baja California Sur,2,Desarrollo Social,13808698631.560001,2013
+3,Baja California Sur,3,Desarrollo Económico,10758381381.54,2013
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,3570431817.0,2013
+4,Campeche,1,Gobierno,1006979783.0000002,2013
+4,Campeche,2,Desarrollo Social,14776332479.510004,2013
+4,Campeche,3,Desarrollo Económico,107918835602.41998,2013
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,6931299142.0,2013
+5,Coahuila de Zaragoza,1,Gobierno,2371654025.77,2013
+5,Coahuila de Zaragoza,2,Desarrollo Social,40691205250.530014,2013
+5,Coahuila de Zaragoza,3,Desarrollo Económico,9809783194.65,2013
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,12640550999.0,2013
+6,Colima,1,Gobierno,1353750285.3400006,2013
+6,Colima,2,Desarrollo Social,12422917666.829998,2013
+6,Colima,3,Desarrollo Económico,23572969482.95,2013
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,3708564139.0,2013
+7,Chiapas,1,Gobierno,4228049357.85,2013
+7,Chiapas,2,Desarrollo Social,63980005199.659996,2013
+7,Chiapas,3,Desarrollo Económico,15529078167.840004,2013
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,21547420603.0,2013
+8,Chihuahua,1,Gobierno,1970209024.7300003,2013
+8,Chihuahua,2,Desarrollo Social,45940917765.80001,2013
+8,Chihuahua,3,Desarrollo Económico,17584028017.81,2013
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,15397681693.0,2013
+9,Ciudad de México,1,Gobierno,252671620782.61,2013
+9,Ciudad de México,2,Desarrollo Social,947707015320.98,2013
+9,Ciudad de México,3,Desarrollo Económico,340922159557.24,2013
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,58790708768.0,2013
+10,Durango,1,Gobierno,732434066.25,2013
+10,Durango,2,Desarrollo Social,27498391143.41,2013
+10,Durango,3,Desarrollo Económico,13008725129.420002,2013
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,7021122629.0,2013
+11,Guanajuato,1,Gobierno,2848542132.36,2013
+11,Guanajuato,2,Desarrollo Social,58143509902.43999,2013
+11,Guanajuato,3,Desarrollo Económico,18983973549.21,2013
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,21675193736.0,2013
+12,Guerrero,1,Gobierno,2783154518.0,2013
+12,Guerrero,2,Desarrollo Social,51984336787.38002,2013
+12,Guerrero,3,Desarrollo Económico,7964375698.86,2013
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,12299168637.0,2013
+13,Hidalgo,1,Gobierno,684574274.0900002,2013
+13,Hidalgo,2,Desarrollo Social,36614494958.87999,2013
+13,Hidalgo,3,Desarrollo Económico,29634976295.01,2013
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,10883214834.0,2013
+14,Jalisco,1,Gobierno,3912963106.8200006,2013
+14,Jalisco,2,Desarrollo Social,84591584395.34998,2013
+14,Jalisco,3,Desarrollo Económico,11276706830.389997,2013
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,33594064338.0,2013
+15,Estado de México,1,Gobierno,8811196078.269997,2013
+15,Estado de México,2,Desarrollo Social,148859002519.03,2013
+15,Estado de México,3,Desarrollo Económico,14604163814.41,2013
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,67234670255.0,2013
+16,Michoacán de Ocampo,1,Gobierno,1452092400.98,2013
+16,Michoacán de Ocampo,2,Desarrollo Social,49842597992.43999,2013
+16,Michoacán de Ocampo,3,Desarrollo Económico,8115701789.730001,2013
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,17030306464.0,2013
+17,Morelos,1,Gobierno,711063402.62,2013
+17,Morelos,2,Desarrollo Social,24753010008.960007,2013
+17,Morelos,3,Desarrollo Económico,4562656738.77,2013
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,7451368830.0,2013
+18,Nayarit,1,Gobierno,721783712.4899999,2013
+18,Nayarit,2,Desarrollo Social,18349190146.87,2013
+18,Nayarit,3,Desarrollo Económico,4947742658.850001,2013
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,5336010903.0,2013
+19,Nuevo León,1,Gobierno,2802922522.54,2013
+19,Nuevo León,2,Desarrollo Social,68933238684.7,2013
+19,Nuevo León,3,Desarrollo Económico,19611720076.59,2013
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,23942882661.0,2013
+20,Oaxaca,1,Gobierno,2865021376.430001,2013
+20,Oaxaca,2,Desarrollo Social,52837928794.83,2013
+20,Oaxaca,3,Desarrollo Económico,12283507203.010004,2013
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,14423718832.0,2013
+21,Puebla,1,Gobierno,1280790407.97,2013
+21,Puebla,2,Desarrollo Social,65209479474.78,2013
+21,Puebla,3,Desarrollo Económico,11290694055.040003,2013
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,23135971926.0,2013
+22,Querétaro,1,Gobierno,662922330.4900001,2013
+22,Querétaro,2,Desarrollo Social,23348462393.67001,2013
+22,Querétaro,3,Desarrollo Económico,6261683719.03,2013
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,9144181105.0,2013
+23,Quintana Roo,1,Gobierno,1192454491.04,2013
+23,Quintana Roo,2,Desarrollo Social,18355423421.110004,2013
+23,Quintana Roo,3,Desarrollo Económico,4040213326.9399996,2013
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,6903939696.0,2013
+24,San Luis Potosí,1,Gobierno,830474340.6700001,2013
+24,San Luis Potosí,2,Desarrollo Social,34041257349.949997,2013
+24,San Luis Potosí,3,Desarrollo Económico,14538215606.35,2013
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,10596000535.0,2013
+25,Sinaloa,1,Gobierno,2588208084.3099995,2013
+25,Sinaloa,2,Desarrollo Social,42250088066.53001,2013
+25,Sinaloa,3,Desarrollo Económico,18132670166.83,2013
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,12911166491.0,2013
+26,Sonora,1,Gobierno,1634246460.46,2013
+26,Sonora,2,Desarrollo Social,40576230946.479996,2013
+26,Sonora,3,Desarrollo Económico,25089800045.440006,2013
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,15811487157.0,2013
+27,Tabasco,1,Gobierno,1029578281.9699998,2013
+27,Tabasco,2,Desarrollo Social,27344023792.460003,2013
+27,Tabasco,3,Desarrollo Económico,151483112571.51,2013
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,19390164058.0,2013
+28,Tamaulipas,1,Gobierno,2042103337.2599998,2013
+28,Tamaulipas,2,Desarrollo Social,44253296956.909996,2013
+28,Tamaulipas,3,Desarrollo Económico,49621133780.25,2013
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,16847430263.0,2013
+29,Tlaxcala,1,Gobierno,448896479.31,2013
+29,Tlaxcala,2,Desarrollo Social,15112456704.909998,2013
+29,Tlaxcala,3,Desarrollo Económico,1691335487.9299998,2013
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,5460362666.0,2013
+30,Veracruz de Ignacio de la Llave,1,Gobierno,7048717900.5199995,2013
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,91836945253.54999,2013
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,138728843778.36996,2013
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,31761983972.0,2013
+31,Yucatán,1,Gobierno,1854138951.9799995,2013
+31,Yucatán,2,Desarrollo Social,31339372773.070004,2013
+31,Yucatán,3,Desarrollo Económico,16015867330.09,2013
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,9043523495.0,2013
+32,Zacatecas,1,Gobierno,546787907.63,2013
+32,Zacatecas,2,Desarrollo Social,22571354842.39,2013
+32,Zacatecas,3,Desarrollo Económico,4406320944.32,2013
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,7282554643.0,2013
+34,No distribuible geográficamente,1,Gobierno,0.0,2013
+34,No distribuible geográficamente,2,Desarrollo Social,4286842426.29,2013
+34,No distribuible geográficamente,3,Desarrollo Económico,48401609038.56,2013
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,296275695488.66,2013
+35,En el extranjero,1,Gobierno,6483443297.379999,2013
+35,En el extranjero,3,Desarrollo Económico,1726325894.12,2013
+1,Aguascalientes,1,Gobierno,3440532767.9799995,2014
+1,Aguascalientes,2,Desarrollo Social,19262744830.85,2014
+1,Aguascalientes,3,Desarrollo Económico,2283164863.9199996,2014
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,6405533551.0,2014
+2,Baja California,1,Gobierno,4739753856.150001,2014
+2,Baja California,2,Desarrollo Social,46454721296.819984,2014
+2,Baja California,3,Desarrollo Económico,15863279069.760004,2014
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,16315129598.0,2014
+3,Baja California Sur,1,Gobierno,1701169316.3999999,2014
+3,Baja California Sur,2,Desarrollo Social,14176998687.630003,2014
+3,Baja California Sur,3,Desarrollo Económico,11745471598.119997,2014
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,3901488587.0,2014
+4,Campeche,1,Gobierno,1627213417.1000001,2014
+4,Campeche,2,Desarrollo Social,15091918055.750004,2014
+4,Campeche,3,Desarrollo Económico,137971785628.68,2014
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,7010143324.0,2014
+5,Coahuila de Zaragoza,1,Gobierno,3339514946.1599994,2014
+5,Coahuila de Zaragoza,2,Desarrollo Social,45365649996.71001,2014
+5,Coahuila de Zaragoza,3,Desarrollo Económico,10693043225.03,2014
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,14012643562.0,2014
+6,Colima,1,Gobierno,1692219036.4299998,2014
+6,Colima,2,Desarrollo Social,14369655107.629995,2014
+6,Colima,3,Desarrollo Económico,15996436397.790003,2014
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,3951915335.0,2014
+7,Chiapas,1,Gobierno,7491501115.529999,2014
+7,Chiapas,2,Desarrollo Social,66873180919.03999,2014
+7,Chiapas,3,Desarrollo Económico,17726269802.86001,2014
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,23517747029.0,2014
+8,Chihuahua,1,Gobierno,2130677398.57,2014
+8,Chihuahua,2,Desarrollo Social,50807961983.88,2014
+8,Chihuahua,3,Desarrollo Económico,19741374784.769997,2014
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,17403638720.0,2014
+9,Ciudad de México,1,Gobierno,267184912677.25992,2014
+9,Ciudad de México,2,Desarrollo Social,1034867140875.8503,2014
+9,Ciudad de México,3,Desarrollo Económico,372155310866.24005,2014
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,63706117006.0,2014
+10,Durango,1,Gobierno,1843947708.3400002,2014
+10,Durango,2,Desarrollo Social,29403354557.69,2014
+10,Durango,3,Desarrollo Económico,13417547946.890003,2014
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,7727875382.0,2014
+11,Guanajuato,1,Gobierno,7693305399.540001,2014
+11,Guanajuato,2,Desarrollo Social,62311693961.0,2014
+11,Guanajuato,3,Desarrollo Económico,18856949910.58,2014
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,24198306571.0,2014
+12,Guerrero,1,Gobierno,6910291035.4,2014
+12,Guerrero,2,Desarrollo Social,62838307862.35001,2014
+12,Guerrero,3,Desarrollo Económico,10052299451.179998,2014
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,13843727957.0,2014
+13,Hidalgo,1,Gobierno,1266030335.3799996,2014
+13,Hidalgo,2,Desarrollo Social,39664366454.46,2014
+13,Hidalgo,3,Desarrollo Económico,25821037500.870003,2014
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,11552806895.0,2014
+14,Jalisco,1,Gobierno,6154640764.570001,2014
+14,Jalisco,2,Desarrollo Social,92375203165.76001,2014
+14,Jalisco,3,Desarrollo Económico,13104283480.2,2014
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,37222249971.0,2014
+15,Estado de México,1,Gobierno,16560379395.060001,2014
+15,Estado de México,2,Desarrollo Social,162605024656.07,2014
+15,Estado de México,3,Desarrollo Económico,20132795804.690002,2014
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,75260980109.0,2014
+16,Michoacán de Ocampo,1,Gobierno,4732337793.36,2014
+16,Michoacán de Ocampo,2,Desarrollo Social,54813995546.01999,2014
+16,Michoacán de Ocampo,3,Desarrollo Económico,8422546462.360002,2014
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,18485607086.0,2014
+17,Morelos,1,Gobierno,2148138743.59,2014
+17,Morelos,2,Desarrollo Social,26731110421.1,2014
+17,Morelos,3,Desarrollo Económico,4508048032.989999,2014
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,8296839397.0,2014
+18,Nayarit,1,Gobierno,1912369325.88,2014
+18,Nayarit,2,Desarrollo Social,19239740936.930004,2014
+18,Nayarit,3,Desarrollo Económico,4495409813.239999,2014
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,5878829773.0,2014
+19,Nuevo León,1,Gobierno,6748010466.660001,2014
+19,Nuevo León,2,Desarrollo Social,73058977877.35,2014
+19,Nuevo León,3,Desarrollo Económico,19012064999.050003,2014
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,26829431061.0,2014
+20,Oaxaca,1,Gobierno,5678991266.72,2014
+20,Oaxaca,2,Desarrollo Social,57403551889.11998,2014
+20,Oaxaca,3,Desarrollo Económico,14621386795.229994,2014
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,16185623197.0,2014
+21,Puebla,1,Gobierno,3837640913.79,2014
+21,Puebla,2,Desarrollo Social,68390882955.35,2014
+21,Puebla,3,Desarrollo Económico,15110251683.799994,2014
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,25466965151.0,2014
+22,Querétaro,1,Gobierno,1570344286.6700003,2014
+22,Querétaro,2,Desarrollo Social,25073459042.4,2014
+22,Querétaro,3,Desarrollo Económico,8520682546.330002,2014
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,10017413932.0,2014
+23,Quintana Roo,1,Gobierno,1526814552.7199998,2014
+23,Quintana Roo,2,Desarrollo Social,20491270156.420006,2014
+23,Quintana Roo,3,Desarrollo Económico,3268131187.749999,2014
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,7637341058.0,2014
+24,San Luis Potosí,1,Gobierno,1515678791.4,2014
+24,San Luis Potosí,2,Desarrollo Social,36417283301.07,2014
+24,San Luis Potosí,3,Desarrollo Económico,12936900634.059998,2014
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,11527932838.0,2014
+25,Sinaloa,1,Gobierno,4628788741.679999,2014
+25,Sinaloa,2,Desarrollo Social,43744976587.700005,2014
+25,Sinaloa,3,Desarrollo Económico,13802235791.61,2014
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,14764882499.0,2014
+26,Sonora,1,Gobierno,3566998417.6899996,2014
+26,Sonora,2,Desarrollo Social,43564784751.04,2014
+26,Sonora,3,Desarrollo Económico,21996730596.530003,2014
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,17165075510.0,2014
+27,Tabasco,1,Gobierno,1731998509.8600004,2014
+27,Tabasco,2,Desarrollo Social,29165199157.75999,2014
+27,Tabasco,3,Desarrollo Económico,137678043212.48,2014
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,19692829582.0,2014
+28,Tamaulipas,1,Gobierno,2927084149.5600004,2014
+28,Tamaulipas,2,Desarrollo Social,48097805908.87999,2014
+28,Tamaulipas,3,Desarrollo Económico,53006058029.19,2014
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,18643034966.0,2014
+29,Tlaxcala,1,Gobierno,774421487.83,2014
+29,Tlaxcala,2,Desarrollo Social,16141572558.830004,2014
+29,Tlaxcala,3,Desarrollo Económico,1812633866.04,2014
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,6101194707.0,2014
+30,Veracruz de Ignacio de la Llave,1,Gobierno,8356452257.879998,2014
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,95760404523.63998,2014
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,131557491039.21,2014
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,34439149085.0,2014
+31,Yucatán,1,Gobierno,3558331015.5699997,2014
+31,Yucatán,2,Desarrollo Social,32858024882.179993,2014
+31,Yucatán,3,Desarrollo Económico,14181960896.67,2014
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,10119648835.0,2014
+32,Zacatecas,1,Gobierno,1304331367.36,2014
+32,Zacatecas,2,Desarrollo Social,24105435026.920002,2014
+32,Zacatecas,3,Desarrollo Económico,3805719322.0100007,2014
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,7622246431.0,2014
+34,No distribuible geográficamente,1,Gobierno,0.0,2014
+34,No distribuible geográficamente,2,Desarrollo Social,5820026517.580001,2014
+34,No distribuible geográficamente,3,Desarrollo Económico,48158021316.33001,2014
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,326398215063.33,2014
+35,En el extranjero,1,Gobierno,7322856367.659999,2014
+35,En el extranjero,3,Desarrollo Económico,2154817026.79,2014
+1,Aguascalientes,1,Gobierno,3137107819.130001,2015
+1,Aguascalientes,2,Desarrollo Social,21739487309.230003,2015
+1,Aguascalientes,3,Desarrollo Económico,1976088138.34,2015
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,7011081150.0,2015
+2,Baja California,1,Gobierno,3659474810.5199995,2015
+2,Baja California,2,Desarrollo Social,50376717757.030014,2015
+2,Baja California,3,Desarrollo Económico,13295300336.31,2015
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,17230278485.0,2015
+3,Baja California Sur,1,Gobierno,1058615803.5699998,2015
+3,Baja California Sur,2,Desarrollo Social,17222628527.360004,2015
+3,Baja California Sur,3,Desarrollo Económico,8777324164.709997,2015
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,4122849828.0,2015
+4,Campeche,1,Gobierno,1117242521.4099998,2015
+4,Campeche,2,Desarrollo Social,17978351955.12,2015
+4,Campeche,3,Desarrollo Económico,163842637001.66998,2015
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,8442107342.0,2015
+5,Coahuila de Zaragoza,1,Gobierno,2668392986.3699994,2015
+5,Coahuila de Zaragoza,2,Desarrollo Social,49299674616.36,2015
+5,Coahuila de Zaragoza,3,Desarrollo Económico,9133003842.01,2015
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,14534075775.0,2015
+6,Colima,1,Gobierno,1372140563.98,2015
+6,Colima,2,Desarrollo Social,15655436508.74,2015
+6,Colima,3,Desarrollo Económico,12685258669.16,2015
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,4243673840.0,2015
+7,Chiapas,1,Gobierno,4579449166.160002,2015
+7,Chiapas,2,Desarrollo Social,74838197736.18001,2015
+7,Chiapas,3,Desarrollo Económico,18345612457.240005,2015
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,24372998556.0,2015
+8,Chihuahua,1,Gobierno,1496214701.6799998,2015
+8,Chihuahua,2,Desarrollo Social,53465271607.95,2015
+8,Chihuahua,3,Desarrollo Económico,17673315264.91,2015
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,18761159191.0,2015
+9,Ciudad de México,1,Gobierno,314953574490.9899,2015
+9,Ciudad de México,2,Desarrollo Social,1138162936805.56,2015
+9,Ciudad de México,3,Desarrollo Económico,488083663682.00085,2015
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,73151122279.0,2015
+10,Durango,1,Gobierno,869362085.29,2015
+10,Durango,2,Desarrollo Social,33007594435.01,2015
+10,Durango,3,Desarrollo Económico,12306400901.730001,2015
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,8371984193.0,2015
+11,Guanajuato,1,Gobierno,3272712757.9699993,2015
+11,Guanajuato,2,Desarrollo Social,65351643755.529976,2015
+11,Guanajuato,3,Desarrollo Económico,16665429173.49,2015
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,26734575940.0,2015
+12,Guerrero,1,Gobierno,3035491206.849999,2015
+12,Guerrero,2,Desarrollo Social,59932071894.920006,2015
+12,Guerrero,3,Desarrollo Económico,8688904417.82,2015
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,15002896634.0,2015
+13,Hidalgo,1,Gobierno,887826132.1099999,2015
+13,Hidalgo,2,Desarrollo Social,45126467354.740005,2015
+13,Hidalgo,3,Desarrollo Económico,19086731541.340004,2015
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,12176759838.0,2015
+14,Jalisco,1,Gobierno,4861539046.25,2015
+14,Jalisco,2,Desarrollo Social,98092783886.71002,2015
+14,Jalisco,3,Desarrollo Económico,14009164955.829998,2015
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,41140616799.0,2015
+15,Estado de México,1,Gobierno,14893137977.489998,2015
+15,Estado de México,2,Desarrollo Social,177896121965.62997,2015
+15,Estado de México,3,Desarrollo Económico,39015133382.63,2015
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,81718984323.0,2015
+16,Michoacán de Ocampo,1,Gobierno,1677631976.429999,2015
+16,Michoacán de Ocampo,2,Desarrollo Social,60015282433.73999,2015
+16,Michoacán de Ocampo,3,Desarrollo Económico,8342172235.18,2015
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,19619287098.0,2015
+17,Morelos,1,Gobierno,946327414.3400002,2015
+17,Morelos,2,Desarrollo Social,32124428525.449997,2015
+17,Morelos,3,Desarrollo Económico,3922283426.4199996,2015
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,8765361100.0,2015
+18,Nayarit,1,Gobierno,851801027.9100001,2015
+18,Nayarit,2,Desarrollo Social,21779167750.159996,2015
+18,Nayarit,3,Desarrollo Económico,4270325147.96,2015
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,6289437265.0,2015
+19,Nuevo León,1,Gobierno,3346528471.8600006,2015
+19,Nuevo León,2,Desarrollo Social,83898069957.00998,2015
+19,Nuevo León,3,Desarrollo Económico,19340946478.77,2015
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,28929470471.0,2015
+20,Oaxaca,1,Gobierno,4024612696.5200005,2015
+20,Oaxaca,2,Desarrollo Social,63671830648.63001,2015
+20,Oaxaca,3,Desarrollo Económico,14000517176.199999,2015
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,16220345595.0,2015
+21,Puebla,1,Gobierno,1922221281.64,2015
+21,Puebla,2,Desarrollo Social,75354115029.97002,2015
+21,Puebla,3,Desarrollo Económico,12619807702.300005,2015
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,27024851269.0,2015
+22,Querétaro,1,Gobierno,1000271333.1399999,2015
+22,Querétaro,2,Desarrollo Social,28179360105.150005,2015
+22,Querétaro,3,Desarrollo Económico,7883052202.839999,2015
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,10963573119.0,2015
+23,Quintana Roo,1,Gobierno,1345894665.98,2015
+23,Quintana Roo,2,Desarrollo Social,21771558189.890003,2015
+23,Quintana Roo,3,Desarrollo Económico,3421419635.28,2015
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,8332211739.0,2015
+24,San Luis Potosí,1,Gobierno,1036297873.5500001,2015
+24,San Luis Potosí,2,Desarrollo Social,42432602791.619995,2015
+24,San Luis Potosí,3,Desarrollo Económico,12583814873.19,2015
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,12156962067.0,2015
+25,Sinaloa,1,Gobierno,2990231125.969999,2015
+25,Sinaloa,2,Desarrollo Social,49272619282.72002,2015
+25,Sinaloa,3,Desarrollo Económico,13081290489.569998,2015
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,15214512929.0,2015
+26,Sonora,1,Gobierno,2062539303.0600002,2015
+26,Sonora,2,Desarrollo Social,47795426987.869995,2015
+26,Sonora,3,Desarrollo Económico,17592318173.41,2015
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,17843366004.0,2015
+27,Tabasco,1,Gobierno,1192428311.8500001,2015
+27,Tabasco,2,Desarrollo Social,30999755780.159996,2015
+27,Tabasco,3,Desarrollo Económico,86498253141.5,2015
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,21028760332.0,2015
+28,Tamaulipas,1,Gobierno,2407229742.2800007,2015
+28,Tamaulipas,2,Desarrollo Social,53653561719.72,2015
+28,Tamaulipas,3,Desarrollo Económico,55918446854.86,2015
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,19963352042.0,2015
+29,Tlaxcala,1,Gobierno,540235541.7299998,2015
+29,Tlaxcala,2,Desarrollo Social,18181652793.13,2015
+29,Tlaxcala,3,Desarrollo Económico,1836772971.3699996,2015
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,6321901060.0,2015
+30,Veracruz de Ignacio de la Llave,1,Gobierno,7828309250.49,2015
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,109426152198.52998,2015
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,102095065215.23001,2015
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,34408688515.0,2015
+31,Yucatán,1,Gobierno,2053369761.85,2015
+31,Yucatán,2,Desarrollo Social,36566991177.17999,2015
+31,Yucatán,3,Desarrollo Económico,12535926126.990004,2015
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,10818909871.0,2015
+32,Zacatecas,1,Gobierno,660277244.34,2015
+32,Zacatecas,2,Desarrollo Social,26194954211.879997,2015
+32,Zacatecas,3,Desarrollo Económico,3019544461.2400002,2015
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,8214135427.0,2015
+34,No distribuible geográficamente,1,Gobierno,0.0,2015
+34,No distribuible geográficamente,2,Desarrollo Social,6477938584.47,2015
+34,No distribuible geográficamente,3,Desarrollo Económico,56771582533.399994,2015
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,355026700674.78,2015
+35,En el extranjero,1,Gobierno,9104845849.37,2015
+35,En el extranjero,3,Desarrollo Económico,2749264810.53,2015
+1,Aguascalientes,1,Gobierno,2964442609.1399984,2016
+1,Aguascalientes,2,Desarrollo Social,23155793438.530003,2016
+1,Aguascalientes,3,Desarrollo Económico,5737774637.889999,2016
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,7803087467.0,2016
+2,Baja California,1,Gobierno,3689222396.8799996,2016
+2,Baja California,2,Desarrollo Social,52267744801.3,2016
+2,Baja California,3,Desarrollo Económico,17804021883.26,2016
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,19901886451.0,2016
+3,Baja California Sur,1,Gobierno,1098378166.2099998,2016
+3,Baja California Sur,2,Desarrollo Social,19365147994.91,2016
+3,Baja California Sur,3,Desarrollo Económico,9395472576.03,2016
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,4440530142.0,2016
+4,Campeche,1,Gobierno,1035721397.3599998,2016
+4,Campeche,2,Desarrollo Social,17708024539.739998,2016
+4,Campeche,3,Desarrollo Económico,181960128730.85004,2016
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,7959947899.0,2016
+5,Coahuila de Zaragoza,1,Gobierno,2828308201.7099996,2016
+5,Coahuila de Zaragoza,2,Desarrollo Social,52716947245.65998,2016
+5,Coahuila de Zaragoza,3,Desarrollo Económico,10965578060.710001,2016
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,16793771450.0,2016
+6,Colima,1,Gobierno,1384125809.5800002,2016
+6,Colima,2,Desarrollo Social,16235814370.39,2016
+6,Colima,3,Desarrollo Económico,13716479018.599997,2016
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,4932276588.0,2016
+7,Chiapas,1,Gobierno,4832716374.84,2016
+7,Chiapas,2,Desarrollo Social,74582219913.16,2016
+7,Chiapas,3,Desarrollo Económico,16360002234.54,2016
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,26962791103.0,2016
+8,Chihuahua,1,Gobierno,1246388555.6499996,2016
+8,Chihuahua,2,Desarrollo Social,56723683974.28999,2016
+8,Chihuahua,3,Desarrollo Económico,16780951254.799997,2016
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,20346057001.0,2016
+9,Ciudad de México,1,Gobierno,366787998349.3001,2016
+9,Ciudad de México,2,Desarrollo Social,1181182974861.6196,2016
+9,Ciudad de México,3,Desarrollo Económico,736377462141.5206,2016
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,81494386130.0,2016
+10,Durango,1,Gobierno,809753159.5699998,2016
+10,Durango,2,Desarrollo Social,33205180402.72,2016
+10,Durango,3,Desarrollo Económico,11563542565.069998,2016
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,9103017694.0,2016
+11,Guanajuato,1,Gobierno,3072285425.3599997,2016
+11,Guanajuato,2,Desarrollo Social,67581175746.07,2016
+11,Guanajuato,3,Desarrollo Económico,18500071904.49,2016
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,30005941589.0,2016
+12,Guerrero,1,Gobierno,2879986917.520001,2016
+12,Guerrero,2,Desarrollo Social,62367769973.06999,2016
+12,Guerrero,3,Desarrollo Económico,9033444192.699999,2016
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,16053232508.0,2016
+13,Hidalgo,1,Gobierno,850060113.0999998,2016
+13,Hidalgo,2,Desarrollo Social,47378548194.4,2016
+13,Hidalgo,3,Desarrollo Económico,19150347570.5,2016
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,13769010226.0,2016
+14,Jalisco,1,Gobierno,5142560021.759998,2016
+14,Jalisco,2,Desarrollo Social,101906718087.81998,2016
+14,Jalisco,3,Desarrollo Económico,18980315704.059998,2016
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,46544052680.0,2016
+15,Estado de México,1,Gobierno,13030308683.869995,2016
+15,Estado de México,2,Desarrollo Social,187574853701.95996,2016
+15,Estado de México,3,Desarrollo Económico,64035844459.43999,2016
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,88553802171.0,2016
+16,Michoacán de Ocampo,1,Gobierno,1310936843.9599998,2016
+16,Michoacán de Ocampo,2,Desarrollo Social,64155905665.869995,2016
+16,Michoacán de Ocampo,3,Desarrollo Económico,7688299857.09,2016
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,22039105143.0,2016
+17,Morelos,1,Gobierno,725506931.6199999,2016
+17,Morelos,2,Desarrollo Social,32105030469.65,2016
+17,Morelos,3,Desarrollo Económico,4261140075.58,2016
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,9135892217.0,2016
+18,Nayarit,1,Gobierno,675162316.4999999,2016
+18,Nayarit,2,Desarrollo Social,22510551546.019997,2016
+18,Nayarit,3,Desarrollo Económico,3645512479.47,2016
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,6948834627.0,2016
+19,Nuevo León,1,Gobierno,2944717937.47,2016
+19,Nuevo León,2,Desarrollo Social,84532245876.2,2016
+19,Nuevo León,3,Desarrollo Económico,17028720207.610003,2016
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,33692728300.0,2016
+20,Oaxaca,1,Gobierno,3152908726.95,2016
+20,Oaxaca,2,Desarrollo Social,67853505338.92,2016
+20,Oaxaca,3,Desarrollo Económico,13973651885.449999,2016
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,17796428167.0,2016
+21,Puebla,1,Gobierno,1795092217.9,2016
+21,Puebla,2,Desarrollo Social,77617893617.67,2016
+21,Puebla,3,Desarrollo Económico,11111246178.650002,2016
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,29473575715.0,2016
+22,Querétaro,1,Gobierno,701516586.2400002,2016
+22,Querétaro,2,Desarrollo Social,31259929249.639996,2016
+22,Querétaro,3,Desarrollo Económico,8106348144.300001,2016
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,12460014595.0,2016
+23,Quintana Roo,1,Gobierno,1291614475.2800004,2016
+23,Quintana Roo,2,Desarrollo Social,22270562723.09,2016
+23,Quintana Roo,3,Desarrollo Económico,3110865328.5500007,2016
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,8995463774.0,2016
+24,San Luis Potosí,1,Gobierno,847120553.2399998,2016
+24,San Luis Potosí,2,Desarrollo Social,43655625896.15,2016
+24,San Luis Potosí,3,Desarrollo Económico,12460666422.72,2016
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,14026103624.0,2016
+25,Sinaloa,1,Gobierno,2747355186.6,2016
+25,Sinaloa,2,Desarrollo Social,50860678509.310005,2016
+25,Sinaloa,3,Desarrollo Económico,11596437024.859999,2016
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,16357008111.0,2016
+26,Sonora,1,Gobierno,2117759235.9399998,2016
+26,Sonora,2,Desarrollo Social,47193088726.659996,2016
+26,Sonora,3,Desarrollo Económico,19033016253.120007,2016
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,18664163736.0,2016
+27,Tabasco,1,Gobierno,1420386125.1499996,2016
+27,Tabasco,2,Desarrollo Social,31810226439.920002,2016
+27,Tabasco,3,Desarrollo Económico,71950033206.90999,2016
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,22336225800.0,2016
+28,Tamaulipas,1,Gobierno,2351571757.4699993,2016
+28,Tamaulipas,2,Desarrollo Social,56288487038.969986,2016
+28,Tamaulipas,3,Desarrollo Económico,57197217222.19,2016
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,21853939445.0,2016
+29,Tlaxcala,1,Gobierno,707451276.72,2016
+29,Tlaxcala,2,Desarrollo Social,18589622015.5,2016
+29,Tlaxcala,3,Desarrollo Económico,1374600645.89,2016
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,6952632874.0,2016
+30,Veracruz de Ignacio de la Llave,1,Gobierno,7498562872.140003,2016
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,109220284938.83,2016
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,89393746562.65999,2016
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,37119401811.0,2016
+31,Yucatán,1,Gobierno,2193968971.6399994,2016
+31,Yucatán,2,Desarrollo Social,38107804625.06,2016
+31,Yucatán,3,Desarrollo Económico,12509778935.69,2016
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,11653026788.0,2016
+32,Zacatecas,1,Gobierno,604607369.56,2016
+32,Zacatecas,2,Desarrollo Social,27472064743.14,2016
+32,Zacatecas,3,Desarrollo Económico,2922983680.4799995,2016
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,9609242734.0,2016
+34,No distribuible geográficamente,1,Gobierno,0.0,2016
+34,No distribuible geográficamente,2,Desarrollo Social,11578366721.34,2016
+34,No distribuible geográficamente,3,Desarrollo Económico,52311823231.94001,2016
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,402758601113.38,2016
+35,En el extranjero,1,Gobierno,13018905681.159996,2016
+35,En el extranjero,2,Desarrollo Social,4925000.0,2016
+35,En el extranjero,3,Desarrollo Económico,2813357030.2500005,2016
+1,Aguascalientes,1,Gobierno,2654281472.6,2017
+1,Aguascalientes,2,Desarrollo Social,22803571790.8,2017
+1,Aguascalientes,3,Desarrollo Económico,2447928456.72,2017
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,8207174330.0,2017
+2,Baja California,1,Gobierno,3404140738.3700004,2017
+2,Baja California,2,Desarrollo Social,51913924340.58001,2017
+2,Baja California,3,Desarrollo Económico,16047297998.660002,2017
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,22883871008.0,2017
+3,Baja California Sur,1,Gobierno,1243639870.9899995,2017
+3,Baja California Sur,2,Desarrollo Social,17325874097.7,2017
+3,Baja California Sur,3,Desarrollo Económico,7286398319.7699995,2017
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,5353643275.0,2017
+4,Campeche,1,Gobierno,979253172.0400002,2017
+4,Campeche,2,Desarrollo Social,17429570801.089996,2017
+4,Campeche,3,Desarrollo Económico,124041441450.27002,2017
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,7113280174.0,2017
+5,Coahuila de Zaragoza,1,Gobierno,2651133264.8599997,2017
+5,Coahuila de Zaragoza,2,Desarrollo Social,52644594761.35,2017
+5,Coahuila de Zaragoza,3,Desarrollo Económico,15165555629.140001,2017
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,18629803859.0,2017
+6,Colima,1,Gobierno,1336190252.76,2017
+6,Colima,2,Desarrollo Social,15799426598.169998,2017
+6,Colima,3,Desarrollo Económico,19534200416.399994,2017
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,5243768382.0,2017
+7,Chiapas,1,Gobierno,5685957697.209999,2017
+7,Chiapas,2,Desarrollo Social,73562490511.77,2017
+7,Chiapas,3,Desarrollo Económico,15554307206.190004,2017
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,29742838141.0,2017
+8,Chihuahua,1,Gobierno,899318426.2199999,2017
+8,Chihuahua,2,Desarrollo Social,57350551070.68001,2017
+8,Chihuahua,3,Desarrollo Económico,15663060383.349998,2017
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,23357641333.0,2017
+9,Ciudad de México,1,Gobierno,483721788046.78,2017
+9,Ciudad de México,2,Desarrollo Social,1228765810684.8398,2017
+9,Ciudad de México,3,Desarrollo Económico,482647546221.39984,2017
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,87709884620.0,2017
+10,Durango,1,Gobierno,645808019.94,2017
+10,Durango,2,Desarrollo Social,31119550777.770004,2017
+10,Durango,3,Desarrollo Económico,16085029589.44,2017
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,10432666866.0,2017
+11,Guanajuato,1,Gobierno,2887327536.59,2017
+11,Guanajuato,2,Desarrollo Social,67191237016.19001,2017
+11,Guanajuato,3,Desarrollo Económico,22937915202.539997,2017
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,33367277521.0,2017
+12,Guerrero,1,Gobierno,2596639106.3799996,2017
+12,Guerrero,2,Desarrollo Social,58499972048.37001,2017
+12,Guerrero,3,Desarrollo Económico,24696053441.239998,2017
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,17090098182.0,2017
+13,Hidalgo,1,Gobierno,684913971.8699999,2017
+13,Hidalgo,2,Desarrollo Social,45765216084.37,2017
+13,Hidalgo,3,Desarrollo Económico,26217376210.26,2017
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,15392959949.0,2017
+14,Jalisco,1,Gobierno,4126564577.71,2017
+14,Jalisco,2,Desarrollo Social,104535140113.12,2017
+14,Jalisco,3,Desarrollo Económico,24608327346.779995,2017
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,52679505716.0,2017
+15,Estado de México,1,Gobierno,12169461527.489998,2017
+15,Estado de México,2,Desarrollo Social,182714097075.72995,2017
+15,Estado de México,3,Desarrollo Económico,55469711011.31,2017
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,102335598261.0,2017
+16,Michoacán de Ocampo,1,Gobierno,1185345127.33,2017
+16,Michoacán de Ocampo,2,Desarrollo Social,62858075849.71,2017
+16,Michoacán de Ocampo,3,Desarrollo Económico,11174972576.990002,2017
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,23653818960.0,2017
+17,Morelos,1,Gobierno,598665620.89,2017
+17,Morelos,2,Desarrollo Social,32218235821.140007,2017
+17,Morelos,3,Desarrollo Económico,5599530943.710001,2017
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,10447256447.0,2017
+18,Nayarit,1,Gobierno,598545830.4800001,2017
+18,Nayarit,2,Desarrollo Social,20923030193.739998,2017
+18,Nayarit,3,Desarrollo Económico,4671974094.55,2017
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,7804995508.0,2017
+19,Nuevo León,1,Gobierno,2783250176.11,2017
+19,Nuevo León,2,Desarrollo Social,86390412917.74,2017
+19,Nuevo León,3,Desarrollo Económico,16705916326.480001,2017
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,36196898427.0,2017
+20,Oaxaca,1,Gobierno,2967699483.7599998,2017
+20,Oaxaca,2,Desarrollo Social,63761439563.74999,2017
+20,Oaxaca,3,Desarrollo Económico,15785398772.35,2017
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,19517300175.0,2017
+21,Puebla,1,Gobierno,1794173920.4699998,2017
+21,Puebla,2,Desarrollo Social,74783815063.68,2017
+21,Puebla,3,Desarrollo Económico,12137444522.19,2017
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,33576943348.0,2017
+22,Querétaro,1,Gobierno,567481310.1899999,2017
+22,Querétaro,2,Desarrollo Social,30034325849.000008,2017
+22,Querétaro,3,Desarrollo Económico,8462397663.659999,2017
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,13831209440.0,2017
+23,Quintana Roo,1,Gobierno,1188956956.9,2017
+23,Quintana Roo,2,Desarrollo Social,21509086912.270004,2017
+23,Quintana Roo,3,Desarrollo Económico,5240119189.31,2017
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,10311133091.0,2017
+24,San Luis Potosí,1,Gobierno,766464005.02,2017
+24,San Luis Potosí,2,Desarrollo Social,42184587812.12,2017
+24,San Luis Potosí,3,Desarrollo Económico,17287166754.24,2017
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,17398779025.0,2017
+25,Sinaloa,1,Gobierno,2543320642.5,2017
+25,Sinaloa,2,Desarrollo Social,51647082376.560005,2017
+25,Sinaloa,3,Desarrollo Económico,16064259107.27,2017
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,18597995626.0,2017
+26,Sonora,1,Gobierno,2210975525.93,2017
+26,Sonora,2,Desarrollo Social,46822375001.860016,2017
+26,Sonora,3,Desarrollo Económico,18496427793.659996,2017
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,21399505097.0,2017
+27,Tabasco,1,Gobierno,1109053711.26,2017
+27,Tabasco,2,Desarrollo Social,29911653903.189995,2017
+27,Tabasco,3,Desarrollo Económico,63558523315.82999,2017
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,21678211744.0,2017
+28,Tamaulipas,1,Gobierno,2177997947.3400006,2017
+28,Tamaulipas,2,Desarrollo Social,55163478021.44001,2017
+28,Tamaulipas,3,Desarrollo Económico,49659297552.060005,2017
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,23715234854.0,2017
+29,Tlaxcala,1,Gobierno,676200534.6800001,2017
+29,Tlaxcala,2,Desarrollo Social,18089283350.529995,2017
+29,Tlaxcala,3,Desarrollo Económico,1759185951.7499995,2017
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,7644851979.0,2017
+30,Veracruz de Ignacio de la Llave,1,Gobierno,7306279659.370002,2017
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,111815944986.49997,2017
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,92227292103.56001,2017
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,43414414078.0,2017
+31,Yucatán,1,Gobierno,2143727606.8400004,2017
+31,Yucatán,2,Desarrollo Social,36608773037.27999,2017
+31,Yucatán,3,Desarrollo Económico,18781555174.969997,2017
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,13248940721.0,2017
+32,Zacatecas,1,Gobierno,486015891.9700001,2017
+32,Zacatecas,2,Desarrollo Social,25442738324.620007,2017
+32,Zacatecas,3,Desarrollo Económico,3136640393.279999,2017
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,10440063109.0,2017
+34,No distribuible geográficamente,1,Gobierno,3500000.0,2017
+34,No distribuible geográficamente,2,Desarrollo Social,3553424435.5,2017
+34,No distribuible geográficamente,3,Desarrollo Económico,42324306719.16999,2017
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,461725347303.63,2017
+35,En el extranjero,1,Gobierno,13327718985.3,2017
+35,En el extranjero,2,Desarrollo Social,1404640.8199999998,2017
+35,En el extranjero,3,Desarrollo Económico,2961846741.4,2017
+1,Aguascalientes,1,Gobierno,3172913857.819999,2018
+1,Aguascalientes,2,Desarrollo Social,25032595649.46,2018
+1,Aguascalientes,3,Desarrollo Económico,3271663036.75,2018
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,9225508835.0,2018
+2,Baja California,1,Gobierno,3909117429.2700005,2018
+2,Baja California,2,Desarrollo Social,56988703810.159996,2018
+2,Baja California,3,Desarrollo Económico,23388244836.649998,2018
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,24633384943.0,2018
+3,Baja California Sur,1,Gobierno,1266807627.1200001,2018
+3,Baja California Sur,2,Desarrollo Social,19271211583.329998,2018
+3,Baja California Sur,3,Desarrollo Económico,10519858532.940002,2018
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,6095652809.0,2018
+4,Campeche,1,Gobierno,1334223247.06,2018
+4,Campeche,2,Desarrollo Social,18925119594.690006,2018
+4,Campeche,3,Desarrollo Económico,111661200986.23,2018
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,8897349876.0,2018
+5,Coahuila de Zaragoza,1,Gobierno,2911765797.140001,2018
+5,Coahuila de Zaragoza,2,Desarrollo Social,58631418591.6,2018
+5,Coahuila de Zaragoza,3,Desarrollo Económico,22714529940.39,2018
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,19596547549.0,2018
+6,Colima,1,Gobierno,1489576884.0100002,2018
+6,Colima,2,Desarrollo Social,17010739591.039999,2018
+6,Colima,3,Desarrollo Económico,31544659063.149994,2018
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,5812593146.0,2018
+7,Chiapas,1,Gobierno,6170523260.0199995,2018
+7,Chiapas,2,Desarrollo Social,80616688254.29,2018
+7,Chiapas,3,Desarrollo Económico,13713500935.46,2018
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,32018912344.0,2018
+8,Chihuahua,1,Gobierno,1196725923.01,2018
+8,Chihuahua,2,Desarrollo Social,62618505079.31999,2018
+8,Chihuahua,3,Desarrollo Económico,16639428876.32,2018
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,24586455985.0,2018
+9,Ciudad de México,1,Gobierno,356194556418.95984,2018
+9,Ciudad de México,2,Desarrollo Social,1294921611616.6792,2018
+9,Ciudad de México,3,Desarrollo Económico,560180723189.3901,2018
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,93187364465.0,2018
+10,Durango,1,Gobierno,771309312.3399997,2018
+10,Durango,2,Desarrollo Social,34101792243.6,2018
+10,Durango,3,Desarrollo Económico,15465010257.95,2018
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,11470446852.0,2018
+11,Guanajuato,1,Gobierno,3270198071.900001,2018
+11,Guanajuato,2,Desarrollo Social,73436043987.09,2018
+11,Guanajuato,3,Desarrollo Económico,22724324287.19,2018
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,35992359833.0,2018
+12,Guerrero,1,Gobierno,3073370229.280001,2018
+12,Guerrero,2,Desarrollo Social,65151161825.12999,2018
+12,Guerrero,3,Desarrollo Económico,26100964313.760002,2018
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,20259191710.0,2018
+13,Hidalgo,1,Gobierno,862903792.87,2018
+13,Hidalgo,2,Desarrollo Social,49969428983.87,2018
+13,Hidalgo,3,Desarrollo Económico,28281713442.950005,2018
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,16368977174.0,2018
+14,Jalisco,1,Gobierno,5053787340.21,2018
+14,Jalisco,2,Desarrollo Social,113185392514.33003,2018
+14,Jalisco,3,Desarrollo Económico,19727423742.35,2018
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,55571877214.0,2018
+15,Estado de México,1,Gobierno,12353430832.889997,2018
+15,Estado de México,2,Desarrollo Social,201088114894.36002,2018
+15,Estado de México,3,Desarrollo Económico,96375580825.93,2018
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,115582108351.0,2018
+16,Michoacán de Ocampo,1,Gobierno,1445670219.94,2018
+16,Michoacán de Ocampo,2,Desarrollo Social,69107245930.12999,2018
+16,Michoacán de Ocampo,3,Desarrollo Económico,10468794888.670002,2018
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,27182415990.0,2018
+17,Morelos,1,Gobierno,742286339.1699998,2018
+17,Morelos,2,Desarrollo Social,34711044485.75,2018
+17,Morelos,3,Desarrollo Económico,5031687981.33,2018
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,11307165799.0,2018
+18,Nayarit,1,Gobierno,671739731.2800001,2018
+18,Nayarit,2,Desarrollo Social,23588657938.789997,2018
+18,Nayarit,3,Desarrollo Económico,4189408155.38,2018
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,7981133320.0,2018
+19,Nuevo León,1,Gobierno,3338615475.760001,2018
+19,Nuevo León,2,Desarrollo Social,95430261459.8,2018
+19,Nuevo León,3,Desarrollo Económico,18027238438.89,2018
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,39326113162.0,2018
+20,Oaxaca,1,Gobierno,3308553773.47,2018
+20,Oaxaca,2,Desarrollo Social,71722145117.22998,2018
+20,Oaxaca,3,Desarrollo Económico,18139871518.01,2018
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,21536217226.0,2018
+21,Puebla,1,Gobierno,2541306825.4000006,2018
+21,Puebla,2,Desarrollo Social,82341639900.5,2018
+21,Puebla,3,Desarrollo Económico,14332069553.859999,2018
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,36004270808.0,2018
+22,Querétaro,1,Gobierno,722556124.3199997,2018
+22,Querétaro,2,Desarrollo Social,33737097278.889996,2018
+22,Querétaro,3,Desarrollo Económico,8929347772.46,2018
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,15172478920.0,2018
+23,Quintana Roo,1,Gobierno,1438017755.9900007,2018
+23,Quintana Roo,2,Desarrollo Social,23931616573.079994,2018
+23,Quintana Roo,3,Desarrollo Económico,4898436536.42,2018
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,11546550107.0,2018
+24,San Luis Potosí,1,Gobierno,997858650.0000001,2018
+24,San Luis Potosí,2,Desarrollo Social,46547106036.70999,2018
+24,San Luis Potosí,3,Desarrollo Económico,19461126299.73,2018
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,17760943651.0,2018
+25,Sinaloa,1,Gobierno,2958747565.68,2018
+25,Sinaloa,2,Desarrollo Social,56884516448.399994,2018
+25,Sinaloa,3,Desarrollo Económico,18356764213.78,2018
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,20736576506.0,2018
+26,Sonora,1,Gobierno,2263184153.3300004,2018
+26,Sonora,2,Desarrollo Social,50730287547.20001,2018
+26,Sonora,3,Desarrollo Económico,17891536667.1,2018
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,23232304208.0,2018
+27,Tabasco,1,Gobierno,1319041500.5,2018
+27,Tabasco,2,Desarrollo Social,33155140365.939995,2018
+27,Tabasco,3,Desarrollo Económico,77364680176.85,2018
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,24078087800.0,2018
+28,Tamaulipas,1,Gobierno,2479289380.8999996,2018
+28,Tamaulipas,2,Desarrollo Social,60381781182.39,2018
+28,Tamaulipas,3,Desarrollo Económico,55184425660.27,2018
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,25949997025.0,2018
+29,Tlaxcala,1,Gobierno,518518821.3299999,2018
+29,Tlaxcala,2,Desarrollo Social,19758167587.05,2018
+29,Tlaxcala,3,Desarrollo Económico,2299260984.7,2018
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,8241180401.0,2018
+30,Veracruz de Ignacio de la Llave,1,Gobierno,8093540348.749996,2018
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,122084134097.43997,2018
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,92670374988.87999,2018
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,49010068338.0,2018
+31,Yucatán,1,Gobierno,2252315454.89,2018
+31,Yucatán,2,Desarrollo Social,40181135237.78999,2018
+31,Yucatán,3,Desarrollo Económico,18113661852.610004,2018
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,14614068435.0,2018
+32,Zacatecas,1,Gobierno,585700549.6099999,2018
+32,Zacatecas,2,Desarrollo Social,28178792197.280003,2018
+32,Zacatecas,3,Desarrollo Económico,3666209206.3400006,2018
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,11066873773.0,2018
+34,No distribuible geográficamente,1,Gobierno,3500000.0,2018
+34,No distribuible geográficamente,2,Desarrollo Social,3083201434.6100006,2018
+34,No distribuible geográficamente,3,Desarrollo Económico,46549749190.51998,2018
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,552259240373.9299,2018
+35,En el extranjero,1,Gobierno,11173126171.090004,2018
+35,En el extranjero,2,Desarrollo Social,2204999.0,2018
+35,En el extranjero,3,Desarrollo Económico,2441685317.96,2018
+1,Aguascalientes,1,Gobierno,3371832486.770002,2019
+1,Aguascalientes,2,Desarrollo Social,26286201367.589996,2019
+1,Aguascalientes,3,Desarrollo Económico,1282297788.7899997,2019
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,9254292663.0,2019
+2,Baja California,1,Gobierno,3786176889.8099995,2019
+2,Baja California,2,Desarrollo Social,60083131962.14001,2019
+2,Baja California,3,Desarrollo Económico,19106421393.570004,2019
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,24687241231.0,2019
+3,Baja California Sur,1,Gobierno,1225464926.76,2019
+3,Baja California Sur,2,Desarrollo Social,20009197299.629993,2019
+3,Baja California Sur,3,Desarrollo Económico,10516403485.220001,2019
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,6675360762.0,2019
+4,Campeche,1,Gobierno,1253506540.1799998,2019
+4,Campeche,2,Desarrollo Social,19278553620.71,2019
+4,Campeche,3,Desarrollo Económico,119207648485.67,2019
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,9761152690.0,2019
+5,Coahuila de Zaragoza,1,Gobierno,2614284926.4199996,2019
+5,Coahuila de Zaragoza,2,Desarrollo Social,62158930317.46001,2019
+5,Coahuila de Zaragoza,3,Desarrollo Económico,17885226525.590004,2019
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,20896925661.0,2019
+6,Colima,1,Gobierno,1564757311.32,2019
+6,Colima,2,Desarrollo Social,18369613173.19,2019
+6,Colima,3,Desarrollo Económico,26798744281.700005,2019
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,5657137861.0,2019
+7,Chiapas,1,Gobierno,5220036034.569999,2019
+7,Chiapas,2,Desarrollo Social,81906387560.11998,2019
+7,Chiapas,3,Desarrollo Económico,13137237107.500002,2019
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,31813356803.0,2019
+8,Chihuahua,1,Gobierno,1022366018.32,2019
+8,Chihuahua,2,Desarrollo Social,67002697595.62,2019
+8,Chihuahua,3,Desarrollo Económico,13588181232.910002,2019
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,25617806567.0,2019
+9,Ciudad de México,1,Gobierno,312532628018.1601,2019
+9,Ciudad de México,2,Desarrollo Social,1519148874912.809,2019
+9,Ciudad de México,3,Desarrollo Económico,654977874324.3004,2019
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,93348525044.0,2019
+10,Durango,1,Gobierno,754887722.1399999,2019
+10,Durango,2,Desarrollo Social,35373542658.689995,2019
+10,Durango,3,Desarrollo Económico,13394004868.02,2019
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,11293587590.0,2019
+11,Guanajuato,1,Gobierno,3221875416.399999,2019
+11,Guanajuato,2,Desarrollo Social,77987348077.69,2019
+11,Guanajuato,3,Desarrollo Económico,19800536653.43,2019
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,39119703624.0,2019
+12,Guerrero,1,Gobierno,3081523309.45,2019
+12,Guerrero,2,Desarrollo Social,66684019003.41,2019
+12,Guerrero,3,Desarrollo Económico,20917506154.739998,2019
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,20198704364.0,2019
+13,Hidalgo,1,Gobierno,752195131.4000002,2019
+13,Hidalgo,2,Desarrollo Social,53695138126.59999,2019
+13,Hidalgo,3,Desarrollo Económico,23713574891.88,2019
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,17973996872.0,2019
+14,Jalisco,1,Gobierno,5055315825.28,2019
+14,Jalisco,2,Desarrollo Social,120433394681.06,2019
+14,Jalisco,3,Desarrollo Económico,16595525535.87,2019
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,57286037822.0,2019
+15,Estado de México,1,Gobierno,13782854258.299997,2019
+15,Estado de México,2,Desarrollo Social,208797075778.45996,2019
+15,Estado de México,3,Desarrollo Económico,16943118255.220003,2019
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,121181641760.0,2019
+16,Michoacán de Ocampo,1,Gobierno,2062973804.8900003,2019
+16,Michoacán de Ocampo,2,Desarrollo Social,72222623268.23997,2019
+16,Michoacán de Ocampo,3,Desarrollo Económico,5800238964.839999,2019
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,28617151474.0,2019
+17,Morelos,1,Gobierno,708820429.2900001,2019
+17,Morelos,2,Desarrollo Social,36721573232.44,2019
+17,Morelos,3,Desarrollo Económico,4569693577.68,2019
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,11889205204.0,2019
+18,Nayarit,1,Gobierno,699550986.68,2019
+18,Nayarit,2,Desarrollo Social,24666735665.19,2019
+18,Nayarit,3,Desarrollo Económico,3360407336.5299997,2019
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,8886626354.0,2019
+19,Nuevo León,1,Gobierno,3036150107.24,2019
+19,Nuevo León,2,Desarrollo Social,104235294403.18,2019
+19,Nuevo León,3,Desarrollo Económico,26099635164.929996,2019
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,42097391661.0,2019
+20,Oaxaca,1,Gobierno,3169583358.6299996,2019
+20,Oaxaca,2,Desarrollo Social,73717814576.87,2019
+20,Oaxaca,3,Desarrollo Económico,14683380797.159996,2019
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,22926360831.0,2019
+21,Puebla,1,Gobierno,4198972744.730001,2019
+21,Puebla,2,Desarrollo Social,84579415442.34,2019
+21,Puebla,3,Desarrollo Económico,9580342241.15,2019
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,38198575351.0,2019
+22,Querétaro,1,Gobierno,638169231.2300001,2019
+22,Querétaro,2,Desarrollo Social,35435889382.200005,2019
+22,Querétaro,3,Desarrollo Económico,6330630563.77,2019
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,15858589833.0,2019
+23,Quintana Roo,1,Gobierno,1428343355.2700002,2019
+23,Quintana Roo,2,Desarrollo Social,25307028726.25,2019
+23,Quintana Roo,3,Desarrollo Económico,6750961996.830002,2019
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,11747009527.0,2019
+24,San Luis Potosí,1,Gobierno,856820523.35,2019
+24,San Luis Potosí,2,Desarrollo Social,47855926455.299995,2019
+24,San Luis Potosí,3,Desarrollo Económico,16151006017.390003,2019
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,19116589022.0,2019
+25,Sinaloa,1,Gobierno,2909569772.32,2019
+25,Sinaloa,2,Desarrollo Social,59812278995.06001,2019
+25,Sinaloa,3,Desarrollo Económico,11414586371.02,2019
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,21395460186.0,2019
+26,Sonora,1,Gobierno,2131032876.6799998,2019
+26,Sonora,2,Desarrollo Social,53718390498.33999,2019
+26,Sonora,3,Desarrollo Económico,16299722107.050001,2019
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,24267789737.0,2019
+27,Tabasco,1,Gobierno,1316757100.9599998,2019
+27,Tabasco,2,Desarrollo Social,34452532848.53,2019
+27,Tabasco,3,Desarrollo Económico,88064303300.64001,2019
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,26072344981.0,2019
+28,Tamaulipas,1,Gobierno,2465100527.26,2019
+28,Tamaulipas,2,Desarrollo Social,63113815406.08,2019
+28,Tamaulipas,3,Desarrollo Económico,56711347069.340004,2019
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,27689979257.0,2019
+29,Tlaxcala,1,Gobierno,491187077.75,2019
+29,Tlaxcala,2,Desarrollo Social,20834051728.099995,2019
+29,Tlaxcala,3,Desarrollo Económico,1569685058.23,2019
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,8580655094.0,2019
+30,Veracruz de Ignacio de la Llave,1,Gobierno,7781402426.77,2019
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,127688949701.36,2019
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,89351360141.57,2019
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,51005778698.0,2019
+31,Yucatán,1,Gobierno,2112102618.3600001,2019
+31,Yucatán,2,Desarrollo Social,42045596610.82,2019
+31,Yucatán,3,Desarrollo Económico,16657417443.679996,2019
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,15028483585.0,2019
+32,Zacatecas,1,Gobierno,575556782.2100002,2019
+32,Zacatecas,2,Desarrollo Social,29244126212.17,2019
+32,Zacatecas,3,Desarrollo Económico,2065937723.9900002,2019
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,11200810036.0,2019
+34,No distribuible geográficamente,1,Gobierno,20612164.41,2019
+34,No distribuible geográficamente,2,Desarrollo Social,12588069936.23,2019
+34,No distribuible geográficamente,3,Desarrollo Económico,35989042070.42,2019
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,563452780286.45,2019
+35,En el extranjero,1,Gobierno,9783312212.690002,2019
+35,En el extranjero,2,Desarrollo Social,329911.53,2019
+35,En el extranjero,3,Desarrollo Económico,1778341960.63,2019
+1,Aguascalientes,1,Gobierno,3262469235.02,2020
+1,Aguascalientes,2,Desarrollo Social,27987986166.890003,2020
+1,Aguascalientes,3,Desarrollo Económico,1454246354.3300002,2020
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,9246316791.0,2020
+2,Baja California,1,Gobierno,3976043179.229999,2020
+2,Baja California,2,Desarrollo Social,63389158561.16001,2020
+2,Baja California,3,Desarrollo Económico,15632545594.159998,2020
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,25972466280.0,2020
+3,Baja California Sur,1,Gobierno,1436305967.3500004,2020
+3,Baja California Sur,2,Desarrollo Social,20973285486.87,2020
+3,Baja California Sur,3,Desarrollo Económico,9955149547.390001,2020
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,6330405778.0,2020
+4,Campeche,1,Gobierno,1462850391.1799998,2020
+4,Campeche,2,Desarrollo Social,20419804258.189995,2020
+4,Campeche,3,Desarrollo Económico,136470742483.25,2020
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,8647936248.0,2020
+5,Coahuila de Zaragoza,1,Gobierno,2901968217.3400006,2020
+5,Coahuila de Zaragoza,2,Desarrollo Social,66278637746.200005,2020
+5,Coahuila de Zaragoza,3,Desarrollo Económico,10913634720.830004,2020
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,19417504307.0,2020
+6,Colima,1,Gobierno,1752064682.5499995,2020
+6,Colima,2,Desarrollo Social,19093190885.179996,2020
+6,Colima,3,Desarrollo Económico,15339889581.709997,2020
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,6011542417.0,2020
+7,Chiapas,1,Gobierno,5352940202.08,2020
+7,Chiapas,2,Desarrollo Social,87502370402.03998,2020
+7,Chiapas,3,Desarrollo Económico,11715969186.470001,2020
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,34028886476.0,2020
+8,Chihuahua,1,Gobierno,1278697515.88,2020
+8,Chihuahua,2,Desarrollo Social,71028552010.00002,2020
+8,Chihuahua,3,Desarrollo Económico,19602416042.780006,2020
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,25718070926.0,2020
+9,Ciudad de México,1,Gobierno,344470856231.6901,2020
+9,Ciudad de México,2,Desarrollo Social,1660063900225.4,2020
+9,Ciudad de México,3,Desarrollo Económico,644205476977.06,2020
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,87506430819.0,2020
+10,Durango,1,Gobierno,834670733.5300001,2020
+10,Durango,2,Desarrollo Social,36424019136.340004,2020
+10,Durango,3,Desarrollo Económico,11724137294.29,2020
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,10847270370.0,2020
+11,Guanajuato,1,Gobierno,3027995737.8500004,2020
+11,Guanajuato,2,Desarrollo Social,82040736234.38998,2020
+11,Guanajuato,3,Desarrollo Económico,21394572662.16,2020
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,36549833330.0,2020
+12,Guerrero,1,Gobierno,3387371731.56,2020
+12,Guerrero,2,Desarrollo Social,70862277027.51001,2020
+12,Guerrero,3,Desarrollo Económico,8729239688.3,2020
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,19753722836.0,2020
+13,Hidalgo,1,Gobierno,1046165101.9999998,2020
+13,Hidalgo,2,Desarrollo Social,55448169008.03001,2020
+13,Hidalgo,3,Desarrollo Económico,18759985422.33,2020
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,16622004516.0,2020
+14,Jalisco,1,Gobierno,4799445708.349998,2020
+14,Jalisco,2,Desarrollo Social,128772492211.61,2020
+14,Jalisco,3,Desarrollo Económico,13702918055.36,2020
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,55418719957.0,2020
+15,Estado de México,1,Gobierno,20899941944.269997,2020
+15,Estado de México,2,Desarrollo Social,216333690810.34,2020
+15,Estado de México,3,Desarrollo Económico,13146581985.489998,2020
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,115000176779.0,2020
+16,Michoacán de Ocampo,1,Gobierno,1786885285.8999994,2020
+16,Michoacán de Ocampo,2,Desarrollo Social,75936644619.13998,2020
+16,Michoacán de Ocampo,3,Desarrollo Económico,5204209086.469998,2020
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,26527124065.0,2020
+17,Morelos,1,Gobierno,816395529.3800001,2020
+17,Morelos,2,Desarrollo Social,38989815493.43001,2020
+17,Morelos,3,Desarrollo Económico,4891832799.58,2020
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,11062050870.0,2020
+18,Nayarit,1,Gobierno,826821812.55,2020
+18,Nayarit,2,Desarrollo Social,26895610118.069996,2020
+18,Nayarit,3,Desarrollo Económico,2430788762.3100004,2020
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,7904296467.0,2020
+19,Nuevo León,1,Gobierno,3302415484.5900006,2020
+19,Nuevo León,2,Desarrollo Social,113389557557.26,2020
+19,Nuevo León,3,Desarrollo Económico,26100450818.319996,2020
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,40317061543.0,2020
+20,Oaxaca,1,Gobierno,3509716648.4700003,2020
+20,Oaxaca,2,Desarrollo Social,76288665608.16,2020
+20,Oaxaca,3,Desarrollo Económico,18254606900.42,2020
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,22209574911.0,2020
+21,Puebla,1,Gobierno,2252291267.5,2020
+21,Puebla,2,Desarrollo Social,89788938924.89,2020
+21,Puebla,3,Desarrollo Económico,10024727003.95,2020
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,35558372611.0,2020
+22,Querétaro,1,Gobierno,793645101.8300002,2020
+22,Querétaro,2,Desarrollo Social,38357178296.1,2020
+22,Querétaro,3,Desarrollo Económico,7261774031.0,2020
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,15768410704.0,2020
+23,Quintana Roo,1,Gobierno,1744554217.2199996,2020
+23,Quintana Roo,2,Desarrollo Social,26812124461.74,2020
+23,Quintana Roo,3,Desarrollo Económico,4518629061.46,2020
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,11675865881.0,2020
+24,San Luis Potosí,1,Gobierno,998977325.1600002,2020
+24,San Luis Potosí,2,Desarrollo Social,50979545496.60999,2020
+24,San Luis Potosí,3,Desarrollo Económico,15568955246.129997,2020
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,18059817528.0,2020
+25,Sinaloa,1,Gobierno,3017440785.600001,2020
+25,Sinaloa,2,Desarrollo Social,63086192713.03001,2020
+25,Sinaloa,3,Desarrollo Económico,11525328682.599998,2020
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,20633013498.0,2020
+26,Sonora,1,Gobierno,2485153847.8900013,2020
+26,Sonora,2,Desarrollo Social,57552785754.71,2020
+26,Sonora,3,Desarrollo Económico,19867840621.35,2020
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,22738316115.0,2020
+27,Tabasco,1,Gobierno,1600880372.9,2020
+27,Tabasco,2,Desarrollo Social,36201049966.43001,2020
+27,Tabasco,3,Desarrollo Económico,94799679496.55997,2020
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,24102922145.0,2020
+28,Tamaulipas,1,Gobierno,2860936630.1800003,2020
+28,Tamaulipas,2,Desarrollo Social,67136590971.96999,2020
+28,Tamaulipas,3,Desarrollo Económico,53744153301.119995,2020
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,26407036106.0,2020
+29,Tlaxcala,1,Gobierno,593866530.0500001,2020
+29,Tlaxcala,2,Desarrollo Social,21905305806.530006,2020
+29,Tlaxcala,3,Desarrollo Económico,1669614678.8899999,2020
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,8607403441.0,2020
+30,Veracruz de Ignacio de la Llave,1,Gobierno,8286474385.08,2020
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,134458624857.59,2020
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,82417304764.70001,2020
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,49714696729.0,2020
+31,Yucatán,1,Gobierno,2198313738.66,2020
+31,Yucatán,2,Desarrollo Social,44972523625.9,2020
+31,Yucatán,3,Desarrollo Económico,13642059869.87,2020
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,14538973094.0,2020
+32,Zacatecas,1,Gobierno,671623146.83,2020
+32,Zacatecas,2,Desarrollo Social,31015018296.640007,2020
+32,Zacatecas,3,Desarrollo Económico,1815454954.1399999,2020
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,10649084486.0,2020
+34,No distribuible geográficamente,1,Gobierno,0.0,2020
+34,No distribuible geográficamente,2,Desarrollo Social,7308666667.2699995,2020
+34,No distribuible geográficamente,3,Desarrollo Económico,32764865152.96,2020
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,602298360223.19,2020
+35,En el extranjero,1,Gobierno,10617682839.670006,2020
+35,En el extranjero,3,Desarrollo Económico,1435234921.9699998,2020
+1,Aguascalientes,1,Gobierno,3053926144.0,2021
+1,Aguascalientes,2,Desarrollo Social,29761317745.0,2021
+1,Aguascalientes,3,Desarrollo Económico,1297524811.0,2021
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,10333095212.0,2021
+2,Baja California,1,Gobierno,3972408275.0,2021
+2,Baja California,2,Desarrollo Social,70770536458.0,2021
+2,Baja California,3,Desarrollo Económico,23294893922.0,2021
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,28279897483.0,2021
+3,Baja California Sur,1,Gobierno,1716270561.0,2021
+3,Baja California Sur,2,Desarrollo Social,22494193260.0,2021
+3,Baja California Sur,3,Desarrollo Económico,14648807425.0,2021
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,6740188427.0,2021
+4,Campeche,1,Gobierno,1695468714.0,2021
+4,Campeche,2,Desarrollo Social,21255271262.0,2021
+4,Campeche,3,Desarrollo Económico,162924379829.0,2021
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,8897351814.0,2021
+5,Coahuila de Zaragoza,1,Gobierno,2716434177.0,2021
+5,Coahuila de Zaragoza,2,Desarrollo Social,69835702272.0,2021
+5,Coahuila de Zaragoza,3,Desarrollo Económico,10774761431.0,2021
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,21509504552.0,2021
+6,Colima,1,Gobierno,2019385881.0,2021
+6,Colima,2,Desarrollo Social,20882791486.0,2021
+6,Colima,3,Desarrollo Económico,10461927437.0,2021
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,6277661568.0,2021
+7,Chiapas,1,Gobierno,5541277599.0,2021
+7,Chiapas,2,Desarrollo Social,88804947335.0,2021
+7,Chiapas,3,Desarrollo Económico,18854166589.0,2021
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,37189518756.0,2021
+8,Chihuahua,1,Gobierno,1107340194.0,2021
+8,Chihuahua,2,Desarrollo Social,76517430150.0,2021
+8,Chihuahua,3,Desarrollo Económico,21198267479.0,2021
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,27594081563.0,2021
+9,Ciudad de México,1,Gobierno,382998975650.0,2021
+9,Ciudad de México,2,Desarrollo Social,1829816596830.0,2021
+9,Ciudad de México,3,Desarrollo Económico,951076442695.0,2021
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,93206826902.0,2021
+10,Durango,1,Gobierno,798523096.0,2021
+10,Durango,2,Desarrollo Social,39452122789.0,2021
+10,Durango,3,Desarrollo Económico,17689251243.0,2021
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,12536889406.0,2021
+11,Guanajuato,1,Gobierno,2952370739.0,2021
+11,Guanajuato,2,Desarrollo Social,86002214216.0,2021
+11,Guanajuato,3,Desarrollo Económico,25673125752.0,2021
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,39403177508.0,2021
+12,Guerrero,1,Gobierno,3580892443.0,2021
+12,Guerrero,2,Desarrollo Social,73097555008.0,2021
+12,Guerrero,3,Desarrollo Económico,10269818607.0,2021
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,20792552375.0,2021
+13,Hidalgo,1,Gobierno,830627755.0,2021
+13,Hidalgo,2,Desarrollo Social,57487607081.0,2021
+13,Hidalgo,3,Desarrollo Económico,20482241788.0,2021
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,17259188676.0,2021
+14,Jalisco,1,Gobierno,4626878659.0,2021
+14,Jalisco,2,Desarrollo Social,135288167276.0,2021
+14,Jalisco,3,Desarrollo Económico,12462914925.0,2021
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,61014381153.0,2021
+15,Estado de México,1,Gobierno,11791210893.0,2021
+15,Estado de México,2,Desarrollo Social,228338628119.0,2021
+15,Estado de México,3,Desarrollo Económico,13496310274.0,2021
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,121652922172.0,2021
+16,Michoacán de Ocampo,1,Gobierno,1643309015.0,2021
+16,Michoacán de Ocampo,2,Desarrollo Social,79111930133.0,2021
+16,Michoacán de Ocampo,3,Desarrollo Económico,5898610645.0,2021
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,30117236568.0,2021
+17,Morelos,1,Gobierno,911321289.0,2021
+17,Morelos,2,Desarrollo Social,41374378682.0,2021
+17,Morelos,3,Desarrollo Económico,6409847351.0,2021
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,12160298633.0,2021
+18,Nayarit,1,Gobierno,1207586733.0,2021
+18,Nayarit,2,Desarrollo Social,28502125082.0,2021
+18,Nayarit,3,Desarrollo Económico,3260283640.0,2021
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,8306565077.0,2021
+19,Nuevo León,1,Gobierno,3191631763.0,2021
+19,Nuevo León,2,Desarrollo Social,122581943146.0,2021
+19,Nuevo León,3,Desarrollo Económico,27122709158.0,2021
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,46629972450.0,2021
+20,Oaxaca,1,Gobierno,3598924982.0,2021
+20,Oaxaca,2,Desarrollo Social,80000411728.0,2021
+20,Oaxaca,3,Desarrollo Económico,22473928557.0,2021
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,22710288187.0,2021
+21,Puebla,1,Gobierno,1440906369.0,2021
+21,Puebla,2,Desarrollo Social,93577310700.0,2021
+21,Puebla,3,Desarrollo Económico,11405270954.0,2021
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,39138425581.0,2021
+22,Querétaro,1,Gobierno,697952506.0,2021
+22,Querétaro,2,Desarrollo Social,41298647515.0,2021
+22,Querétaro,3,Desarrollo Económico,8498220088.0,2021
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,17595868856.0,2021
+23,Quintana Roo,1,Gobierno,2436410844.0,2021
+23,Quintana Roo,2,Desarrollo Social,28922166905.0,2021
+23,Quintana Roo,3,Desarrollo Económico,11422799963.0,2021
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,12469186494.0,2021
+24,San Luis Potosí,1,Gobierno,902493667.0,2021
+24,San Luis Potosí,2,Desarrollo Social,52913542266.0,2021
+24,San Luis Potosí,3,Desarrollo Económico,17872619795.0,2021
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,18694431316.0,2021
+25,Sinaloa,1,Gobierno,3383524099.0,2021
+25,Sinaloa,2,Desarrollo Social,67023074073.0,2021
+25,Sinaloa,3,Desarrollo Económico,16457798278.0,2021
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,23269260799.0,2021
+26,Sonora,1,Gobierno,2554808083.0,2021
+26,Sonora,2,Desarrollo Social,61214744238.0,2021
+26,Sonora,3,Desarrollo Económico,23854231334.0,2021
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,24079892696.0,2021
+27,Tabasco,1,Gobierno,1836538670.0,2021
+27,Tabasco,2,Desarrollo Social,38437810127.0,2021
+27,Tabasco,3,Desarrollo Económico,140958225748.0,2021
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,26180536983.0,2021
+28,Tamaulipas,1,Gobierno,2942387967.0,2021
+28,Tamaulipas,2,Desarrollo Social,70067716212.0,2021
+28,Tamaulipas,3,Desarrollo Económico,59867168732.0,2021
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,28035036673.0,2021
+29,Tlaxcala,1,Gobierno,573689243.0,2021
+29,Tlaxcala,2,Desarrollo Social,22713398308.0,2021
+29,Tlaxcala,3,Desarrollo Económico,1517355319.0,2021
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,9098305620.0,2021
+30,Veracruz de Ignacio de la Llave,1,Gobierno,8622900002.0,2021
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,140027091299.0,2021
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,99690582880.0,2021
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,59511490053.0,2021
+31,Yucatán,1,Gobierno,2424457450.0,2021
+31,Yucatán,2,Desarrollo Social,47534679570.0,2021
+31,Yucatán,3,Desarrollo Económico,28406819096.0,2021
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,15551508634.0,2021
+32,Zacatecas,1,Gobierno,653727239.0,2021
+32,Zacatecas,2,Desarrollo Social,32699838647.0,2021
+32,Zacatecas,3,Desarrollo Económico,1288252764.0,2021
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,10997017576.0,2021
+34,No distribuible geográficamente,1,Gobierno,0.0,2021
+34,No distribuible geográficamente,2,Desarrollo Social,14758908404.0,2021
+34,No distribuible geográficamente,3,Desarrollo Económico,27832064231.0,2021
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,547791297965.0,2021
+35,En el extranjero,1,Gobierno,12389479516.0,2021
+35,En el extranjero,2,Desarrollo Social,61796.0,2021
+35,En el extranjero,3,Desarrollo Económico,1070145422.0,2021
+1,Aguascalientes,1,Gobierno,3723437152.8999996,2022
+1,Aguascalientes,2,Desarrollo Social,33719582767.600002,2022
+1,Aguascalientes,3,Desarrollo Económico,1201516779.8,2022
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,11944303348.0,2022
+2,Baja California,1,Gobierno,4253683933.1000004,2022
+2,Baja California,2,Desarrollo Social,76895880110.09999,2022
+2,Baja California,3,Desarrollo Económico,29517022668.69999,2022
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,33746680104.0,2022
+3,Baja California Sur,1,Gobierno,1946445179.3000002,2022
+3,Baja California Sur,2,Desarrollo Social,25054191382.300003,2022
+3,Baja California Sur,3,Desarrollo Económico,18006583138.7,2022
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,7913141694.0,2022
+4,Campeche,1,Gobierno,2590550348.8999996,2022
+4,Campeche,2,Desarrollo Social,24459925922.899998,2022
+4,Campeche,3,Desarrollo Económico,218010260673.19998,2022
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,8849080658.0,2022
+5,Coahuila de Zaragoza,1,Gobierno,3029226109.7999997,2022
+5,Coahuila de Zaragoza,2,Desarrollo Social,79863445650.5,2022
+5,Coahuila de Zaragoza,3,Desarrollo Económico,15558897331.099998,2022
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,24503518132.0,2022
+6,Colima,1,Gobierno,1892471468.6999996,2022
+6,Colima,2,Desarrollo Social,23185863954.8,2022
+6,Colima,3,Desarrollo Económico,12568913358.299997,2022
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,7268067368.0,2022
+7,Chiapas,1,Gobierno,5374055524.099999,2022
+7,Chiapas,2,Desarrollo Social,99437928666.20001,2022
+7,Chiapas,3,Desarrollo Económico,20112276866.399998,2022
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,44560468446.0,2022
+8,Chihuahua,1,Gobierno,1182420232.5000002,2022
+8,Chihuahua,2,Desarrollo Social,84311374045.59999,2022
+8,Chihuahua,3,Desarrollo Económico,27991874821.800003,2022
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,32660516866.0,2022
+9,Ciudad de México,1,Gobierno,393539857461.0,2022
+9,Ciudad de México,2,Desarrollo Social,2091184687380.9995,2022
+9,Ciudad de México,3,Desarrollo Económico,822199240960.0005,2022
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,103910531796.0,2022
+10,Durango,1,Gobierno,857838766.2999997,2022
+10,Durango,2,Desarrollo Social,44811478271.9,2022
+10,Durango,3,Desarrollo Económico,15178558566.199999,2022
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,13340932777.0,2022
+11,Guanajuato,1,Gobierno,3368674087.4,2022
+11,Guanajuato,2,Desarrollo Social,96176859291.80003,2022
+11,Guanajuato,3,Desarrollo Económico,24597608883.499992,2022
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,49505882969.0,2022
+12,Guerrero,1,Gobierno,3879486272.9999995,2022
+12,Guerrero,2,Desarrollo Social,79909785148.29999,2022
+12,Guerrero,3,Desarrollo Económico,21030413957.199997,2022
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,24631467327.0,2022
+13,Hidalgo,1,Gobierno,956517700.2999998,2022
+13,Hidalgo,2,Desarrollo Social,64789557438.8,2022
+13,Hidalgo,3,Desarrollo Económico,42934986527.8,2022
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,20918905442.0,2022
+14,Jalisco,1,Gobierno,4689710369.099999,2022
+14,Jalisco,2,Desarrollo Social,156588274919.2,2022
+14,Jalisco,3,Desarrollo Económico,10540300650.5,2022
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,70592166070.0,2022
+15,Estado de México,1,Gobierno,7942880955.000002,2022
+15,Estado de México,2,Desarrollo Social,251763533670.09998,2022
+15,Estado de México,3,Desarrollo Económico,10714482321.699997,2022
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,141501308468.0,2022
+16,Michoacán de Ocampo,1,Gobierno,1696070411.6000004,2022
+16,Michoacán de Ocampo,2,Desarrollo Social,85721883644.2,2022
+16,Michoacán de Ocampo,3,Desarrollo Económico,6273397207.900001,2022
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,35086709639.0,2022
+17,Morelos,1,Gobierno,740776399.9,2022
+17,Morelos,2,Desarrollo Social,45985242901.99999,2022
+17,Morelos,3,Desarrollo Económico,9572889246.800001,2022
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,14181989441.0,2022
+18,Nayarit,1,Gobierno,2101520973.8999999,2022
+18,Nayarit,2,Desarrollo Social,31738839418.000004,2022
+18,Nayarit,3,Desarrollo Económico,9030077435.0,2022
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,10238835551.0,2022
+19,Nuevo León,1,Gobierno,3254560212.2000003,2022
+19,Nuevo León,2,Desarrollo Social,140557140178.6,2022
+19,Nuevo León,3,Desarrollo Económico,28668407003.999996,2022
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,54684902288.0,2022
+20,Oaxaca,1,Gobierno,5034257799.299999,2022
+20,Oaxaca,2,Desarrollo Social,86556245018.20001,2022
+20,Oaxaca,3,Desarrollo Económico,27900846995.100002,2022
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,31529215387.0,2022
+21,Puebla,1,Gobierno,1591129937.9999998,2022
+21,Puebla,2,Desarrollo Social,105624200655.59998,2022
+21,Puebla,3,Desarrollo Económico,11847344045.9,2022
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,46082621181.0,2022
+22,Querétaro,1,Gobierno,717676277.2999998,2022
+22,Querétaro,2,Desarrollo Social,47330675257.200005,2022
+22,Querétaro,3,Desarrollo Económico,7541607203.800001,2022
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,20024191683.0,2022
+23,Quintana Roo,1,Gobierno,2085410382.6000001,2022
+23,Quintana Roo,2,Desarrollo Social,33509227883.199997,2022
+23,Quintana Roo,3,Desarrollo Económico,77386553281.40001,2022
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,14203255340.0,2022
+24,San Luis Potosí,1,Gobierno,930501835.4000001,2022
+24,San Luis Potosí,2,Desarrollo Social,58704764219.09999,2022
+24,San Luis Potosí,3,Desarrollo Económico,22786228074.4,2022
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,22111925893.0,2022
+25,Sinaloa,1,Gobierno,3940356802.4999995,2022
+25,Sinaloa,2,Desarrollo Social,74998353285.49998,2022
+25,Sinaloa,3,Desarrollo Económico,20487407381.500004,2022
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,25595581252.0,2022
+26,Sonora,1,Gobierno,2883906228.100001,2022
+26,Sonora,2,Desarrollo Social,69459089465.7,2022
+26,Sonora,3,Desarrollo Económico,25663976357.0,2022
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,28760069863.0,2022
+27,Tabasco,1,Gobierno,2035119410.0999997,2022
+27,Tabasco,2,Desarrollo Social,43328003661.7,2022
+27,Tabasco,3,Desarrollo Económico,193624956383.0,2022
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,28151841016.0,2022
+28,Tamaulipas,1,Gobierno,3198587065.9,2022
+28,Tamaulipas,2,Desarrollo Social,80967120805.30002,2022
+28,Tamaulipas,3,Desarrollo Económico,66426321841.2,2022
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,31988553801.0,2022
+29,Tlaxcala,1,Gobierno,620235700.8000001,2022
+29,Tlaxcala,2,Desarrollo Social,25828546622.299995,2022
+29,Tlaxcala,3,Desarrollo Económico,1361549391.8000002,2022
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,9660569149.0,2022
+30,Veracruz de Ignacio de la Llave,1,Gobierno,8604669524.8,2022
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,153685694506.69995,2022
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,100898921324.4,2022
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,60598710134.0,2022
+31,Yucatán,1,Gobierno,2576824994.2,2022
+31,Yucatán,2,Desarrollo Social,53682847331.7,2022
+31,Yucatán,3,Desarrollo Económico,52523879215.0,2022
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,18991924373.0,2022
+32,Zacatecas,1,Gobierno,680008464.4999999,2022
+32,Zacatecas,2,Desarrollo Social,36294853781.69999,2022
+32,Zacatecas,3,Desarrollo Económico,1476960609.3999996,2022
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,14696413446.0,2022
+34,No distribuible geográficamente,1,Gobierno,0.0,2022
+34,No distribuible geográficamente,2,Desarrollo Social,7214272708.4,2022
+34,No distribuible geográficamente,3,Desarrollo Económico,32833778767.0,2022
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,713588775557.7001,2022
+35,En el extranjero,1,Gobierno,11107308293.400005,2022
+35,En el extranjero,3,Desarrollo Económico,908939907.3000001,2022
+1,Aguascalientes,1,Gobierno,4037004536.4099994,2023
+1,Aguascalientes,2,Desarrollo Social,37347234403.929985,2023
+1,Aguascalientes,3,Desarrollo Económico,1262624857.6200001,2023
+1,Aguascalientes,4,Otras no Clasificadas en Funciones Anteriores,12118406724.0,2023
+2,Baja California,1,Gobierno,4404082627.490001,2023
+2,Baja California,2,Desarrollo Social,84677375058.81,2023
+2,Baja California,3,Desarrollo Económico,28785746396.100002,2023
+2,Baja California,4,Otras no Clasificadas en Funciones Anteriores,36122000943.0,2023
+3,Baja California Sur,1,Gobierno,1747242695.28,2023
+3,Baja California Sur,2,Desarrollo Social,28233152568.000004,2023
+3,Baja California Sur,3,Desarrollo Económico,18791517181.46,2023
+3,Baja California Sur,4,Otras no Clasificadas en Funciones Anteriores,9460194986.0,2023
+4,Campeche,1,Gobierno,1628047434.4799998,2023
+4,Campeche,2,Desarrollo Social,26904008617.2,2023
+4,Campeche,3,Desarrollo Económico,126670632011.23,2023
+4,Campeche,4,Otras no Clasificadas en Funciones Anteriores,10875020008.0,2023
+5,Coahuila de Zaragoza,1,Gobierno,3075787803.5499988,2023
+5,Coahuila de Zaragoza,2,Desarrollo Social,90337820171.45999,2023
+5,Coahuila de Zaragoza,3,Desarrollo Económico,16343546938.279999,2023
+5,Coahuila de Zaragoza,4,Otras no Clasificadas en Funciones Anteriores,27023808001.0,2023
+6,Colima,1,Gobierno,2103245420.5999994,2023
+6,Colima,2,Desarrollo Social,26466246802.199993,2023
+6,Colima,3,Desarrollo Económico,9251751401.5,2023
+6,Colima,4,Otras no Clasificadas en Funciones Anteriores,7136914910.0,2023
+7,Chiapas,1,Gobierno,5770014955.68,2023
+7,Chiapas,2,Desarrollo Social,112954294347.23001,2023
+7,Chiapas,3,Desarrollo Económico,30379099044.300003,2023
+7,Chiapas,4,Otras no Clasificadas en Funciones Anteriores,44450050690.0,2023
+8,Chihuahua,1,Gobierno,1236600593.7100003,2023
+8,Chihuahua,2,Desarrollo Social,93918104985.1,2023
+8,Chihuahua,3,Desarrollo Económico,20719623342.21,2023
+8,Chihuahua,4,Otras no Clasificadas en Funciones Anteriores,35977130926.0,2023
+9,Ciudad de México,1,Gobierno,407836406262.5902,2023
+9,Ciudad de México,2,Desarrollo Social,2337684456541.7397,2023
+9,Ciudad de México,3,Desarrollo Económico,751708743766.73,2023
+9,Ciudad de México,4,Otras no Clasificadas en Funciones Anteriores,112654505288.0,2023
+10,Durango,1,Gobierno,861498094.2500001,2023
+10,Durango,2,Desarrollo Social,52333832437.270004,2023
+10,Durango,3,Desarrollo Económico,11746950741.61,2023
+10,Durango,4,Otras no Clasificadas en Funciones Anteriores,16636483835.0,2023
+11,Guanajuato,1,Gobierno,3126254024.589999,2023
+11,Guanajuato,2,Desarrollo Social,106650803360.38998,2023
+11,Guanajuato,3,Desarrollo Económico,21246859216.86,2023
+11,Guanajuato,4,Otras no Clasificadas en Funciones Anteriores,51753303661.0,2023
+12,Guerrero,1,Gobierno,3993195810.0099993,2023
+12,Guerrero,2,Desarrollo Social,90881667701.2,2023
+12,Guerrero,3,Desarrollo Económico,28304338272.030003,2023
+12,Guerrero,4,Otras no Clasificadas en Funciones Anteriores,25635486168.0,2023
+13,Hidalgo,1,Gobierno,844169889.5900002,2023
+13,Hidalgo,2,Desarrollo Social,73517043059.27998,2023
+13,Hidalgo,3,Desarrollo Económico,38004016829.439995,2023
+13,Hidalgo,4,Otras no Clasificadas en Funciones Anteriores,23110268999.0,2023
+14,Jalisco,1,Gobierno,5432573785.96,2023
+14,Jalisco,2,Desarrollo Social,175620220137.88007,2023
+14,Jalisco,3,Desarrollo Económico,11806022681.83,2023
+14,Jalisco,4,Otras no Clasificadas en Funciones Anteriores,76834701788.0,2023
+15,Estado de México,1,Gobierno,10842216926.230003,2023
+15,Estado de México,2,Desarrollo Social,282927138129.48,2023
+15,Estado de México,3,Desarrollo Económico,12559963134.529999,2023
+15,Estado de México,4,Otras no Clasificadas en Funciones Anteriores,150707116613.0,2023
+16,Michoacán de Ocampo,1,Gobierno,1711849238.3899994,2023
+16,Michoacán de Ocampo,2,Desarrollo Social,95327997332.82999,2023
+16,Michoacán de Ocampo,3,Desarrollo Económico,6473090419.510001,2023
+16,Michoacán de Ocampo,4,Otras no Clasificadas en Funciones Anteriores,37417873476.0,2023
+17,Morelos,1,Gobierno,793463965.0899999,2023
+17,Morelos,2,Desarrollo Social,51163735263.229996,2023
+17,Morelos,3,Desarrollo Económico,7854433927.099999,2023
+17,Morelos,4,Otras no Clasificadas en Funciones Anteriores,15157901854.0,2023
+18,Nayarit,1,Gobierno,2950042592.4,2023
+18,Nayarit,2,Desarrollo Social,36351184405.42001,2023
+18,Nayarit,3,Desarrollo Económico,6949158781.919999,2023
+18,Nayarit,4,Otras no Clasificadas en Funciones Anteriores,11641047763.0,2023
+19,Nuevo León,1,Gobierno,3425149538.94,2023
+19,Nuevo León,2,Desarrollo Social,161479869118.78,2023
+19,Nuevo León,3,Desarrollo Económico,22757278377.68,2023
+19,Nuevo León,4,Otras no Clasificadas en Funciones Anteriores,62148951797.0,2023
+20,Oaxaca,1,Gobierno,5059265842.349999,2023
+20,Oaxaca,2,Desarrollo Social,99509320662.65,2023
+20,Oaxaca,3,Desarrollo Económico,29540900443.449997,2023
+20,Oaxaca,4,Otras no Clasificadas en Funciones Anteriores,30779842932.0,2023
+21,Puebla,1,Gobierno,1435469746.1200004,2023
+21,Puebla,2,Desarrollo Social,116492122508.71002,2023
+21,Puebla,3,Desarrollo Económico,11821597130.89,2023
+21,Puebla,4,Otras no Clasificadas en Funciones Anteriores,52334580032.0,2023
+22,Querétaro,1,Gobierno,801747089.9200001,2023
+22,Querétaro,2,Desarrollo Social,53292155420.299995,2023
+22,Querétaro,3,Desarrollo Económico,6083723428.959999,2023
+22,Querétaro,4,Otras no Clasificadas en Funciones Anteriores,23614679743.0,2023
+23,Quintana Roo,1,Gobierno,4006042044.03,2023
+23,Quintana Roo,2,Desarrollo Social,38336083753.19,2023
+23,Quintana Roo,3,Desarrollo Económico,52862612697.11,2023
+23,Quintana Roo,4,Otras no Clasificadas en Funciones Anteriores,18403026962.0,2023
+24,San Luis Potosí,1,Gobierno,916093961.1300001,2023
+24,San Luis Potosí,2,Desarrollo Social,66263757001.64001,2023
+24,San Luis Potosí,3,Desarrollo Económico,21892501292.16,2023
+24,San Luis Potosí,4,Otras no Clasificadas en Funciones Anteriores,22719315844.0,2023
+25,Sinaloa,1,Gobierno,4015179987.5200005,2023
+25,Sinaloa,2,Desarrollo Social,84712234925.33,2023
+25,Sinaloa,3,Desarrollo Económico,23163679019.200005,2023
+25,Sinaloa,4,Otras no Clasificadas en Funciones Anteriores,28117841998.0,2023
+26,Sonora,1,Gobierno,2871792047.189999,2023
+26,Sonora,2,Desarrollo Social,77593904128.20998,2023
+26,Sonora,3,Desarrollo Económico,21152085883.11,2023
+26,Sonora,4,Otras no Clasificadas en Funciones Anteriores,29566161001.0,2023
+27,Tabasco,1,Gobierno,2310026085.58,2023
+27,Tabasco,2,Desarrollo Social,48997397552.71999,2023
+27,Tabasco,3,Desarrollo Económico,221684360024.61002,2023
+27,Tabasco,4,Otras no Clasificadas en Funciones Anteriores,30583587293.0,2023
+28,Tamaulipas,1,Gobierno,3535815263.8199997,2023
+28,Tamaulipas,2,Desarrollo Social,89487640623.07999,2023
+28,Tamaulipas,3,Desarrollo Económico,59885423615.450005,2023
+28,Tamaulipas,4,Otras no Clasificadas en Funciones Anteriores,34097795129.0,2023
+29,Tlaxcala,1,Gobierno,627880536.7300001,2023
+29,Tlaxcala,2,Desarrollo Social,29046449110.789997,2023
+29,Tlaxcala,3,Desarrollo Económico,905317707.4000001,2023
+29,Tlaxcala,4,Otras no Clasificadas en Funciones Anteriores,11230359663.0,2023
+30,Veracruz de Ignacio de la Llave,1,Gobierno,9077419701.77,2023
+30,Veracruz de Ignacio de la Llave,2,Desarrollo Social,170230378327.94,2023
+30,Veracruz de Ignacio de la Llave,3,Desarrollo Económico,102844752096.44998,2023
+30,Veracruz de Ignacio de la Llave,4,Otras no Clasificadas en Funciones Anteriores,66213182168.0,2023
+31,Yucatán,1,Gobierno,2594785497.7,2023
+31,Yucatán,2,Desarrollo Social,59238716957.67,2023
+31,Yucatán,3,Desarrollo Económico,44100660523.35001,2023
+31,Yucatán,4,Otras no Clasificadas en Funciones Anteriores,20789355555.0,2023
+32,Zacatecas,1,Gobierno,663988663.46,2023
+32,Zacatecas,2,Desarrollo Social,39248030800.93001,2023
+32,Zacatecas,3,Desarrollo Económico,1856337104.2999997,2023
+32,Zacatecas,4,Otras no Clasificadas en Funciones Anteriores,13603849970.0,2023
+34,No distribuible geográficamente,1,Gobierno,0.0,2023
+34,No distribuible geográficamente,2,Desarrollo Social,5461558558.99,2023
+34,No distribuible geográficamente,3,Desarrollo Económico,48875630074.28,2023
+34,No distribuible geográficamente,4,Otras no Clasificadas en Funciones Anteriores,940651343936.2799,2023
+35,En el extranjero,1,Gobierno,11096841569.340004,2023
+35,En el extranjero,3,Desarrollo Económico,739396240.1,2023
