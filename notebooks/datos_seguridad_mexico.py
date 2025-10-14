@@ -16,9 +16,10 @@ Uso:
 """
 
 import os
-import requests
-import pandas as pd
+
 from dotenv import load_dotenv
+import pandas as pd
+import requests
 
 # Cargar variables de entorno
 load_dotenv()
