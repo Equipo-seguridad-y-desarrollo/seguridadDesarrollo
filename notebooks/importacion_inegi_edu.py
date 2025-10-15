@@ -82,7 +82,7 @@ def generar_registro_datos(fuentes, directorio_salida = r"..\references"):
         directorio_salida (str): El nombre de la carpeta donde se guardará el archivo.
     """
     os.makedirs(directorio_salida, exist_ok=True)
-    ruta_completa = os.path.join(directorio_salida, "registro_fuentes.txt")
+    ruta_completa = os.path.join(directorio_salida, "registro_fuentes_educacionysalud.txt")
     fecha_acceso = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     try:
