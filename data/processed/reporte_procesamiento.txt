@@ -2,7 +2,7 @@
 REPORTE DE PROCESAMIENTO DE DATOS DE SEGURIDAD
 ================================================================================
 
-Fecha de procesamiento: 2025-10-14 23:10:29
+Fecha de procesamiento: 2025-10-15 10:36:29
 
 
 ================================================================================
@@ -14,7 +14,7 @@ Período: 2011 - 2025
 Entidades: 33
 
 Columnas generadas:
-  - anio: int64
+  - año: int32
   - valor: float64
   - entidad: object
   - cve_entidad: object
