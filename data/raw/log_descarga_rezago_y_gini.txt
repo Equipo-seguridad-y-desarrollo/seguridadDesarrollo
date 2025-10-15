@@ -1,0 +1,15 @@
+
+LOG DE DESCARGA DE DATOS DEL PROYECTO
+=====================================
+Fecha de descarga: 2025-10-15 14:04:24
+
+Este archivo documenta las fuentes de datos utilizadas en el proyecto.
+---
+### FUENTE 1: Coeficiente de GINI por Entidad Federativa
+- Fuente Original: API de DataMexico (Secretaría de Economía).
+- Archivo Generado: data/raw/gini_estados_mexico_raw.csv
+---
+### FUENTE 2: Rezago Educativo por Entidad Federativa, contiene el estimado de población con rezago educativo mayor de 15 años.
+- Fuente Original: Instituto Nacional para la Educación de los Adultos (INEA).
+- Archivos Generados: Múltiples archivos de Excel (ej. `est_rez_2024_actualizado.xlsx`) en data/raw/.
+- contiene los datos de https://www.gob.mx/inea/documentos/rezago-educativo
