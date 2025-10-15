@@ -1,0 +1,9 @@
+Convenciones sugeridas
+
+- **Fechas**: usar `YYYY-MM-DD` y columna `fecha`/`periodo` como índice temporal si procede.
+- **Moneda**: documentar si las cifras están en **MXN** o **USD**, y si son **constantes (deflactadas)** o **corrientes**; indicar base/año.
+- **Unidades**: especificar si las magnitudes están en **miles** o **millones**.
+- **Frecuencia**: dejar claro si la serie es **mensual**, **trimestral** o **anual** y cómo se manejan las conversiones.
+- **Cobertura geográfica**: país/estado/municipio; incluir catálogos oficiales de claves si aplica (p. ej., INEGI).
+- **Imputación**: documentar reglas para valores faltantes, outliers y ajustes estacionales.
+- **Versionado**: mantener `data/raw`, `data/processed` y scripts reproducibles (`notebooks/`, `src/`).
