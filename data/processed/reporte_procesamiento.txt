@@ -1,0 +1,52 @@
+================================================================================
+REPORTE DE PROCESAMIENTO DE DATOS DE SEGURIDAD
+================================================================================
+
+Fecha de procesamiento: 2025-10-14 23:10:29
+
+
+================================================================================
+DATASET 1: Percepción de Inseguridad
+================================================================================
+
+Total de registros: 495
+Período: 2011 - 2025
+Entidades: 33
+
+Columnas generadas:
+  - anio: int64
+  - valor: float64
+  - entidad: object
+  - cve_entidad: object
+  - nivel_percepcion: category
+  - es_nacional: bool
+
+Estadísticas del indicador 'valor':
+  - Media: 72654.36
+  - Mediana: 76394.05
+  - Desv. Std: 14216.82
+  - Mínimo: 23653.43
+  - Máximo: 93503.29
+
+Distribución por nivel de percepción:
+  - Alto: 220 (44.4%)
+  - Medio: 137 (27.7%)
+  - Muy Alto: 97 (19.6%)
+  - Bajo: 41 (8.3%)
+
+================================================================================
+DATASET 2: Incidencia Delictiva
+================================================================================
+
+Total de registros: 401408
+Columnas: 4
+
+Primeras columnas:
+  - anio: int64
+  - entidad: object
+  - clave_ent: int64
+  - incidencia_delictiva: float64
+
+================================================================================
+FIN DEL REPORTE
+================================================================================
