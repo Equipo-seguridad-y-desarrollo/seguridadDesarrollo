@@ -79,7 +79,7 @@ df_edu_wide.columns = ['id_estado','estado', 'fecha', 'derhab', 'pob_bac', 'pob_
 df_edu_wide.head()
 
 #Guardado de dataframe en archivo CSV como raw
-nombre_carpeta = '../.data/raw/'
+nombre_carpeta = '../data/raw/'
 nombre_archivo = 'educacionysalud.csv'
 
 if not os.path.exists(nombre_carpeta):
