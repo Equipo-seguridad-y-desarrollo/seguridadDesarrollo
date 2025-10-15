@@ -1,8 +1,9 @@
 #Importacion de librerias
 import requests
 import pandas as pd
-import pprint
+import datetime
 import os
+import json
 from dotenv import load_dotenv
 
 #Lectura e importacion de datos
@@ -61,7 +62,6 @@ valores = []
 #Obtencion de datos para cada estado
 for estado in id_estado:
     inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
-    #inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/070000{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
     response = requests.get(inegi_url)
     data = response.json()
     for indicador in data['Series']: 
@@ -71,21 +71,111 @@ for estado in id_estado:
             valor = observacion['OBS_VALUE']
             valores.append({"id_estado": id_estado[estado], "estado": estado, "indicador": indicador_actual, "indicador_nombre": id_ind[indicador_actual], "año" : fecha, "valor" : valor})
 
+#Función de creación de archivo de información de descarga
+def generar_registro_datos(fuentes, directorio_salida = r"..\references"):
+    """
+    Genera un archivo de texto con la descripción de las fuentes de datos,
+    adaptado para manejar tanto archivos estáticos como consultas a APIs.
+
+    Args:
+        fuentes (list): Una lista de diccionarios con la info de cada fuente.
+        directorio_salida (str): El nombre de la carpeta donde se guardará el archivo.
+    """
+    os.makedirs(directorio_salida, exist_ok=True)
+    ruta_completa = os.path.join(directorio_salida, "registro_fuentes.txt")
+    fecha_acceso = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+        with open(ruta_completa, "w", encoding="utf-8") as f:
+            f.write("="*50 + "\n")
+            f.write("REGISTRO DE FUENTES DE DATOS\n")
+            f.write("="*50 + "\n\n")
+
+            for i, fuente in enumerate(fuentes, 1):
+                f.write("-"*50 + "\n")
+                f.write(f"--- Fuente de Datos #{i} ---\n")
+                f.write(f"Nombre: {fuente.get('nombre', 'No especificado')}\n")
+                
+                # Revisa si es una API o un archivo y escribe los campos correspondientes
+                if fuente.get('tipo') == 'API':
+                    f.write(f"Tipo: API\n")
+                    f.write(f"Fecha de Query: {fecha_acceso}\n")
+                    f.write(f"Endpoint: {fuente.get('endpoint', 'No especificado')}\n")
+                    
+                    # Formatea los parámetros para que sean legibles
+                    params = fuente.get('parametros', {})
+                    if params:
+                        f.write("Parámetros de Query:\n")
+                        f.write(json.dumps(params, indent=4))
+                        f.write("\n")
+                        
+                    f.write(f"URL Documentación: {fuente.get('url_documentacion', 'No especificada')}\n")
+                else: # Asume que es un archivo por defecto
+                    f.write(f"Tipo: Archivo Estático\n")
+                    f.write(f"Fecha de Descarga: {fecha_acceso}\n")
+                    f.write(f"URL de Descarga: {fuente.get('url_descarga', 'No especificada')}\n")
+                    f.write(f"Enlace para más información: {fuente.get('url_info', 'No especificado')}\n")
+                
+                f.write(f"Descripción: {fuente.get('descripcion', 'No especificada')}\n\n")
+
+        print(f"Se ha generado el archivo en la ruta '{ruta_completa}' correctamente.")
+
+    except IOError as e:
+        print(f"Error al escribir en el archivo: {e}")
+
+mis_fuentes = []
+
+for codigo, nombre in id_ind.items():
+    fuente = {
+        "nombre": f"Indicador: {nombre} (Todos los estados)",
+        "tipo": "API",
+        # El endpoint se muestra como una plantilla para indicar que se iteró sobre el estado
+        "endpoint": f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{codigo}/es/{{id_estado}}/false/BISE/2.0/token_inegi",
+        "parametros": {
+            "indicador": codigo,
+            # Se especifica el rango geográfico de la consulta
+            "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+            "reciente": "false",
+            "fuente_datos": "BISE",
+            "version_api": "2.0"
+        },
+        "url_documentacion": "https://www.inegi.org.mx/servicios/api_indicadores.html",
+        "descripcion": f"Consulta a la API de INEGI para obtener la serie de datos sobre '{nombre}' para cada uno de los 32 estados de México."
+    }
+    mis_fuentes.append(fuente)
+
+#Creación de archivo de registro de descarga
+generar_registro_datos(mis_fuentes)
+
+
 #Creacion del dataframe
 df_edu = pd.DataFrame(valores)
-df_edu['valor'] = pd.to_numeric(df_edu['valor'], errors='coerce')
-df_edu_wide = df_edu.pivot_table(index=['id_estado','estado', 'año'], columns = 'indicador_nombre', values = 'valor').reset_index()
-df_edu_wide.columns = ['id_estado','estado', 'fecha', 'derhab', 'pob_bac', 'pob_edbas', 'pob_edsup', 'porc_analf', 'porc_sined', 'promedio_ed']
-df_edu_wide.head()
 
-#Guardado de dataframe en archivo CSV como raw
-nombre_carpeta = '../data/raw/'
-nombre_archivo = 'educacionysalud.csv'
+#Función de guardado de dataframe en archivo CSV como raw
+def descarga_csv(dataframe, nombre_carpeta, nombre_archivo):
+    """
+    Guarda el DataFrame en un archivo CSV en la carpeta destino.
 
-if not os.path.exists(nombre_carpeta):
-    os.makedirs(nombre_carpeta)
-    print("Se creó la carpeta .data/raw/")
+    Args:
+        dataframe (pd.DataFrame): El DataFrame a guardar.
+        nombre_carpeta (str): La ruta de la carpeta donde se guarda el archivo.
+        nombre_archivo (str): El nombre del archivo CSV.
+    """
+    try:
+        if not os.path.exists(nombre_carpeta):
+            os.makedirs(nombre_carpeta)
+            print(f"Se creó la carpeta: '{nombre_carpeta}'")
 
-ruta_guardado = os.path.join(nombre_carpeta, nombre_archivo)
-df_edu_wide.to_csv(ruta_guardado, index=False, encoding='utf-8')
-print("Archivo con dataframe de educacion y salud creado")
+        ruta_completa = os.path.join(nombre_carpeta, nombre_archivo)
+        dataframe.to_csv(ruta_completa, index=False, encoding='utf-8')
+        
+        print(f"Archivo con dataframe de educacion y salud creado en: '{ruta_completa}'")
+
+    except Exception as e:
+        print(f"Ocurrió un error al guardar el archivo: {e}")
+
+#Creación de archivo de datos CSV
+carpeta_destino = '../data/raw/'
+archivo_destino = 'educacionysalud_raw.csv'
+
+descarga_csv(df_edu, carpeta_destino, archivo_destino)

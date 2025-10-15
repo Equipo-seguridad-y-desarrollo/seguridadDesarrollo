@@ -9,9 +9,9 @@
 
 | Variable | Tipo | No. no nulos | No. nulos | Ejemplos | Rango numérico | Valores posibles | Descripción (inferida) | Unidades (inferidas) |
 |---|---:|---:|---:|---|---|---|---|---|
-| `id_estado` | object | 479 | 0 | 01, 02, 03, 04, 05 | [01, 32] |  | Identificador de entidad/estado |  |
-| `estado` | object | 479 | 0 | Aguascalientes, Baja California, Baja California Sur, Campeche, Coahuila |  |  | Identificador de entidad/estado |  |
-| `fecha` | object | 479 | 0 | 2000, 2005, 2010, 2015, 2020 | [1990, 2020] |  | Año de medición |  |
+| `id_estado` | category | 479 | 0 | 01, 02, 03, 04, 05 | [01, 32] |  | Identificador de entidad/estado |  |
+| `estado` | category | 479 | 0 | Aguascalientes, Baja California, Baja California Sur, Campeche, Coahuila |  |  | Identificador de entidad/estado |  |
+| `fecha` | int64 | 479 | 0 | 2000, 2005, 2010, 2015, 2020 | [1990, 2020] |  | Año de medición |  |
 | `der_hab` | float64 | 128 | 351 | 523201.0, 758160.0, 930149.0 | [2.476260e+05, 1.126768e+07] |  | Número de derechohabientes registrados en todos los servicios de salud |  |
 | `pob_bac` | float64 | 96 | 383 | 27312.0, 54559.0, 101806.0 | [1.733900e+04, 1.565560e+06] |  | Población con estudios de bachillerato|  |
 | `pob_edbas` | float64 | 64 | 415 | 381110.0, 466984.0 | [1.663590e+05, 	5.971664e+06] |  | Población con educación básica|  |

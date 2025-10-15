@@ -1,0 +1,123 @@
+==================================================
+REGISTRO DE FUENTES DE DATOS
+==================================================
+
+--------------------------------------------------
+--- Fuente de Datos #1 ---
+Nombre: Indicador: Porcentaje analfabetismo (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/3108001001/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "3108001001",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Porcentaje analfabetismo' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #2 ---
+Nombre: Indicador: Promedio escolaridad (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/1005000038/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "1005000038",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Promedio escolaridad' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #3 ---
+Nombre: Indicador: Poblacion con educacion basica (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205239/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "6200205239",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Poblacion con educacion basica' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #4 ---
+Nombre: Indicador: Poblacion con bachillerato (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205241/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "6200205241",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Poblacion con bachillerato' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #5 ---
+Nombre: Indicador: Poblacion con estudios superiores (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205242/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "6200205242",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Poblacion con estudios superiores' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #6 ---
+Nombre: Indicador: Porcentaje sin escolaridad (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6207019020/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "6207019020",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Porcentaje sin escolaridad' para cada uno de los 32 estados de México.
+
+--------------------------------------------------
+--- Fuente de Datos #7 ---
+Nombre: Indicador: Derechohabientes (Todos los estados)
+Tipo: API
+Fecha de Query: 2025-10-15 11:25:16
+Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/1004000001/es/{id_estado}/false/BISE/2.0/token_inegi
+Parámetros de Query:
+{
+    "indicador": "1004000001",
+    "area_geografica": "Claves '01' a '32' (Todos los estados de la Republica Mexicana)",
+    "reciente": "false",
+    "fuente_datos": "BISE",
+    "version_api": "2.0"
+}
+URL Documentación: https://www.inegi.org.mx/servicios/api_indicadores.html
+Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'Derechohabientes' para cada uno de los 32 estados de México.
+
