@@ -10,6 +10,9 @@ Original file is located at
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+import logging
+from datetime import datetime
+from pathlib import Path
 
 estados_ids = {
     1: 'Aguascalientes', 2: 'Baja California', 3: 'Baja California Sur',
@@ -251,3 +254,123 @@ if lista_df_remesas:
 
 else:
     print("\nNo se pudieron obtener datos para generar el reporte.")
+
+# Configurar logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+DATA_RAW_DIR = Path('data/raw')
+
+def generar_log_descarga_variables_economicas():
+    """Genera un archivo de texto con la descripción de las fuentes de datos económicas."""
+
+    contenido_log = f"""
+LOG DE DESCARGA DE DATOS ECONÓMICOS DEL PROYECTO
+=================================================
+Fecha de descarga: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Este archivo documenta las fuentes de datos utilizadas en el proyecto,
+la fecha de su descarga y una breve descripción de su naturaleza.
+---
+
+### FUENTE 1: Inversión Extranjera Directa (IED) por Estado
+- **Fuente Original**: API de DataMexico (Secretaría de Economía).
+- **Descripción**: Datos trimestrales de inversión extranjera directa por entidad federativa. La IED es un indicador crucial del atractivo económico de cada estado y su capacidad para atraer capital internacional.
+- **Parámetros de Consulta**:
+  - Endpoint: /datamexico/api/data
+  - Cube: fdi_2_state_investment
+  - Drilldowns: Quarter, State
+  - Medida: Investment
+- **Enlace de la Fuente**: https://www.economia.gob.mx/datamexico/
+- **Rango de Datos**: Todos los estados (ID: 1-32)
+- **Archivo Generado**: data/raw/ied_raw.csv
+---
+
+### FUENTE 2: Salario Mensual por Estado
+- **Fuente Original**: API de DataMexico - INEGI ENOE (Encuesta Nacional de Ocupación y Empleo).
+- **Descripción**: Datos trimestrales del salario mensual promedio y tamaño de la fuerza laboral por entidad federativa. Proporciona información sobre el nivel de ingresos y la población económicamente activa en cada estado.
+- **Parámetros de Consulta**:
+  - Endpoint: /datamexico/api/data
+  - Cube: inegi_enoe
+  - Drilldowns: State, Quarter
+  - Medidas: Monthly Wage, Workforce
+  - Filtro: Population Classification = 1
+- **Enlace de la Fuente**: https://www.economia.gob.mx/datamexico/
+- **Rango de Datos**: Todos los estados (ID: 1-32)
+- **Archivo Generado**: data/raw/salario_raw.csv
+---
+
+### FUENTE 3: Población Económicamente Activa (PEA) por Estado
+- **Fuente Original**: API de DataMexico - INEGI ENOE.
+- **Descripción**: Datos trimestrales de la población económicamente activa (PEA) por estado. La PEA es el total de personas que están trabajando o buscando trabajo, siendo un indicador clave del mercado laboral.
+- **Parámetros de Consulta**:
+  - Endpoint: /datamexico/api/data
+  - Cube: inegi_enoe
+  - Drilldowns: State, Quarter
+  - Medida: Workforce
+  - Filtro: Economically Active Population = 1
+- **Enlace de la Fuente**: https://www.economia.gob.mx/datamexico/
+- **Rango de Datos**: Todos los estados (ID: 1-32)
+- **Archivo Generado**: data/raw/pea_raw.csv
+---
+
+### FUENTE 4: Gasto Público Ejecutado por Estado
+- **Fuente Original**: API de DataMexico - Presupuestos de Egresos (Transparencia Presupuestaria).
+- **Descripción**: Datos anuales del gasto público ejecutado por entidad federativa, desglosado por grupo funcional. Refleja la inversión y gasto del gobierno en cada estado.
+- **Parámetros de Consulta**:
+  - Endpoint: /datamexico/api/data
+  - Cube: budget_transparency
+  - Drilldowns: State, Functional Group
+  - Medida: Amount Executed
+  - Rango de Años: 2013-2023
+- **Enlace de la Fuente**: https://www.economia.gob.mx/datamexico/
+- **Rango de Datos**: Todos los estados (ID: 1-32), años 2013 a 2023
+- **Archivo Generado**: data/raw/gasto_raw.csv
+---
+
+### FUENTE 5: Remesas por Estado
+- **Fuente Original**: API de DataMexico - Banco de México (Banxico).
+- **Descripción**: Datos trimestrales de remesas (transferencias de dinero) que llegan a cada entidad federativa desde el extranjero. Las remesas son una fuente importante de ingreso para muchas regiones de México.
+- **Parámetros de Consulta**:
+  - Endpoint: /datamexico/api/data.jsonrecords
+  - Cube: banxico_mun_income_remittances
+  - Drilldowns: State, Quarter
+  - Medida: Remittance Amount
+- **Enlace de la Fuente**: https://www.economia.gob.mx/datamexico/
+- **Rango de Datos**: Todos los estados (ID: 1-32)
+- **Archivo Generado**: data/raw/remesas_raw.csv
+---
+
+### NOTAS GENERALES:
+- **Plataforma de Datos**: Todos los datos provienen de la plataforma DataMexico de la Secretaría de Economía del Gobierno de México.
+- **Formato de Respuesta**: JSON convertido a DataFrames de pandas
+- **Codificación**: UTF-8
+- **Manejo de Errores**: Se registran advertencias y errores por estado en caso de que la API no retorne datos o falle la conexión.
+- **Localización**: Todos los datos fueron consultados con locale='es' (español).
+
+---
+Generado automáticamente por: importacion_variables_economicas.py
+"""
+
+    ruta_log = DATA_RAW_DIR / "log_descarga.txt"
+
+    try:
+        # Crear directorio si no existe
+        DATA_RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+        # Escribir el archivo de log
+        with open(ruta_log, "w", encoding="utf-8") as f:
+            f.write(contenido_log)
+
+        logging.info(f"✓ Archivo de log de descargas generado exitosamente en: {ruta_log}")
+        return True
+
+    except Exception as e:
+        logging.error(f"✗ No se pudo crear el archivo de log: {e}")
+        return False
+
+
+# Ejecutar la función
+if __name__ == "__main__":
+    generar_log_descarga_variables_economicas()
