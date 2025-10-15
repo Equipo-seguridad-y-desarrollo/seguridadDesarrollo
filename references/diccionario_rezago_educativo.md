@@ -2,6 +2,13 @@
 
 Este archivo describe las variables del conjunto de datos sobre el rezago educativo en las entidades federativas de México. Los datos provienen de estimaciones del INEA (Instituto Nacional para la Educación de los Adultos). Los datos se pueden encontrar en la carpeta rezago_educativo_consolidado,csv
 
+##  estimacion de rezago educativo en mayores de 15 años del 2019 - 2024
+
+- **Archivo fuente**: `rezago_educativo.csv`
+- **Filas x columnas**: 204 filas × 19 columnas
+- **Posibles columnas temporales**: Año
+- **Posibles variables categóricas**: Entidad federativa
+
 | Columna | Nombre de la Variable | Descripción | Tipo de Dato |
 |---|---|---|---|
 | 0 | `entidad_federativa` | Nombre de la entidad federativa. | Texto |
@@ -14,7 +21,7 @@ Este archivo describe las variables del conjunto de datos sobre el rezago educat
 | 7 | `Lugar.2` | Posición (ranking) de la entidad a nivel nacional en número de personas sin primaria terminada. | Flotante |
 | 8 | `%.1` | Porcentaje de la población que no completó la educación primaria. | Flotante |
 | 9 | `Lugar.3` | Posición (ranking) de la entidad a nivel nacional por porcentaje de personas sin primaria terminada. | Flotante |
-| 10 | `Sin secundaria terminada`| Cifra absoluta de personas que no completaron la educación secundaria. | Flotante |
+| 10 | `Sin secundaria terminada`| Cifr absoluta de personas que no completaron la educación secundaria. | Flotante |
 | 11 | `Lugar.4` | Posición (ranking) de la entidad a nivel nacional en número de personas sin secundaria terminada. | Flotante |
 | 12 | `%.2` | Porcentaje de la población que no completó la educación secundaria. | Flotante |
 | 13 | `Lugar.5` | Posición (ranking) de la entidad a nivel nacional por porcentaje de personas sin secundaria terminada. | Flotante |

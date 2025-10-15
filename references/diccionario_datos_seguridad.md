@@ -151,3 +151,181 @@ Este dataset contiene los registros oficiales de hechos delictivos ocurridos en 
 - **Correlación**: Relacionar percepción con incidencia real
 - **Visualización**: Series de tiempo, mapas coropléticos, gráficos de barras
 - **Modelado**: Variables independientes para modelos predictivos de seguridad pública
+
+---
+
+## DATASETS PROCESADOS
+
+## Dataset 3: Percepción de Inseguridad - Procesado
+
+### Información General
+- **Nombre del archivo**: `percepcion_inseguridad_procesado.csv`
+- **Ubicación**: `data/processed/`
+- **Fuente original**: `data/raw/indicador_inseguridad_estados.csv`
+- **Transformaciones aplicadas**: 
+  - Normalización de nombres de columnas
+  - Conversión de tipos de datos
+  - Agregación de columnas calculadas
+  - Validación de calidad
+  - Ordenamiento por entidad y año
+
+### Descripción
+Dataset procesado y limpio listo para análisis, con columnas adicionales calculadas para facilitar el análisis y clasificación de niveles de percepción.
+
+### Variables
+
+| Campo | Nombre | Tipo de dato | Descripción | Valores posibles | Observaciones |
+|-------|--------|--------------|-------------|------------------|---------------|
+| año | Año | Integer | Año de referencia de la medición | 2011-2025 | Valores anuales consecutivos |
+| valor | Valor del indicador | Float | Número de personas de 18+ años que perciben inseguridad por cada 100,000 habitantes | 0.00 - 100,000.00 | Validado en rango [0, 100000] |
+| entidad | Entidad federativa | String | Nombre completo de la entidad federativa o "Nacional" | 33 valores únicos | Incluye nacional y 32 estados |
+| cve_entidad | Clave de entidad | String | Código numérico de identificación con formato de 2 dígitos | "00"-"32" | Formato normalizado con ceros a la izquierda |
+| nivel_percepcion | Nivel de percepción | Category | Clasificación del nivel de percepción de inseguridad | Bajo, Medio, Alto, Muy Alto | Bajo: 0-50k, Medio: 50k-70k, Alto: 70k-85k, Muy Alto: 85k-100k |
+| es_nacional | Es nacional | Boolean | Indica si el registro corresponde al nivel nacional | True, False | True cuando entidad="Nacional" |
+
+### Reglas de Clasificación
+
+**Nivel de Percepción (nivel_percepcion):**
+- **Bajo**: 0 - 50,000 personas por cada 100,000
+- **Medio**: 50,001 - 70,000 personas por cada 100,000
+- **Alto**: 70,001 - 85,000 personas por cada 100,000
+- **Muy Alto**: 85,001 - 100,000 personas por cada 100,000
+
+### Validaciones de Calidad Aplicadas
+
+1. **Valores nulos**: Verificación en columnas críticas (año, valor, entidad, cve_entidad)
+2. **Tipos de datos**: Validación de tipos correctos para cada columna
+3. **Rango de valores**: Verificación que 'valor' esté entre 0 y 100,000
+4. **Duplicados**: Detección de registros duplicados por (año, cve_entidad)
+5. **Completitud temporal**: Verificación de datos para todos los años esperados (2011-2025) por entidad
+
+---
+
+## Dataset 4: Percepción de Inseguridad por Estados (sin nacional)
+
+### Información General
+- **Nombre del archivo**: `percepcion_inseguridad_estados.csv`
+- **Ubicación**: `data/processed/`
+- **Descripción**: Versión del dataset procesado que excluye el registro nacional, contiene únicamente los 32 estados
+- **Uso recomendado**: Análisis comparativos entre estados, mapas coropléticos, análisis regionales
+
+### Variables
+Mismas variables que `percepcion_inseguridad_procesado.csv`, excepto que:
+- No incluye registros donde `entidad = "Nacional"`
+- El campo `es_nacional` siempre es `False`
+- Total de registros: 32 estados × ~15 años = ~480 registros
+
+---
+
+## Dataset 5: Incidencia Delictiva - Completa (Intermedio)
+
+### Información General
+- **Nombre del archivo**: `incidencia_delictiva_completa.csv`
+- **Ubicación**: `data/interim/`
+- **Fuente original**: `data/raw/incidencia_delictiva_estatal_2015_2025.csv`
+- **Estado**: Intermedio - Columnas normalizadas pero sin agregaciones mayores
+- **Transformaciones aplicadas**:
+  - Normalización de nombres de columnas (minúsculas, guiones bajos)
+  - Codificación UTF-8 asegurada
+
+### Descripción
+Dataset intermedio que contiene la estructura completa de incidencia delictiva con nombres de columnas normalizados. La estructura exacta depende del archivo fuente del SESNSP, pero típicamente incluye:
+
+### Estructura Esperada (sujeta a variación)
+
+**Columnas de identificación:**
+- Año, mes, entidad federativa
+- Tipo de delito, subtipo de delito
+- Modalidad del delito
+
+**Columnas de conteo:**
+- Total de casos por categoría
+- Desagregaciones por tipo específico de delito
+
+**Nota**: Este dataset se mantiene en formato intermedio debido a su estructura compleja y variable. Para análisis específicos, se recomienda crear scripts de transformación ad-hoc según las necesidades del proyecto.
+
+---
+
+## METADATOS DE PROCESAMIENTO
+
+### Scripts de Procesamiento
+
+1. **datos_seguridad_mexico.py**
+   - **Ubicación**: `notebooks/`
+   - **Función**: Descarga de datos raw desde fuentes originales
+   - **Salidas**: Archivos en `data/raw/` + log de descarga
+   - **Uso**: `python datos_seguridad_mexico.py --token TU_TOKEN_AQUI`
+
+2. **procesar_datos_seguridad.py**
+   - **Ubicación**: `notebooks/`
+   - **Función**: Transformación de datos raw a procesados
+   - **Salidas**: Archivos en `data/processed/` y `data/interim/`
+   - **Uso**: `python procesar_datos_seguridad.py`
+   - **Genera**: Reporte de procesamiento y validaciones
+
+### Notebooks de Exploración
+
+1. **1.0-exploracion_datos_seguridad.ipynb**
+   - Exploración inicial de datos raw
+   - Visualizaciones exploratorias
+   - Análisis de calidad preliminar
+
+2. **2.0-procesamiento_datos_seguridad.ipynb**
+   - Pruebas de transformaciones
+   - Desarrollo de validaciones
+   - Prototipado antes de scripts
+
+### Control de Calidad
+
+**Reglas de calidad implementadas:**
+
+1. **Valores nulos**:
+   - ERROR si >10% de nulos en columnas críticas
+   - ADVERTENCIA si <10% de nulos
+
+2. **Tipos de datos**:
+   - Verificación de tipos numéricos y string
+   - Conversión automática con manejo de errores
+
+3. **Rangos válidos**:
+   - Percepción: [0, 100000]
+   - Años: [2011, 2025] para percepción, [2015, 2025] para delictiva
+
+4. **Duplicados**:
+   - Detección por claves únicas (año + entidad)
+   - Reporte en validación
+
+5. **Completitud temporal**:
+   - Verificación de serie completa por entidad
+   - Identificación de años faltantes
+
+### Archivos Generados en Procesamiento
+
+**data/processed/**
+- `percepcion_inseguridad_procesado.csv` - Dataset completo procesado
+- `percepcion_inseguridad_estados.csv` - Solo estados (sin nacional)
+- `incidencia_delictiva_procesado.csv` - Dataset agregado (si estructura lo permite)
+- `reporte_procesamiento.txt` - Reporte detallado del procesamiento
+
+**data/interim/**
+- `incidencia_delictiva_completa.csv` - Dataset intermedio normalizado
+
+**data/raw/**
+- `log_descarga_seguridad.txt` - Log detallado de descarga con metadata
+
+---
+
+## CHANGELOG
+
+### Versión 2.0 (Octubre 2025)
+- Agregados datasets procesados
+- Implementadas validaciones de calidad
+- Creados scripts de descarga y procesamiento automatizados
+- Agregada columna `nivel_percepcion` calculada
+- Normalización de nombres de columnas
+- Documentación de flujo de procesamiento
+
+### Versión 1.0 (Inicial)
+- Documentación de datasets raw
+- Definición de estructura básica
+- Catálogo de entidades federativas

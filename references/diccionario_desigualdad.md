@@ -1,4 +1,10 @@
-# Diccionario de Datos: Coeficiente de GINI por Estado
+# Diccionario de Datos: Coeficiente de GINI por Estado del 2010 al 2022
+
+
+- **Archivo fuente**: `gini_desigualdad_procesado.csv`
+- **Filas x columnas**: 224 filas x 4 columnas 
+- **Posibles columnas temporales**: Anio
+- **Posibles variables categóricas**: Entidad federativa
 
 Este archivo describe las variables contenidas en el conjunto de datos sobre el coeficiente de GINI en los estados de México se puede encontrar en la carpeta gini_estados_mexico.csv
 
