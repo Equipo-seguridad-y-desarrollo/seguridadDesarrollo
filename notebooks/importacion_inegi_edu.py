@@ -62,14 +62,56 @@ valores = []
 #Obtencion de datos para cada estado
 for estado in id_estado:
     inegi_url = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicadores}/es/{id_estado[estado]}/false/BISE/2.0/{token_inegi}?type=json"
+    
+    print(f"Consultando datos para el estado: {estado}...")
     response = requests.get(inegi_url)
-    data = response.json()
-    for indicador in data['Series']: 
-        for observacion in indicador['OBSERVATIONS']:
-            indicador_actual = indicador['INDICADOR']
-            fecha = observacion['TIME_PERIOD']
-            valor = observacion['OBS_VALUE']
-            valores.append({"id_estado": id_estado[estado], "estado": estado, "indicador": indicador_actual, "indicador_nombre": id_ind[indicador_actual], "año" : fecha, "valor" : valor})
+    
+    # ------------------------------------------------------------------
+    # --- PASO 1: Validar que la solicitud a la API fue exitosa ---
+    # ------------------------------------------------------------------
+    if response.status_code != 200:
+        print(f"  -> ADVERTENCIA: La API devolvió un error para '{estado}'. Código de estado: {response.status_code}")
+        print(f"     Respuesta: {response.text[:100]}") # Muestra los primeros 100 caracteres de la respuesta
+        continue  # Salta al siguiente estado
+
+    # ------------------------------------------------------------------
+    # --- PASO 2: Intentar convertir la respuesta a JSON ---
+    # ------------------------------------------------------------------
+    try:
+        data = response.json()
+    except json.JSONDecodeError:
+        print(f"  -> ADVERTENCIA: La respuesta para '{estado}' no es un JSON válido.")
+        continue # Salta al siguiente estado
+
+    # ------------------------------------------------------------------
+    # --- PASO 3: Validar que la estructura de datos es la esperada ---
+    # ------------------------------------------------------------------
+    # Revisa si 'data' es una lista, no está vacía, y el primer elemento es un diccionario con la clave 'Series'
+    if not isinstance(data, list) or not data or 'Series' not in data[0]:
+        print(f"  -> ADVERTENCIA: Los datos para '{estado}' no tienen la estructura esperada (lista con clave 'Series').")
+        continue # Salta al siguiente estado
+
+    # ------------------------------------------------------------------
+    # --- Si todas las validaciones pasan, procesamos los datos ---
+    # ------------------------------------------------------------------
+    for indicador in data[0]['Series']:
+        observaciones = indicador.get('OBSERVATIONS', []) # Usar .get() es más seguro
+        for observacion in observaciones:
+            indicador_actual = indicador.get('INDICADOR')
+            fecha = observacion.get('TIME_PERIOD')
+            valor = observacion.get('OBS_VALUE')
+
+            if all([indicador_actual, fecha, valor]): # Asegura que ningún valor sea nulo
+                valores.append({
+                    "id_estado": id_estado[estado], 
+                    "estado": estado, 
+                    "indicador": indicador_actual, 
+                    "indicador_nombre": id_ind.get(indicador_actual, "Desconocido"), 
+                    "año": fecha, 
+                    "valor": valor
+                })
+
+print("\nConsulta de datos a la API finalizada.")
 
 #Función de creación de archivo de información de descarga
 def generar_registro_datos(fuentes, directorio_salida = r"..\references"):

@@ -91,51 +91,18 @@ def descargar_percepcion_inseguridad(token):
     Returns:
         tuple: (DataFrame con datos, diccionario con metadata para log)
     """
-    # ====== (1) Indicador percepción de inseguridad: TODOS LOS ESTADOS y NACIONAL 2011 a 2025 ======
-    # Periodicidad: anual (proviene de ENVIPE, serie anual).
-    # Qué se mide: número de personas de 18 años y más que perciben su entidad federativa como insegura,
-    # estimadas por cada 100 000 habitantes de ese grupo de edad (unidad del indicador).
-    # Ventana temporal: serie disponible desde 2011 (primera ENVIPE) hasta 2025 (edición vigente).
-    # Cobertura geográfica: Nacional y por entidad federativa (desagregación estatal).
-
-    # Cobertura geográfica: Nacional y por entidad federativa (desagregación estatal).
-
-    clave_indicador = "6204327085"  # CNI: percepción de inseguridad por cada 100 000 (18+).
+    clave_indicador = "6204327085"
 
     entidades = {
-        "00": "Nacional",
-        "01": "Aguascalientes",
-        "02": "Baja California",
-        "03": "Baja California Sur",
-        "04": "Campeche",
-        "05": "Coahuila",
-        "06": "Colima",
-        "07": "Chiapas",
-        "08": "Chihuahua",
-        "09": "Ciudad de México",
-        "10": "Durango",
-        "11": "Guanajuato",
-        "12": "Guerrero",
-        "13": "Hidalgo",
-        "14": "Jalisco",
-        "15": "México",
-        "16": "Michoacán",
-        "17": "Morelos",
-        "18": "Nayarit",
-        "19": "Nuevo León",
-        "20": "Oaxaca",
-        "21": "Puebla",
-        "22": "Querétaro",
-        "23": "Quintana Roo",
-        "24": "San Luis Potosí",
-        "25": "Sinaloa",
-        "26": "Sonora",
-        "27": "Tabasco",
-        "28": "Tamaulipas",
-        "29": "Tlaxcala",
-        "30": "Veracruz",
-        "31": "Yucatán",
-        "32": "Zacatecas",
+        "00": "Nacional", "01": "Aguascalientes", "02": "Baja California", 
+        "03": "Baja California Sur", "04": "Campeche", "05": "Coahuila", 
+        "06": "Colima", "07": "Chiapas", "08": "Chihuahua", "09": "Ciudad de México", 
+        "10": "Durango", "11": "Guanajuato", "12": "Guerrero", "13": "Hidalgo", 
+        "14": "Jalisco", "15": "México", "16": "Michoacán", "17": "Morelos", 
+        "18": "Nayarit", "19": "Nuevo León", "20": "Oaxaca", "21": "Puebla", 
+        "22": "Querétaro", "23": "Quintana Roo", "24": "San Luis Potosí", 
+        "25": "Sinaloa", "26": "Sonora", "27": "Tabasco", "28": "Tamaulipas", 
+        "29": "Tlaxcala", "30": "Veracruz", "31": "Yucatán", "32": "Zacatecas",
     }
     claves_entidades = list(entidades.keys())
     all_data = []
@@ -145,30 +112,27 @@ def descargar_percepcion_inseguridad(token):
         url = (
             f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/"
             f"{clave_indicador}/es/{clave}/false/BISE/2.0/{token}?type=json"
-        )  # API del Banco de Indicadores.
+        )
         try:
             response = requests.get(url, timeout=7)
             json_data = response.json()
             if "Series" in json_data and json_data["Series"]:
                 serie = json_data["Series"][0]["OBSERVATIONS"]
                 df = pd.DataFrame(serie)
-                df["año"] = df["TIME_PERIOD"].astype(int)  # Años en la serie (2011–2025).
-                df["valor"] = pd.to_numeric(
-                    df["OBS_VALUE"], errors="coerce"
-                )  # Personas 18+ por cada 100 000 que perciben inseguridad.
-                df["entidad"] = entidades[clave]  # Desagregación estatal y nacional.
+                df["año"] = df["TIME_PERIOD"].astype(int)
+                df["valor"] = pd.to_numeric(df["OBS_VALUE"], errors="coerce")
+                df["entidad"] = entidades[clave]
                 df["clave"] = clave
                 df = df[["año", "valor", "entidad", "clave"]]
                 all_data.append(df)
-                print(f"  ✓ {entidades[clave]}")
+                print(f"  + Exito en {entidades[clave]}") # MODIFICADO
             else:
-                print(f"  ✗ Sin datos para {entidades[clave]}")
+                print(f"  - Sin datos para {entidades[clave]}") # MODIFICADO
         except Exception as e:
-            print(f"  ✗ Error en la entidad {clave}: {e}")
+            print(f"  X Error en la entidad {clave}: {e}") # MODIFICADO
 
     df_final = pd.concat(all_data, ignore_index=True)
     
-    # Metadata para el log
     metadata = {
         'nombre': 'Indicador de Percepción de Inseguridad',
         'descripcion': '''Número estimado de personas de 18 años y más que perciben su entidad 
@@ -202,27 +166,20 @@ def descargar_incidencia_delictiva():
     Returns:
         tuple: (DataFrame con datos, diccionario con metadata para log)
     """
-    # ====== (2) Incidencia Delictiva Estatal 2015-2025 (CSV directo) ======
-    # Periodicidad: mensual; suele publicarse alrededor del día 20 de cada mes con cifras del mes inmediato anterior.
-    # Qué se mide: hechos delictivos ocurridos, con desagregación por entidad federativa (serie estatal).
-    # Ventana temporal del recurso: enero 2015 a agosto 2025 (corte vigente del dataset estatal).
-    # Fuente: Datos abiertos del SESNSP (portal institucional de incidencia delictiva).
-
     print("\nDescargando datos de incidencia delictiva...")
-    url_crimen = "https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/INM_estatal_ago25.csv"  # Corte a agosto 2025.
+    url_crimen = "https://repodatos.atdt.gob.mx/api_update/sesnsp/incidencia_delictiva/INM_estatal_ago25.csv"
     
     try:
         df_crimen = pd.read_csv(url_crimen)
         estado = 'Exitoso'
         registros = len(df_crimen)
-        print(f"✓ Descargado: {registros} registros")
+        print(f"+ Descargado: {registros} registros") # MODIFICADO
     except Exception as e:
-        print(f"✗ Error descargando incidencia delictiva: {e}")
+        print(f"X Error descargando incidencia delictiva: {e}") # MODIFICADO
         df_crimen = pd.DataFrame()
         estado = f'Error: {str(e)}'
         registros = 0
     
-    # Metadata para el log
     metadata = {
         'nombre': 'Incidencia Delictiva Estatal',
         'descripcion': '''Registro oficial de hechos delictivos ocurridos en México, desagregados 
@@ -252,7 +209,6 @@ https://www.gob.mx/sesnsp/''',
 
 def main():
     """Función principal del script"""
-    # Parsear argumentos
     parser = argparse.ArgumentParser(
         description='Descarga datos de seguridad en México desde INEGI y SESNSP'
     )
@@ -263,7 +219,6 @@ def main():
     )
     args = parser.parse_args()
     
-    # Obtener token desde argumentos o variable de entorno
     token = args.token or os.getenv("INEGI_API_TOKEN")
     if not token:
         print("ERROR: INEGI_API_TOKEN no está configurado.")
@@ -278,44 +233,40 @@ def main():
     print(f"\nDirectorio de salida: {DATA_RAW_DIR}")
     print(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
-    # Lista para almacenar metadata de las descargas
     log_entries = []
     
-    # Descargar datos de percepción de inseguridad
     try:
         df_percepcion, metadata_percepcion = descargar_percepcion_inseguridad(token)
         output_file = DATA_RAW_DIR / metadata_percepcion['archivo_salida']
         df_percepcion.to_csv(output_file, index=False)
-        print(f"\n✓ Guardado: {output_file} ({len(df_percepcion)} registros)")
+        print(f"\n+ Guardado: {output_file} ({len(df_percepcion)} registros)") # MODIFICADO
         log_entries.append(metadata_percepcion)
     except Exception as e:
-        print(f"\n✗ Error en descarga de percepción de inseguridad: {e}")
+        print(f"\n- Error en descarga de percepción de inseguridad: {e}") # MODIFICADO
         log_entries.append({
             'nombre': 'Indicador de Percepción de Inseguridad',
             'estado': f'Error: {str(e)}',
             'registros': 0
         })
     
-    # Descargar datos de incidencia delictiva
     try:
         df_delictiva, metadata_delictiva = descargar_incidencia_delictiva()
         if not df_delictiva.empty:
             output_file = DATA_RAW_DIR / metadata_delictiva['archivo_salida']
             df_delictiva.to_csv(output_file, index=False)
-            print(f"✓ Guardado: {output_file} ({len(df_delictiva)} registros)")
+            print(f"+ Guardado: {output_file} ({len(df_delictiva)} registros)") # MODIFICADO
         log_entries.append(metadata_delictiva)
     except Exception as e:
-        print(f"✗ Error en descarga de incidencia delictiva: {e}")
+        print(f"- Error en descarga de incidencia delictiva: {e}") # MODIFICADO
         log_entries.append({
             'nombre': 'Incidencia Delictiva Estatal',
             'estado': f'Error: {str(e)}',
             'registros': 0
         })
     
-    # Generar log de descarga
     log_file = DATA_RAW_DIR / "log_descarga_seguridad.txt"
     generar_log_descarga(log_entries, log_file)
-    print(f"\n✓ Log de descarga guardado: {log_file}")
+    print(f"\n+ Log de descarga guardado: {log_file}") # MODIFICADO
     
     print("\n" + "=" * 80)
     print("¡PROCESO COMPLETADO!")
@@ -328,4 +279,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -1,7 +1,7 @@
 
 LOG DE DESCARGA DE DATOS ECONÓMICOS DEL PROYECTO
 =================================================
-Fecha de descarga: 2025-10-15 23:06:13
+Fecha de descarga: 2025-10-15 22:02:07
 Este archivo documenta las fuentes de datos utilizadas en el proyecto,
 la fecha de su descarga y una breve descripción de su naturaleza.
 ---
@@ -9,7 +9,7 @@ la fecha de su descarga y una breve descripción de su naturaleza.
 ### FUENTE 1: Inversión Extranjera Directa (IED) por Estado
 - **Fuente Original**: API de DataMexico (Secretaría de Economía).
 - **Descripción**: Datos trimestrales de inversión extranjera directa por entidad federativa. La IED es un indicador crucial del atractivo económico de cada estado y su capacidad para atraer capital internacional.
-- **Parámetros de Consulta**: 
+- **Parámetros de Consulta**:
   - Endpoint: /datamexico/api/data
   - Cube: fdi_2_state_investment
   - Drilldowns: Quarter, State
@@ -76,10 +76,11 @@ la fecha de su descarga y una breve descripción de su naturaleza.
 
 ### NOTAS GENERALES:
 - **Plataforma de Datos**: Todos los datos provienen de la plataforma DataMexico de la Secretaría de Economía del Gobierno de México.
-- **Formato de Respuesta**: JSON convertido a DataFrames de pandas
+- **Formato de Respuesta**: JSON convertido a CSV
 - **Codificación**: UTF-8
 - **Manejo de Errores**: Se registran advertencias y errores por estado en caso de que la API no retorne datos o falle la conexión.
 - **Localización**: Todos los datos fueron consultados con locale='es' (español).
+- **Librerías Utilizadas**: Solo requests (descarga HTTP) y librería estándar de Python
 
 ---
-Generado automáticamente por: importacion_variables_economicas.py
+Generado automáticamente por: descarga_datos_crudos.py

@@ -1,7 +1,7 @@
 
 LOG DE DESCARGA DE DATOS DEL PROYECTO
 =====================================
-Fecha de descarga: 2025-10-15 20:47:16
+Fecha de descarga: 2025-10-15 22:02:08
 
 Este archivo documenta las fuentes de datos utilizadas en el proyecto.
 ---
