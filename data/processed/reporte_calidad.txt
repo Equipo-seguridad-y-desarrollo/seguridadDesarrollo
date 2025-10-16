@@ -1,0 +1,56 @@
+Fecha de reporte: 2025-10-16 01:05:55
+
+================================================================================
+
+
+Archivo: datos_consolidados.csv
+  Registros totales: 3392
+  Columnas: 8
+  Columnas: Estado, Año, Trimestre, IED_millones_usd, Salario_mensual_pesos, PEA_personas, Remesas_millones_usd, Gasto_ejecutado_pesos
+  Valores nulos:
+    - IED_millones_usd: 64 (1.9%)
+    - Salario_mensual_pesos: 1473 (43.4%)
+    - PEA_personas: 1473 (43.4%)
+    - Remesas_millones_usd: 1792 (52.8%)
+    - Gasto_ejecutado_pesos: 1984 (58.5%)
+  ✓ Sin duplicados
+
+
+Archivo: ied_procesado.csv
+  Registros totales: 3328
+  Columnas: 4
+  Columnas: Estado, Año, Trimestre, IED_millones_usd
+  ✓ Sin valores nulos
+  ✓ Sin duplicados
+
+
+Archivo: gasto_procesado.csv
+  Registros totales: 374
+  Columnas: 3
+  Columnas: Estado, Año, Gasto_ejecutado_pesos
+  ✓ Sin valores nulos
+  ✓ Sin duplicados
+
+
+Archivo: remesas_procesado.csv
+  Registros totales: 1600
+  Columnas: 4
+  Columnas: Estado, Año, Trimestre, Remesas_millones_usd
+  ✓ Sin valores nulos
+  ✓ Sin duplicados
+
+
+Archivo: pea_procesado.csv
+  Registros totales: 1919
+  Columnas: 4
+  Columnas: Estado, Año, Trimestre, PEA_personas
+  ✓ Sin valores nulos
+  ✓ Sin duplicados
+
+
+Archivo: salario_procesado.csv
+  Registros totales: 1919
+  Columnas: 4
+  Columnas: Estado, Año, Trimestre, Salario_mensual_pesos
+  ✓ Sin valores nulos
+  ✓ Sin duplicados

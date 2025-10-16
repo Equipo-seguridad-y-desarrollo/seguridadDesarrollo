@@ -5,6 +5,14 @@
 *.swp
 *.swo
 
+# Data files - keep metadata but exclude large CSV files
+data/raw/*.csv
+data/interim/*.csv
+data/processed/*.csv
+# Keep metadata files
+!data/raw/metadata.txt
+!data/processed/reporte_calidad.txt
+
 ## https://github.com/github/gitignore/blob/e8554d85bf62e38d6db966a50d2064ac025fd82a/Python.gitignore
 
 # Byte-compiled / optimized / DLL files

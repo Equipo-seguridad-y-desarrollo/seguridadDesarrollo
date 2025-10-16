@@ -1,0 +1,82 @@
+METADATOS DE DESCARGA DE DATOS
+================================================================================
+
+Fecha de descarga: 2025-10-16 01:07:42
+Proyecto: Seguridad y Desarrollo - Análisis Socioeconómico por Estado
+
+================================================================================
+FUENTES DE DATOS
+================================================================================
+
+1. DATOS ECONÓMICOS - DataMexico API
+   URL: http://www.economia.gob.mx/datamexico/
+   Descripción: Portal de datos abiertos del gobierno mexicano con información
+                económica, demográfica y social.
+   
+   Datasets descargados:
+   - Inversión Extranjera Directa (IED)
+     * Archivo: ied_raw.csv
+     * Descripción: Montos de inversión extranjera directa por estado y trimestre
+     * Periodo: 1999-Q1 hasta la fecha
+     * Unidad: Millones de dólares USD
+   
+   - Salario Mensual
+     * Archivo: salario_raw.csv
+     * Descripción: Salario mensual promedio por estado y trimestre
+     * Fuente original: INEGI - ENOE
+     * Unidad: Pesos mexicanos
+   
+   - Población Económicamente Activa (PEA)
+     * Archivo: pea_raw.csv
+     * Descripción: Número de personas en la población económicamente activa
+     * Fuente original: INEGI - ENOE
+     * Unidad: Número de personas
+   
+   - Gasto Público Ejecutado
+     * Archivo: gasto_raw.csv
+     * Descripción: Monto del gasto público ejecutado por estado y grupo funcional
+     * Periodo: 2013-2023
+     * Unidad: Pesos mexicanos
+   
+   - Remesas
+     * Archivo: remesas_raw.csv
+     * Descripción: Monto de remesas recibidas por estado y trimestre
+     * Fuente original: Banco de México (BANXICO)
+     * Unidad: Millones de dólares USD
+
+2. INDICADORES INEGI - Educación y Salud
+   URL: https://www.inegi.org.mx/app/api/
+   API Key: 32805429-1...
+   Descripción: Instituto Nacional de Estadística y Geografía - Indicadores
+                socioeconómicos oficiales de México
+   
+   Datasets descargados:
+   - Indicadores de Educación y Salud
+     * Archivo: inegi_educacion_salud_raw.csv
+     * Indicadores incluidos:
+       - Tasa de analfabetismo
+       - Grado promedio de escolaridad
+       - Porcentaje de población con educación básica
+       - Porcentaje de población con educación media superior
+       - Porcentaje de población con educación superior
+       - Esperanza de vida al nacimiento
+       - Tasa de mortalidad infantil
+
+================================================================================
+INFORMACIÓN ADICIONAL
+================================================================================
+
+Todos los datos están organizados por entidad federativa (estado) de México.
+Los datos temporales están organizados por trimestre o año según corresponda.
+Los archivos están en formato CSV con codificación UTF-8.
+
+Para procesar estos datos, ejecutar:
+    python notebooks/process_data.py
+    
+O bien:
+    make process
+
+Para más información, consultar los diccionarios de datos en:
+    references/
+
+================================================================================
