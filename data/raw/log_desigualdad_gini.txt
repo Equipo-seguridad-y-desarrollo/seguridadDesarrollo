@@ -1,0 +1,12 @@
+
+LOG DE DESCARGA DE DATOS DEL PROYECTO
+=====================================
+Fecha de descarga: 2025-10-15 20:47:16
+
+Este archivo documenta las fuentes de datos utilizadas en el proyecto.
+---
+### FUENTE 1: Coeficiente de GINI por Entidad Federativa
+- Fuente Original: API de DataMexico (Secretaría de Economía).
+- Archivo Generado: data/raw/gini_estados_mexico_raw.csv
+---
+
