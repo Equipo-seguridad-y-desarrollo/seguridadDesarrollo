@@ -1,7 +1,7 @@
 
 LOG DE DESCARGA DE DATOS ECONÓMICOS DEL PROYECTO
 =================================================
-Fecha de descarga: 2025-10-15 22:02:07
+Fecha de descarga: 2025-10-15 23:16:39
 Este archivo documenta las fuentes de datos utilizadas en el proyecto,
 la fecha de su descarga y una breve descripción de su naturaleza.
 ---
