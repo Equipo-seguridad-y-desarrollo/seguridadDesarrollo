@@ -2,7 +2,15 @@
 LOG DE DESCARGA DE DATOS DE SEGURIDAD - MÉXICO
 ================================================================================
 
+<<<<<<< HEAD
 Fecha de descarga: 2025-10-15 23:37:28
+=======
+<<<<<<< HEAD
+Fecha de descarga: 2025-10-15 23:17:14
+=======
+Fecha de descarga: 2025-10-15 23:20:06
+>>>>>>> f6ba403 (Modificaciones parciales main.py)
+>>>>>>> 0461075 (Modificaciones parciales main.py)
 
 
 ================================================================================

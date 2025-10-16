@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import subprocess
 import sys
 import os
@@ -11,11 +12,48 @@ def ejecutar_script(ruta_script):
     Ejecuta un script de Python ubicado en la ruta especificada.
     """
     if not os.path.exists(ruta_script):
+=======
+"""
+Pipeline ejecutable desde main.py
+Parte 1: Descarga de datos (notebooks/*)
+Parte 2: Procesamiento y normalización de salidas a data/interim
+"""
+
+import sys
+import os
+import subprocess
+from pathlib import Path
+import shutil
+import glob
+
+# ============================================================
+# Configuración base
+# ============================================================
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+RAW_DIR = DATA_DIR / "raw"
+INTERIM_DIR = DATA_DIR / "interim"
+PROCESSED_DIR = DATA_DIR / "processed"
+INTERIM_DIR.mkdir(parents=True, exist_ok=True)
+
+# ============================================================
+# Utilidades comunes
+# ============================================================
+def ejecutar_script(ruta_script: str, timeout: int | None = None) -> bool:
+    """
+    Ejecuta un script de Python y muestra su salida. 
+    Usa el mismo intérprete y fija cwd=BASE_DIR para que las rutas relativas 
+    dentro de los scripts funcionen como si se ejecutaran desde la raíz del repo.
+    """
+    script_path = Path(ruta_script)
+    if not script_path.exists():
+>>>>>>> 0461075 (Modificaciones parciales main.py)
         print(f"Error: No se encontró el archivo en la ruta '{ruta_script}'.")
         return False
 
     print(f"Iniciando ejecucion de: {ruta_script}")
     try:
+<<<<<<< HEAD
         # Captura la salida como bytes para manejar errores de codificación
         resultado = subprocess.run(
             [sys.executable, ruta_script],
@@ -30,12 +68,25 @@ def ejecutar_script(ruta_script):
             except UnicodeDecodeError:
                 print(resultado.stdout.decode('cp1252', errors='replace'))
 
+=======
+        resultado = subprocess.run(
+            [sys.executable, str(script_path)],
+            check=True,
+            capture_output=True,
+            text=True,
+            cwd=str(BASE_DIR),     # importante para que data/... funcione
+            timeout=timeout        # opcional
+        )
+        if resultado.stdout:
+            print(resultado.stdout)
+>>>>>>> 0461075 (Modificaciones parciales main.py)
         print(f"Finalizado: {ruta_script} se ejecuto correctamente.\n")
         return True
     except subprocess.CalledProcessError as e:
         print(f"Error al ejecutar {ruta_script}.")
         print(f"El script finalizo con un error (codigo de salida {e.returncode}).")
         print("Salida de error (stderr):")
+<<<<<<< HEAD
         # Intenta decodificar el mensaje de error para hacerlo legible
         try:
             error_message = e.stderr.decode('utf-8')
@@ -43,10 +94,18 @@ def ejecutar_script(ruta_script):
             error_message = e.stderr.decode('cp1252', errors='replace')
         print(error_message)
         return False
+=======
+        print(e.stderr)
+        return False
+    except subprocess.TimeoutExpired:
+        print(f"✗ Timeout ejecutando {ruta_script}")
+        return False
+>>>>>>> 0461075 (Modificaciones parciales main.py)
     except Exception as e:
         print(f"Ocurrio un error inesperado con {ruta_script}: {e}")
         return False
 
+<<<<<<< HEAD
 # ==============================================================================
 # FASE 2: PROCESAR Y UNIFICAR DATOS DESCARGADOS
 # ==============================================================================
@@ -172,3 +231,172 @@ if __name__ == "__main__":
         procesar_y_unificar_datos()
     else:
         sys.exit(1)
+=======
+
+# Directorios candidatos para buscar scripts si solo se da el nombre
+CANDIDATE_DIRS = [
+    BASE_DIR,                          # raíz
+    BASE_DIR / "scripts",
+    BASE_DIR / "notebooks",
+    BASE_DIR / "src",
+    BASE_DIR / "etl",
+    BASE_DIR / "processing",
+]
+
+def resolve_script_path(name_or_rel: str) -> Path | None:
+    """
+    Busca un script por nombre (p. ej. 'procesar_datos_rezago.py') o ruta relativa.
+    Retorna Path si lo encuentra; None si no.
+    """
+    p = Path(name_or_rel)
+    # Si ya es una ruta válida:
+    if p.is_file():
+        return p.resolve()
+
+    # Prueba directorios candidatos
+    for d in CANDIDATE_DIRS:
+        cand = d / name_or_rel
+        if cand.is_file():
+            return cand.resolve()
+
+    # Búsqueda recursiva por nombre exacto (excluye carpetas pesadas)
+    exclude = {".git", ".venv", "venv", "__pycache__", "data"}
+    for q in BASE_DIR.rglob("*"):
+        try:
+            if q.is_file() and q.name == Path(name_or_rel).name and not any(part in exclude for part in q.parts):
+                return q.resolve()
+        except Exception:
+            pass
+    return None
+
+def suggest_similar_scripts(basename: str) -> list[str]:
+    """
+    Si no se encuentra el script, sugiere coincidencias por subcadena.
+    """
+    hits = []
+    exclude = {".git", ".venv", "venv", "__pycache__"}
+    needle = basename.lower()
+    for p in BASE_DIR.rglob("*.py"):
+        if any(part in exclude for part in p.parts):
+            continue
+        if needle in p.name.lower():
+            try:
+                hits.append(str(p.relative_to(BASE_DIR)))
+            except Exception:
+                hits.append(str(p))
+    return sorted(hits)[:12]
+
+def run_script_list(scripts: list[str], stop_on_fail: bool = True, label: str = "Ejecución") -> bool:
+    """
+    Resuelve rutas y ejecuta una lista de scripts en orden.
+    """
+    print(f"\n=== {label} ===")
+    for fname in scripts:
+        ruta = resolve_script_path(fname)
+        if ruta is None:
+            print(f"✗ No se encontró '{fname}' en el proyecto.")
+            sugerencias = suggest_similar_scripts(Path(fname).name)
+            if sugerencias:
+                print("   ¿Te refieres a alguno de estos?")
+                for s in sugerencias:
+                    print(f"   - {s}")
+            if stop_on_fail:
+                return False
+            else:
+                continue
+
+        ok = ejecutar_script(str(ruta))
+        if not ok and stop_on_fail:
+            print(f"✗ Falló la ejecución en: {ruta}")
+            return False
+    return True
+
+# ============================================================
+# PARTE 1: Descarga de datos (usa tu lista original)
+# ============================================================
+SCRIPTS_DESCARGA = [
+    # Mantiene tu lista original exactamente como en tu main.py
+    "notebooks/1_variables_economicas_descarga_datos_crudos.py",
+    "notebooks/descarga_datos_rezago.py",
+    "notebooks/importacion_inegi_edu.py",
+    "notebooks/datos_seguridad_mexico.py",
+]
+
+# ============================================================
+# PARTE 2: Procesamiento y normalización en data/interim
+# ============================================================
+SCRIPTS_PROCESAMIENTO = [
+    "procesar_datos_rezago.py",
+    "2_variables_economicas_procesar_datos_formateados.py",
+    "procesado_inegi_edu.py",
+    "procesar_datos_seguridad.py",
+]
+
+def copiar_a_interim(origen: Path, destino: Path) -> None:
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(origen, destino)
+
+def forzar_salida_en_interim():
+    """
+    Copia a data/interim TODO lo que haya quedado en:
+      - data/processed/**/*.csv
+      - data/raw/*procesad*.csv  (p.ej. gini_desigualdad_procesado.csv)
+      - data/interim/**/*.csv
+    No borra origen; solo duplica en interim.
+    """
+    patrones = [
+        str(PROCESSED_DIR / "**" / "*.csv"),
+        str(RAW_DIR / "*procesad*.csv"),   # coincide con *_procesado* / *_processed*
+        str(INTERIM_DIR / "**" / "*.csv"),
+    ]
+    vistos = set()
+    for patron in patrones:
+        for ruta in glob.glob(patron, recursive=True):
+            p = Path(ruta)
+            if p.is_file():
+                destino = INTERIM_DIR / p.name
+                clave = (p.resolve(), destino.resolve())
+                if clave in vistos:
+                    continue
+                copiar_a_interim(p, destino)
+                vistos.add(clave)
+                print(f"→ Copiado a interim: {p}  →  {destino}")
+
+def ejecutar_procesamiento() -> bool:
+    print("\n=== [2/2] Ejecutando scripts de procesamiento ===")
+    ok = run_script_list(SCRIPTS_PROCESAMIENTO, stop_on_fail=True, label="[2/2] Procesamiento")
+    if not ok:
+        return False
+    forzar_salida_en_interim()
+    print("✓ Procesamiento terminado y salidas estandarizadas en data/interim")
+    return True
+
+# ============================================================
+# Punto de entrada
+# ============================================================
+if __name__ == "__main__":
+    # ---- Parte 1: DESCARGA ----
+    print("=============================================")
+    print("INICIANDO PROCESO DE DESCARGA DE DATOS")
+    print("=============================================\n")
+
+    ok_descarga = run_script_list(SCRIPTS_DESCARGA, stop_on_fail=True, label="[1/2] Descarga")
+    if not ok_descarga:
+        print("\nProceso detenido debido a un error en la descarga.")
+        sys.exit(1)
+
+    print("=============================================")
+    print("Exito: Todos los scripts de DESCARGA se ejecutaron correctamente.")
+    print("=============================================\n")
+
+    # ---- Parte 2: PROCESAMIENTO ----
+    ok_proc = ejecutar_procesamiento()
+    if not ok_proc:
+        print("\nProceso detenido debido a un error en el procesamiento.")
+        sys.exit(1)
+
+    print("\n=============================================")
+    print("Pipeline completado (Parte 1 + Parte 2).")
+    print("Archivos intermedios consolidados en: data/interim/")
+    print("=============================================")
+>>>>>>> 0461075 (Modificaciones parciales main.py)
