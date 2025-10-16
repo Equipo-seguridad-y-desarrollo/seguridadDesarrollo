@@ -2,6 +2,7 @@
 LOG DE DESCARGA DE DATOS DEL PROYECTO
 =====================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 Fecha de descarga: 2025-10-15 23:36:58
 =======
 <<<<<<< HEAD
@@ -10,6 +11,9 @@ Fecha de descarga: 2025-10-15 23:16:42
 Fecha de descarga: 2025-10-15 23:19:19
 >>>>>>> f6ba403 (Modificaciones parciales main.py)
 >>>>>>> 0461075 (Modificaciones parciales main.py)
+=======
+Fecha de descarga: 2025-10-16 02:46:16
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
 
 Este archivo documenta las fuentes de datos utilizadas en el proyecto.
 ---

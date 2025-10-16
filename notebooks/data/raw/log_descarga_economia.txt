@@ -1,6 +1,7 @@
 
 LOG DE DESCARGA DE DATOS ECONÓMICOS DEL PROYECTO
 =================================================
+<<<<<<< HEAD:data/raw/log_descarga_economia.txt
 <<<<<<< HEAD
 Fecha de descarga: 2025-10-15 23:36:57
 =======
@@ -10,6 +11,9 @@ Fecha de descarga: 2025-10-15 23:16:39
 Fecha de descarga: 2025-10-15 23:19:16
 >>>>>>> f6ba403 (Modificaciones parciales main.py)
 >>>>>>> 0461075 (Modificaciones parciales main.py)
+=======
+Fecha de descarga: 2025-10-16 02:46:14
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios):notebooks/data/raw/log_descarga_economia.txt
 Este archivo documenta las fuentes de datos utilizadas en el proyecto,
 la fecha de su descarga y una breve descripción de su naturaleza.
 ---

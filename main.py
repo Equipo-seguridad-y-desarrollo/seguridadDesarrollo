@@ -16,7 +16,8 @@ def ejecutar_script(ruta_script):
 """
 Pipeline ejecutable desde main.py
 Parte 1: Descarga de datos (notebooks/*)
-Parte 2: Procesamiento y normalización de salidas a data/interim
+Parte 2: Procesamiento y normalizacion de salidas a data/interim
+Todos los prints estan en ASCII (sin acentos ni emojis) para evitar caracteres raros en Windows.
 """
 
 import sys
@@ -25,9 +26,11 @@ import subprocess
 from pathlib import Path
 import shutil
 import glob
+import time
+from typing import List, Optional, Tuple
 
 # ============================================================
-# Configuración base
+# Configuracion base
 # ============================================================
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -39,20 +42,26 @@ INTERIM_DIR.mkdir(parents=True, exist_ok=True)
 # ============================================================
 # Utilidades comunes
 # ============================================================
-def ejecutar_script(ruta_script: str, timeout: int | None = None) -> bool:
+def ejecutar_script(ruta_script: str, timeout: Optional[int] = None) -> bool:
     """
-    Ejecuta un script de Python y muestra su salida. 
-    Usa el mismo intérprete y fija cwd=BASE_DIR para que las rutas relativas 
-    dentro de los scripts funcionen como si se ejecutaran desde la raíz del repo.
+    Ejecuta un script de Python y muestra su salida.
+    Ejecuta con cwd la carpeta del script, para que sus rutas relativas funcionen.
+    Fuerza UTF-8 en el subproceso para que no truene por UnicodeEncodeError,
+    pero todos nuestros prints estan en ASCII por compatibilidad.
     """
     script_path = Path(ruta_script)
     if not script_path.exists():
+<<<<<<< HEAD
 >>>>>>> 0461075 (Modificaciones parciales main.py)
         print(f"Error: No se encontró el archivo en la ruta '{ruta_script}'.")
+=======
+        print(f"Error: No se encontro el archivo en la ruta '{ruta_script}'.")
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
         return False
 
     print(f"Iniciando ejecucion de: {ruta_script}")
     try:
+<<<<<<< HEAD
 <<<<<<< HEAD
         # Captura la salida como bytes para manejar errores de codificación
         resultado = subprocess.run(
@@ -69,23 +78,39 @@ def ejecutar_script(ruta_script: str, timeout: int | None = None) -> bool:
                 print(resultado.stdout.decode('cp1252', errors='replace'))
 
 =======
+=======
+        env = os.environ.copy()
+        env["PYTHONIOENCODING"] = "utf-8"
+        env["PYTHONUTF8"] = "1"
+
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
         resultado = subprocess.run(
             [sys.executable, str(script_path)],
             check=True,
             capture_output=True,
             text=True,
-            cwd=str(BASE_DIR),     # importante para que data/... funcione
-            timeout=timeout        # opcional
+            cwd=str(script_path.parent),  # ejecutar desde la carpeta del script
+            timeout=timeout,
+            env=env,
         )
         if resultado.stdout:
+            # stdout puede traer acentos desde los scripts; lo imprimimos tal cual.
+            # La consola puede no renderizar, pero no deberia fallar.
             print(resultado.stdout)
+<<<<<<< HEAD
 >>>>>>> 0461075 (Modificaciones parciales main.py)
+=======
+        if resultado.stderr:
+            # Mostrar warnings si los hay
+            print(resultado.stderr, file=sys.stderr)
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
         print(f"Finalizado: {ruta_script} se ejecuto correctamente.\n")
         return True
     except subprocess.CalledProcessError as e:
         print(f"Error al ejecutar {ruta_script}.")
         print(f"El script finalizo con un error (codigo de salida {e.returncode}).")
         print("Salida de error (stderr):")
+<<<<<<< HEAD
 <<<<<<< HEAD
         # Intenta decodificar el mensaje de error para hacerlo legible
         try:
@@ -96,9 +121,15 @@ def ejecutar_script(ruta_script: str, timeout: int | None = None) -> bool:
         return False
 =======
         print(e.stderr)
+=======
+        try:
+            print(e.stderr)
+        except Exception:
+            print(str(e.stderr).encode("utf-8", "replace").decode("utf-8", "replace"))
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
         return False
     except subprocess.TimeoutExpired:
-        print(f"✗ Timeout ejecutando {ruta_script}")
+        print(f"Timeout ejecutando {ruta_script}")
         return False
 >>>>>>> 0461075 (Modificaciones parciales main.py)
     except Exception as e:
@@ -235,7 +266,7 @@ if __name__ == "__main__":
 
 # Directorios candidatos para buscar scripts si solo se da el nombre
 CANDIDATE_DIRS = [
-    BASE_DIR,                          # raíz
+    BASE_DIR,                          # raiz
     BASE_DIR / "scripts",
     BASE_DIR / "notebooks",
     BASE_DIR / "src",
@@ -243,37 +274,34 @@ CANDIDATE_DIRS = [
     BASE_DIR / "processing",
 ]
 
-def resolve_script_path(name_or_rel: str) -> Path | None:
+def resolve_script_path(name_or_rel: str) -> Optional[Path]:
     """
-    Busca un script por nombre (p. ej. 'procesar_datos_rezago.py') o ruta relativa.
+    Busca un script por nombre (por ej. 'procesar_datos_rezago.py') o ruta relativa.
     Retorna Path si lo encuentra; None si no.
     """
     p = Path(name_or_rel)
-    # Si ya es una ruta válida:
     if p.is_file():
         return p.resolve()
 
-    # Prueba directorios candidatos
     for d in CANDIDATE_DIRS:
         cand = d / name_or_rel
         if cand.is_file():
             return cand.resolve()
 
-    # Búsqueda recursiva por nombre exacto (excluye carpetas pesadas)
     exclude = {".git", ".venv", "venv", "__pycache__", "data"}
-    for q in BASE_DIR.rglob("*"):
-        try:
+    try:
+        for q in BASE_DIR.rglob("*"):
             if q.is_file() and q.name == Path(name_or_rel).name and not any(part in exclude for part in q.parts):
                 return q.resolve()
-        except Exception:
-            pass
+    except Exception:
+        pass
     return None
 
-def suggest_similar_scripts(basename: str) -> list[str]:
+def suggest_similar_scripts(basename: str) -> List[str]:
     """
     Si no se encuentra el script, sugiere coincidencias por subcadena.
     """
-    hits = []
+    hits: List[str] = []
     exclude = {".git", ".venv", "venv", "__pycache__"}
     needle = basename.lower()
     for p in BASE_DIR.rglob("*.py"):
@@ -286,7 +314,7 @@ def suggest_similar_scripts(basename: str) -> list[str]:
                 hits.append(str(p))
     return sorted(hits)[:12]
 
-def run_script_list(scripts: list[str], stop_on_fail: bool = True, label: str = "Ejecución") -> bool:
+def run_script_list(scripts: List[str], stop_on_fail: bool = True, label: str = "Ejecucion") -> bool:
     """
     Resuelve rutas y ejecuta una lista de scripts en orden.
     """
@@ -294,28 +322,33 @@ def run_script_list(scripts: list[str], stop_on_fail: bool = True, label: str = 
     for fname in scripts:
         ruta = resolve_script_path(fname)
         if ruta is None:
-            print(f"✗ No se encontró '{fname}' en el proyecto.")
+            print(f"No se encontro '{fname}' en el proyecto.")
             sugerencias = suggest_similar_scripts(Path(fname).name)
             if sugerencias:
-                print("   ¿Te refieres a alguno de estos?")
+                print("Sugerencias:")
                 for s in sugerencias:
-                    print(f"   - {s}")
+                    print(f" - {s}")
             if stop_on_fail:
                 return False
             else:
                 continue
 
+        # Paso especifico antes de ejecutar 'procesado_inegi_edu.py'
+        if Path(fname).name == "procesado_inegi_edu.py":
+            if not alias_inegi_edu_input():
+                print("No se pudo preparar data/raw/educacionysalud.csv")
+                return False
+
         ok = ejecutar_script(str(ruta))
         if not ok and stop_on_fail:
-            print(f"✗ Falló la ejecución en: {ruta}")
+            print(f"Fallo la ejecucion en: {ruta}")
             return False
     return True
 
 # ============================================================
-# PARTE 1: Descarga de datos (usa tu lista original)
+# Parte 1: Descarga de datos (tu lista original)
 # ============================================================
 SCRIPTS_DESCARGA = [
-    # Mantiene tu lista original exactamente como en tu main.py
     "notebooks/1_variables_economicas_descarga_datos_crudos.py",
     "notebooks/descarga_datos_rezago.py",
     "notebooks/importacion_inegi_edu.py",
@@ -323,7 +356,7 @@ SCRIPTS_DESCARGA = [
 ]
 
 # ============================================================
-# PARTE 2: Procesamiento y normalización en data/interim
+# Parte 2: Procesamiento y normalizacion en data/interim
 # ============================================================
 SCRIPTS_PROCESAMIENTO = [
     "procesar_datos_rezago.py",
@@ -332,35 +365,134 @@ SCRIPTS_PROCESAMIENTO = [
     "procesar_datos_seguridad.py",
 ]
 
+def alias_inegi_edu_input() -> bool:
+    """
+    Si existe data/raw/educacionysalud_raw.csv, crea/actualiza
+    data/raw/educacionysalud.csv (el nombre que espera 'procesado_inegi_edu.py').
+    """
+    raw_dir = RAW_DIR
+    src = raw_dir / "educacionysalud_raw.csv"
+    dst = raw_dir / "educacionysalud.csv"
+    if src.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            shutil.copy2(src, dst)
+            print(f"Alias creado para INEGI EDU:\n  {src}\n  -> {dst}")
+            return True
+        except Exception as e:
+            print(f"No se pudo crear alias {dst} desde {src}: {e}")
+            return False
+    else:
+        print(f"No se encontro {src}. Verifica que la parte 1 lo genero.")
+        return False
+
+def _same_file(src: Path, dst: Path) -> bool:
+    if not dst.exists():
+        return False
+    try:
+        s = src.stat()
+        d = dst.stat()
+        # Mismo tamano y misma precision de mtime (redondeada a 1 seg)
+        return (s.st_size == d.st_size) and (int(s.st_mtime) == int(d.st_mtime))
+    except Exception:
+        return False
+
+def safe_copy(src: Path, dst: Path, retries: int = 6, delay: float = 0.8) -> None:
+    """
+    Copia de forma robusta en Windows con reintentos.
+    - Omite si destino ya es identico (tamano y mtime).
+    - Reintenta ante PermissionError (archivo en uso).
+    - Ultimo recurso: copia a .tmp y os.replace.
+    """
+    if src.resolve() == dst.resolve():
+        # Mismo archivo exacto
+        print(f"Salto copia, origen y destino son iguales: {src}")
+        return
+
+    if _same_file(src, dst):
+        # Ya esta igual, no copiamos
+        print(f"Salto copia, destino ya coincide: {dst}")
+        return
+
+    dst.parent.mkdir(parents=True, exist_ok=True)
+
+    last_err: Optional[Exception] = None
+    for attempt in range(1, retries + 1):
+        try:
+            # Intento directo
+            shutil.copy2(src, dst)
+            return
+        except PermissionError as e:
+            last_err = e
+            print(f"Advertencia: destino en uso, reintentando copia ({attempt}/{retries}) -> {dst}")
+            time.sleep(delay)
+        except Exception as e:
+            last_err = e
+            print(f"Advertencia: error copiando (intento {attempt}/{retries}) -> {dst}: {e}")
+            time.sleep(delay)
+
+    # Ultimo recurso: copiar a temporal y reemplazar
+    try:
+        tmp = dst.with_suffix(dst.suffix + ".tmp_copy")
+        if tmp.exists():
+            try:
+                tmp.unlink()
+            except Exception:
+                pass
+        shutil.copyfile(src, tmp)
+        try:
+            shutil.copystat(src, tmp)
+        except Exception:
+            pass
+        os.replace(tmp, dst)
+    except Exception as e:
+        # Si aun falla, levantamos el ultimo error conocido
+        raise last_err if last_err else e
+
 def copiar_a_interim(origen: Path, destino: Path) -> None:
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(origen, destino)
+    safe_copy(origen, destino)
 
 def forzar_salida_en_interim():
     """
     Copia a data/interim TODO lo que haya quedado en:
       - data/processed/**/*.csv
-      - data/raw/*procesad*.csv  (p.ej. gini_desigualdad_procesado.csv)
+      - data/raw/*procesad*.csv  (ej. gini_desigualdad_procesado.csv)
       - data/interim/**/*.csv
     No borra origen; solo duplica en interim.
+    Evita recopiados innecesarios y maneja archivos bloqueados con reintentos.
     """
     patrones = [
         str(PROCESSED_DIR / "**" / "*.csv"),
-        str(RAW_DIR / "*procesad*.csv"),   # coincide con *_procesado* / *_processed*
+        str(RAW_DIR / "*procesad*.csv"),
         str(INTERIM_DIR / "**" / "*.csv"),
     ]
     vistos = set()
     for patron in patrones:
         for ruta in glob.glob(patron, recursive=True):
             p = Path(ruta)
-            if p.is_file():
-                destino = INTERIM_DIR / p.name
-                clave = (p.resolve(), destino.resolve())
-                if clave in vistos:
-                    continue
+            if not p.is_file():
+                continue
+            destino = INTERIM_DIR / p.name
+            clave = (str(p.resolve()), str(destino.resolve()))
+            if clave in vistos:
+                continue
+            try:
                 copiar_a_interim(p, destino)
-                vistos.add(clave)
-                print(f"→ Copiado a interim: {p}  →  {destino}")
+                print(f"Copiado a interim: {p} -> {destino}")
+            except PermissionError as e:
+                print(f"No se pudo copiar (permiso): {p} -> {destino}: {e}")
+            except Exception as e:
+                print(f"No se pudo copiar: {p} -> {destino}: {e}")
+            vistos.add(clave)
+
+    print("Limpiando carpeta data/processed ...")
+    for file in PROCESSED_DIR.glob("**/*"):
+        try:
+            if file.is_file():
+                file.unlink()
+        except Exception as e:
+            print(f"Advertencia: no se pudo borrar {file}: {e}")
+    print("Carpeta data/processed vaciada.")
 
 def ejecutar_procesamiento() -> bool:
     print("\n=== [2/2] Ejecutando scripts de procesamiento ===")
@@ -368,7 +500,7 @@ def ejecutar_procesamiento() -> bool:
     if not ok:
         return False
     forzar_salida_en_interim()
-    print("✓ Procesamiento terminado y salidas estandarizadas en data/interim")
+    print("Procesamiento terminado y salidas estandarizadas en data/interim")
     return True
 
 # ============================================================
@@ -396,7 +528,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     print("\n=============================================")
+<<<<<<< HEAD
     print("Pipeline completado (Parte 1 + Parte 2).")
     print("Archivos intermedios consolidados en: data/interim/")
     print("=============================================")
 >>>>>>> 0461075 (Modificaciones parciales main.py)
+=======
+    print("Pipeline completado")
+    print("=============================================")
+>>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
