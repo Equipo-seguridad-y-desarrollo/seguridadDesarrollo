@@ -6,11 +6,7 @@ REGISTRO DE FUENTES DE DATOS
 --- Fuente de Datos #1 ---
 Nombre: Indicador: Porcentaje analfabetismo (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/3108001001/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -27,11 +23,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #2 ---
 Nombre: Indicador: Promedio escolaridad (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/1005000038/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -48,11 +40,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #3 ---
 Nombre: Indicador: Poblacion con educacion basica (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205239/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -69,11 +57,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #4 ---
 Nombre: Indicador: Poblacion con bachillerato (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205241/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -90,11 +74,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #5 ---
 Nombre: Indicador: Poblacion con estudios superiores (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6200205242/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -111,11 +91,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #6 ---
 Nombre: Indicador: Porcentaje sin escolaridad (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/6207019020/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
@@ -132,11 +108,7 @@ Descripción: Consulta a la API de INEGI para obtener la serie de datos sobre 'P
 --- Fuente de Datos #7 ---
 Nombre: Indicador: Derechohabientes (Todos los estados)
 Tipo: API
-<<<<<<< HEAD
-Fecha de Query: 2025-10-15 23:37:09
-=======
-Fecha de Query: 2025-10-16 02:46:37
->>>>>>> 8ef7b5c (Modificaciones finales para el pipeline de main.py, datos crudos y formateo de datos en datos intermedios)
+Fecha de Query: 2025-10-16 11:25:21
 Endpoint: https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/1004000001/es/{id_estado}/false/BISE/2.0/token_inegi
 Parámetros de Query:
 {
