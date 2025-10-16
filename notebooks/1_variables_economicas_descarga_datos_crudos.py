@@ -353,7 +353,7 @@ la fecha de su descarga y una breve descripción de su naturaleza.
 Generado automáticamente por: descarga_datos_crudos.py
 """
 
-    ruta_log = DATA_RAW_DIR / "log_descarga.txt"
+    ruta_log = DATA_RAW_DIR / "log_descarga_economia.txt"
 
     try:
         DATA_RAW_DIR.mkdir(parents=True, exist_ok=True)
