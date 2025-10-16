@@ -1,0 +1,90 @@
+
+================================================================================
+LOG CONSOLIDADO DE DESCARGA DE DATOS DEL PROYECTO
+================================================================================
+Fecha de descarga: 2025-10-15 23:20:46
+
+Este archivo documenta todas las fuentes de datos utilizadas en el proyecto.
+
+
+================================================================================
+CATEGORÍA: SEGURIDAD
+================================================================================
+
+--- FUENTE 1: Indicador de Percepción de Inseguridad ---
+Fuente Original: INEGI - ENVIPE
+Descripción: Tasa de personas 18+ que perciben inseguridad por cada 100,000 habitantes
+Archivo Generado: data/raw/indicador_inseguridad_estados.csv
+Registros Descargados: 495
+
+--- FUENTE 2: Incidencia Delictiva Estatal ---
+Fuente Original: SESNSP
+Descripción: Hechos delictivos mensuales por entidad federativa (ene 2015 - ago 2025)
+Archivo Generado: data/raw/incidencia_delictiva_estatal_2015_2025.csv
+Registros Descargados: 401,408
+
+
+================================================================================
+CATEGORÍA: EDUCACIÓN Y SALUD
+================================================================================
+
+--- FUENTE 3: Indicadores de Educación y Salud ---
+Fuente Original: INEGI - Banco de Indicadores
+Descripción: 7 indicadores de educación y salud por estado
+Archivo Generado: data/raw/educacionysalud_raw.csv
+Registros Descargados: 1,088
+
+
+================================================================================
+CATEGORÍA: VARIABLES ECONÓMICAS
+================================================================================
+
+--- FUENTE 4: Inversión Extranjera Directa ---
+Fuente Original: DataMexico - Secretaría de Economía
+Descripción: IED trimestral por entidad federativa
+Archivo Generado: data/raw/ied_raw.csv
+Registros Descargados: 3,328
+
+--- FUENTE 5: Salario Mensual ---
+Fuente Original: DataMexico - INEGI ENOE
+Descripción: Salario mensual promedio trimestral por estado
+Archivo Generado: data/raw/salario_raw.csv
+Registros Descargados: 1,919
+
+--- FUENTE 6: Población Económicamente Activa ---
+Fuente Original: DataMexico - INEGI ENOE
+Descripción: PEA trimestral por entidad federativa
+Archivo Generado: data/raw/pea_raw.csv
+Registros Descargados: 1,919
+
+--- FUENTE 7: Gasto Público Ejecutado ---
+Fuente Original: DataMexico - Transparencia Presupuestaria
+Descripción: Gasto público anual 2013-2023 por estado y grupo funcional
+Archivo Generado: data/raw/gasto_raw.csv
+Registros Descargados: 1,479
+
+--- FUENTE 8: Remesas ---
+Fuente Original: DataMexico - Banco de México
+Descripción: Remesas trimestrales por entidad federativa
+Archivo Generado: data/raw/remesas_raw.csv
+Registros Descargados: 1,600
+
+
+================================================================================
+CATEGORÍA: DESIGUALDAD
+================================================================================
+
+--- FUENTE 9: Coeficiente de GINI ---
+Fuente Original: DataMexico - CONEVAL
+Descripción: Coeficiente GINI 2010-2022 por entidad federativa
+Archivo Generado: data/raw/coeficiente_gini_desigualdad.csv
+Registros Descargados: 224
+
+
+================================================================================
+RESUMEN DE DESCARGA
+================================================================================
+Total de fuentes: 9
+Total de registros: 413,460
+
+Archivos generados en: C:\Users\marce\Documents\Ciencia de datos\IgCaracteristicas\seguridadDesarrollo\data\raw

@@ -1,237 +1,471 @@
-# Seguridad y desarrollo
+# 🇲🇽 Proyecto: Seguridad y Desarrollo en México# Seguridad y desarrollo
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
+
+
+Análisis de la relación entre indicadores de seguridad y desarrollo económico-social en México.<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
+
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
 
-Análisis sobre el índice de desarrollo y seguridad por municipio
+---</a>
 
-## 🚀 Inicio Rápido
 
-### Prerrequisitos
-- Python 3.8 o superior
-- pip (gestor de paquetes de Python)
-- Token de API de INEGI (para datos de seguridad)
+
+## 🚀 Inicio RápidoAnálisis sobre el índice de desarrollo y seguridad por municipio
+
+
+
+### Instalación Automática## 🚀 Inicio Rápido
+
+
+
+**Windows (PowerShell)**:### Prerrequisitos
+
+```powershell- Python 3.8 o superior
+
+.\setup_env.ps1- pip (gestor de paquetes de Python)
+
+python notebooks\descarga_datos_completa.py- Token de API de INEGI (para datos de seguridad)
+
+```
 
 ### 1. Configuración del Entorno Virtual
 
-#### En Windows (PowerShell):
-```powershell
-# Crear entorno virtual
-python -m venv venv
+**Linux/macOS**:
 
-# Activar entorno virtual
-.\venv\Scripts\Activate.ps1
+```bash#### En Windows (PowerShell):
 
-# Si hay error de permisos, ejecutar primero:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+chmod +x setup_env.sh```powershell
+
+./setup_env.sh# Crear entorno virtual
+
+python notebooks/descarga_datos_completa.pypython -m venv venv
+
 ```
 
-#### En Linux/Mac:
-```bash
-# Crear entorno virtual
-python3 -m venv venv
-
 # Activar entorno virtual
+
+### Instalación Manual.\venv\Scripts\Activate.ps1
+
+
+
+```bash# Si hay error de permisos, ejecutar primero:
+
+# 1. Crear entorno virtualSet-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+python -m venv venv```
+
+
+
+# 2. Activar entorno#### En Linux/Mac:
+
+# Windows:```bash
+
+.\venv\Scripts\Activate.ps1# Crear entorno virtual
+
+# Linux/Mac:python3 -m venv venv
+
 source venv/bin/activate
-```
 
-### 2. Instalar Dependencias
+# Activar entorno virtual
+
+# 3. Instalar dependenciassource venv/bin/activate
+
+pip install -r requirements.txt```
+
+
+
+# 4. Configurar token de INEGI (crear archivo .env)### 2. Instalar Dependencias
+
+echo "INEGI_API_TOKEN=tu_token_aqui" > .env
 
 ```powershell
-# Actualizar pip
-python -m pip install --upgrade pip
+
+# 5. Descargar datos# Actualizar pip
+
+python notebooks/descarga_datos_completa.pypython -m pip install --upgrade pip
+
+```
 
 # Instalar dependencias del proyecto
-pip install -r requirements.txt
+
+---pip install -r requirements.txt
+
 ```
+
+## 📋 Requisitos
 
 ### 3. Descarga de Datos de Seguridad
 
-Los datos de seguridad se descargan desde dos fuentes oficiales:
-1. **INEGI**: Percepción de inseguridad (requiere token de API)
+- **Python**: 3.8 o superior
+
+- **Token INEGI**: Gratuito desde https://www.inegi.org.mx/app/api/Los datos de seguridad se descargan desde dos fuentes oficiales:
+
+- **Espacio en disco**: ~100 MB para datos descargados1. **INEGI**: Percepción de inseguridad (requiere token de API)
+
 2. **SESNSP**: Incidencia delictiva estatal
 
-#### Obtener Token de API de INEGI:
-1. Visitar: https://www.inegi.org.mx/app/api/indicadores/
-2. Registrarse o iniciar sesión
-3. Copiar el token proporcionado
+---
 
-#### Ejecutar descarga:
-```powershell
-# Método 1: Pasar token directamente
+#### Obtener Token de API de INEGI:
+
+## 📦 Dependencias1. Visitar: https://www.inegi.org.mx/app/api/indicadores/
+
+2. Registrarse o iniciar sesión
+
+El proyecto usa **dependencias mínimas** por defecto (instalación en ~30-40 segundos):3. Copiar el token proporcionado
+
+- `pandas` - Procesamiento de datos
+
+- `numpy` - Operaciones numéricas  #### Ejecutar descarga:
+
+- `requests` - Peticiones HTTP a APIs```powershell
+
+- `python-dotenv` - Variables de entorno# Método 1: Pasar token directamente
+
 python notebooks/datos_seguridad_mexico.py --token TU_TOKEN_AQUI
 
+### Paquetes Opcionales
+
 # Método 2: Usar archivo .env (recomendado)
-# 1. Crear archivo .env en la raíz del proyecto
-# 2. Agregar: INEGI_API_TOKEN=TU_TOKEN_AQUI
-# 3. Ejecutar:
-python notebooks/datos_seguridad_mexico.py
+
+Para análisis completo, instala según necesites:# 1. Crear archivo .env en la raíz del proyecto
+
+```bash# 2. Agregar: INEGI_API_TOKEN=TU_TOKEN_AQUI
+
+# Jupyter Notebooks# 3. Ejecutar:
+
+pip install jupyter ipykernelpython notebooks/datos_seguridad_mexico.py
+
 ```
 
-**Salidas generadas:**
+# Visualización
+
+pip install matplotlib seaborn**Salidas generadas:**
+
 - `data/raw/indicador_inseguridad_estados.csv` - Percepción de inseguridad por estado (2011-2025)
-- `data/raw/incidencia_delictiva_estatal_2015_2025.csv` - Incidencia delictiva estatal (2015-2025)
-- `data/raw/log_descarga_seguridad.txt` - Log detallado con fechas, fuentes y descripción
 
-### 4. Procesamiento de Datos
+# Machine Learning- `data/raw/incidencia_delictiva_estatal_2015_2025.csv` - Incidencia delictiva estatal (2015-2025)
 
-Transformar los datos raw a formato tidy y validar calidad:
+pip install scikit-learn scipy- `data/raw/log_descarga_seguridad.txt` - Log detallado con fechas, fuentes y descripción
 
-```powershell
+
+
+# Excel### 4. Procesamiento de Datos
+
+pip install openpyxl
+
+```Transformar los datos raw a formato tidy y validar calidad:
+
+
+
+---```powershell
+
 python notebooks/procesar_datos_seguridad.py
-```
 
-**Salidas generadas:**
+## 📊 Datos Descargados```
+
+
+
+El script `descarga_datos_completa.py` obtiene:**Salidas generadas:**
+
 - `data/processed/percepcion_inseguridad_procesado.csv` - Dataset completo procesado
-- `data/processed/percepcion_inseguridad_estados.csv` - Solo estados (sin nacional)
-- `data/processed/incidencia_delictiva_procesado.csv` - Dataset de incidencia procesado
-- `data/interim/incidencia_delictiva_completa.csv` - Versión intermedia normalizada
+
+### 🔒 Seguridad- `data/processed/percepcion_inseguridad_estados.csv` - Solo estados (sin nacional)
+
+- Percepción de inseguridad (INEGI)- `data/processed/incidencia_delictiva_procesado.csv` - Dataset de incidencia procesado
+
+- Incidencia delictiva (SESNSP)- `data/interim/incidencia_delictiva_completa.csv` - Versión intermedia normalizada
+
 - `data/processed/reporte_procesamiento.txt` - Reporte de validación y estadísticas
 
-### 5. Exploración de Datos (Opcional)
+### 📚 Educación y Salud
+
+- Indicadores educativos (INEGI)### 5. Exploración de Datos (Opcional)
+
+- Indicadores de salud (INEGI)
 
 Notebooks disponibles para análisis exploratorio:
 
-```powershell
-# Iniciar Jupyter
-jupyter notebook
+### 💰 Economía
 
-# Abrir en el navegador:
+- Inversión Extranjera Directa (Secretaría de Economía)```powershell
+
+- Salarios promedio (DataMexico)# Iniciar Jupyter
+
+- Población Económicamente Activa (DataMexico)jupyter notebook
+
+- Gasto público (DataMexico)
+
+- Remesas (DataMexico)# Abrir en el navegador:
+
 # - notebooks/1.0-exploracion_datos_seguridad.ipynb (Exploración inicial)
-# - notebooks/2.0-procesamiento_datos_seguridad.ipynb (Pruebas de transformación)
-```
 
-## 📊 Diccionarios de Datos
+### 📈 Desigualdad# - notebooks/2.0-procesamiento_datos_seguridad.ipynb (Pruebas de transformación)
 
-Los diccionarios completos se encuentran en `references/`:
+- Coeficiente de Gini (CONEVAL)```
+
+
+
+**Total**: ~410,000 registros | ~55 MB## 📊 Diccionarios de Datos
+
+
+
+---Los diccionarios completos se encuentran en `references/`:
+
 - `diccionario_datos_seguridad.md` - Documentación completa de datasets de seguridad
-- Describe estructura de datos raw y procesados
+
+## 📁 Estructura del Proyecto- Describe estructura de datos raw y procesados
+
 - Incluye validaciones de calidad y reglas de negocio
 
-## 📁 Estructura del Proyecto
-
-## 📁 Estructura del Proyecto
-
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   │   └── incidencia_delictiva_completa.csv
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   │   ├── percepcion_inseguridad_procesado.csv
-│   │   ├── percepcion_inseguridad_estados.csv
-│   │   ├── incidencia_delictiva_procesado.csv
-│   │   └── reporte_procesamiento.txt
-│   └── raw            <- The original, immutable data dump.
-│       ├── indicador_inseguridad_estados.csv
-│       ├── incidencia_delictiva_estatal_2015_2025.csv
-│       └── log_descarga_seguridad.txt
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
+
+.## 📁 Estructura del Proyecto
+
+├── README.md                          # Este archivo
+
+├── setup_env.ps1                      # Setup automático (Windows)## 📁 Estructura del Proyecto
+
+├── setup_env.sh                       # Setup automático (Linux/Mac)
+
+├── requirements.txt                   # Dependencias mínimas```
+
+├── .env                               # Token INEGI (crear este archivo)├── LICENSE            <- Open-source license if one is chosen
+
+│├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+
+├── notebooks/                         # Scripts y notebooks├── README.md          <- The top-level README for developers using this project.
+
+│   ├── descarga_datos_completa.py     # ⭐ Script principal de descarga├── data
+
+│   ├── 1_*.py                         # Scripts de descarga individuales│   ├── external       <- Data from third party sources.
+
+│   ├── 2_*.py                         # Scripts de procesamiento│   ├── interim        <- Intermediate data that has been transformed.
+
+│   └── *.ipynb                        # Notebooks de análisis│   │   └── incidencia_delictiva_completa.csv
+
+││   ├── processed      <- The final, canonical data sets for modeling.
+
+├── data/                              # Datos del proyecto│   │   ├── percepcion_inseguridad_procesado.csv
+
+│   ├── raw/                           # Datos crudos descargados│   │   ├── percepcion_inseguridad_estados.csv
+
+│   ├── interim/                       # Datos intermedios│   │   ├── incidencia_delictiva_procesado.csv
+
+│   └── processed/                     # Datos procesados y limpios│   │   └── reporte_procesamiento.txt
+
+││   └── raw            <- The original, immutable data dump.
+
+├── references/                        # Documentación de referencia│       ├── indicador_inseguridad_estados.csv
+
+│   ├── diccionario_*.md               # Diccionarios de datos│       ├── incidencia_delictiva_estatal_2015_2025.csv
+
+│   └── *.txt                          # Convenciones y fuentes│       └── log_descarga_seguridad.txt
+
+││
+
+└── docs/                              # Documentación adicional├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+
+```│
+
 ├── models             <- Trained and serialized models, model predictions, or model summaries
-│
+
+---│
+
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
+
+## 🔑 Configuración del Token INEGI│                         the creator's initials, and a short `-` delimited description, e.g.
+
 │                         `1.0-jqp-initial-data-exploration`.
-│   ├── 1.0-exploracion_datos_seguridad.ipynb
-│   ├── 2.0-procesamiento_datos_seguridad.ipynb
-│   ├── datos_seguridad_mexico.py       <- Script de descarga
-│   └── procesar_datos_seguridad.py     <- Script de procesamiento
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
+
+1. Registrarse en: https://www.inegi.org.mx/app/api/│   ├── 1.0-exploracion_datos_seguridad.ipynb
+
+2. Obtener token (gratuito)│   ├── 2.0-procesamiento_datos_seguridad.ipynb
+
+3. Crear archivo `.env` en la raíz del proyecto:│   ├── datos_seguridad_mexico.py       <- Script de descarga
+
+   ```│   └── procesar_datos_seguridad.py     <- Script de procesamiento
+
+   INEGI_API_TOKEN=tu_token_aqui│
+
+   ```├── pyproject.toml     <- Project configuration file with package metadata for 
+
 │                         Seguridad y desarrollo and configuration for tools like black
-│
+
+---│
+
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│   └── diccionario_datos_seguridad.md  <- Diccionario completo de datos de seguridad
+
+## 📖 Uso│   └── diccionario_datos_seguridad.md  <- Diccionario completo de datos de seguridad
+
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+
+### Descargar Todos los Datos├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+
+```bash│   └── figures        <- Generated graphics and figures to be used in reporting
+
+python notebooks/descarga_datos_completa.py│
+
+```├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+
 │                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── Seguridad y desarrollo   <- Source code for use in this project.
+
+### Procesar Datos│
+
+```bash├── setup.cfg          <- Configuration file for flake8
+
+python notebooks/2_variables_economicas_procesar_datos_formateados.py│
+
+```└── Seguridad y desarrollo   <- Source code for use in this project.
+
     │
-    ├── __init__.py             <- Makes Seguridad y desarrollo a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
+
+### Análisis en Jupyter    ├── __init__.py             <- Makes Seguridad y desarrollo a Python module
+
+```bash    │
+
+jupyter notebook notebooks/EDA_variables_economicas.ipynb    ├── config.py               <- Store useful variables and configuration
+
+```    │
+
     ├── dataset.py              <- Scripts to download or generate data
-    │
+
+---    │
+
     ├── features.py             <- Code to create features for modeling
-    │
+
+## 🛠️ Solución de Problemas    │
+
     ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
+
+### Error: "No module named 'pandas'"    │   ├── __init__.py 
+
+```bash    │   ├── predict.py          <- Code to run model inference with trained models          
+
+pip install -r requirements.txt    │   └── train.py            <- Code to train models
+
+```    │
+
     └── plots.py                <- Code to create visualizations
-```
+
+### Error: "INEGI_API_TOKEN not found"```
+
+Crea el archivo `.env` con tu token de INEGI.
 
 ## 🔧 Flujo de Trabajo de Datos
 
-### Pipeline de Datos de Seguridad
+### Error de compatibilidad NumPy/Pandas
 
-1. **Descarga (Raw)**: `datos_seguridad_mexico.py`
-   - ⬇️  Descarga desde APIs oficiales (INEGI, SESNSP)
+```bash### Pipeline de Datos de Seguridad
+
+pip uninstall -y numpy pandas
+
+pip install "numpy<2.0" "pandas>=2.0,<2.3"1. **Descarga (Raw)**: `datos_seguridad_mexico.py`
+
+```   - ⬇️  Descarga desde APIs oficiales (INEGI, SESNSP)
+
    - 💾 Guarda en `data/raw/`
-   - 📝 Genera log con metadata completa
 
-2. **Procesamiento (Interim → Processed)**: `procesar_datos_seguridad.py`
-   - 🧹 Limpia y normaliza datos
+### Activar entorno virtual   - 📝 Genera log con metadata completa
+
+```bash
+
+# Windows2. **Procesamiento (Interim → Processed)**: `procesar_datos_seguridad.py`
+
+.\venv\Scripts\Activate.ps1   - 🧹 Limpia y normaliza datos
+
    - ✅ Valida calidad (nulos, duplicados, rangos)
-   - ➕ Agrega columnas calculadas
-   - 💾 Guarda en `data/processed/` y `data/interim/`
-   - 📊 Genera reporte de validación
 
-3. **Exploración y Análisis**: Notebooks
+# Linux/Mac   - ➕ Agrega columnas calculadas
+
+source venv/bin/activate   - 💾 Guarda en `data/processed/` y `data/interim/`
+
+```   - 📊 Genera reporte de validación
+
+
+
+---3. **Exploración y Análisis**: Notebooks
+
    - 🔍 Exploración visual
-   - 📈 Análisis estadístico
+
+## 📚 Diccionarios de Datos   - 📈 Análisis estadístico
+
    - 🧪 Pruebas de transformaciones
 
-### Validaciones de Calidad Implementadas
+Ver archivos en `references/`:
 
-- ✅ **Valores nulos**: Verificación en columnas críticas
-- ✅ **Tipos de datos**: Conversión y validación automática
+- `diccionario_datos_seguridad.md` - Variables de seguridad### Validaciones de Calidad Implementadas
+
+- `diccionario_datos_economia.md` - Variables económicas
+
+- `diccionario_datos_educacionysalud.md` - Variables sociales- ✅ **Valores nulos**: Verificación en columnas críticas
+
+- `diccionario_desigualdad.md` - Indicadores de desigualdad- ✅ **Tipos de datos**: Conversión y validación automática
+
 - ✅ **Rangos válidos**: Detección de valores atípicos
-- ✅ **Duplicados**: Identificación por claves únicas
+
+---- ✅ **Duplicados**: Identificación por claves únicas
+
 - ✅ **Completitud temporal**: Series de tiempo completas por entidad
+
+## 🤝 Contribuir
 
 ## 🧰 Scripts Principales
 
-### Scripts de Datos de Seguridad
+1. Fork el proyecto
 
-| Script | Ubicación | Descripción | Uso |
-|--------|-----------|-------------|-----|
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)### Scripts de Datos de Seguridad
+
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+
+4. Push a la rama (`git push origin feature/AmazingFeature`)| Script | Ubicación | Descripción | Uso |
+
+5. Abre un Pull Request|--------|-----------|-------------|-----|
+
 | `datos_seguridad_mexico.py` | `notebooks/` | Descarga de datos de INEGI y SESNSP | `python notebooks/datos_seguridad_mexico.py --token TOKEN` |
-| `procesar_datos_seguridad.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/procesar_datos_seguridad.py` |
 
-### Notebooks
+---| `procesar_datos_seguridad.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/procesar_datos_seguridad.py` |
 
-| Notebook | Descripción |
+
+
+## 📄 Licencia### Notebooks
+
+
+
+Este proyecto está bajo la licencia especificada en el archivo `LICENSE`.| Notebook | Descripción |
+
 |----------|-------------|
-| `1.0-exploracion_datos_seguridad.ipynb` | Exploración inicial y visualizaciones |
+
+---| `1.0-exploracion_datos_seguridad.ipynb` | Exploración inicial y visualizaciones |
+
 | `2.0-procesamiento_datos_seguridad.ipynb` | Pruebas de transformaciones |
+
+## 👥 Equipo
 
 ## 📚 Fuentes de Datos
 
+Equipo-seguridad-y-desarrollo
+
 ### Datos de Seguridad
 
-1. **Percepción de Inseguridad**
-   - **Fuente**: INEGI - ENVIPE
-   - **Período**: 2011-2025
-   - **Cobertura**: Nacional y 32 estados
-   - **Actualización**: Anual
-   - **API**: https://www.inegi.org.mx/app/api/indicadores/
+---
 
-2. **Incidencia Delictiva**
+1. **Percepción de Inseguridad**
+
+## 📞 Contacto   - **Fuente**: INEGI - ENVIPE
+
+   - **Período**: 2011-2025
+
+Para preguntas o sugerencias, abre un issue en el repositorio.   - **Cobertura**: Nacional y 32 estados
+
+   - **Actualización**: Anual
+
+---   - **API**: https://www.inegi.org.mx/app/api/indicadores/
+
+
+
+**¡Gracias por usar este proyecto!** 🎉2. **Incidencia Delictiva**
+
    - **Fuente**: SESNSP (Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública)
    - **Período**: 2015-2025
    - **Cobertura**: 32 estados
