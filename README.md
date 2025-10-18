@@ -46,48 +46,48 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3. Descarga de Datos de Seguridad
+### 3. Descarga y procesamiento de datos
 
-Los datos de seguridad se descargan desde dos fuentes oficiales:
-1. **INEGI**: Percepción de inseguridad (requiere token de API)
+Los datos se descargan desde las siguientes fuentes oficiales:
+1. **INEGI**: Percepción de inseguridad, indicadores de educación y número de derechohabientes (requiere token de API)
 2. **SESNSP**: Incidencia delictiva estatal
+3. **Plataforma de Datos Abiertos México – Secretaría de Economía**: Indicadores económicos
+4. **CONEVAL**: GINI - indicador de desigualdad
 
 #### Obtener Token de API de INEGI:
 1. Visitar: https://www.inegi.org.mx/app/api/indicadores/
 2. Registrarse o iniciar sesión
-3. Copiar el token proporcionado
+3. Copiar el token proporcionado 
 
-#### Ejecutar descarga:
+#### Ejecutar script:
 ```powershell
-# Método 1: Pasar token directamente
-python notebooks/datos_seguridad_mexico.py --token TU_TOKEN_AQUI
 
-# Método 2: Usar archivo .env (recomendado)
-# 1. Crear archivo .env en la raíz del proyecto
-# 2. Agregar: INEGI_API_TOKEN=TU_TOKEN_AQUI
-# 3. Ejecutar:
-python notebooks/datos_seguridad_mexico.py
+python main.py
+
+# Es necesario que el token esté definido en el archivo .env local para que el script funcione adecuadamente
+
 ```
 
-**Salidas generadas:**
+**Salidas generadas de datos crudos:**
 - `data/raw/indicador_inseguridad_estados.csv` - Percepción de inseguridad por estado (2011-2025)
 - `data/raw/incidencia_delictiva_estatal_2015_2025.csv` - Incidencia delictiva estatal (2015-2025)
-- `data/raw/log_descarga_seguridad.txt` - Log detallado con fechas, fuentes y descripción
+- `data/raw/educacionysalud_raw.csv` - Indicadores de educación y derechohabientes por estado (1990 - 2020)
+- `data/raw/gasto_raw.csv` - Gasto público por entidad federativa anual
+- `data/raw/ied_raw.csv` - Inversión extranjera directa por entidad federativa trimestral
+- `data/raw/coeficiente_gini_desigualdad.csv` - Indicador de desigualdad por entidad federativa (Coeficiente GINI)
+- `data/raw/pea_raw.csv` - Población economicamente activa por entidad federativa trimestral
+- `data/raw/remesas_raw.csv` - Remesad por entidad federativa trimestral
+- `data/raw/salario_raw.csv` - Salario mensual promedio por entidad federativa trimestral
+- `data/raw/log_descarga_economia.csv` - Log detallado con fechas, fuentes y descripción de datos de economía
+- `data/raw/log_desigualdad_gini.csv` - Log detallado con fechas, fuentes y descripción de datos de desigualdad
+- `data/raw/log_descarga_seguridad.txt` - Log detallado con fechas, fuentes y descripción de datos de seguridad
+- `references/registro_fuentes_educacionysalud.txt` - Log detallado con fechas, fuentes y descripción de datos de educación y salud
 
-### 4. Procesamiento de Datos
 
-Transformar los datos raw a formato tidy y validar calidad:
 
-```powershell
-python notebooks/procesar_datos_seguridad.py
-```
+**Salidas generadas de procesamiento de datos:**
+- `data/processed/datos_unificados_2015_2020.csv` - Dataset completo procesado
 
-**Salidas generadas:**
-- `data/processed/percepcion_inseguridad_procesado.csv` - Dataset completo procesado
-- `data/processed/percepcion_inseguridad_estados.csv` - Solo estados (sin nacional)
-- `data/processed/incidencia_delictiva_procesado.csv` - Dataset de incidencia procesado
-- `data/interim/incidencia_delictiva_completa.csv` - Versión intermedia normalizada
-- `data/processed/reporte_procesamiento.txt` - Reporte de validación y estadísticas
 
 ### 5. Exploración de Datos (Opcional)
 
@@ -98,20 +98,34 @@ Notebooks disponibles para análisis exploratorio:
 jupyter notebook
 
 # Abrir en el navegador:
-# - notebooks/1.0-exploracion_datos_seguridad.ipynb (Exploración inicial)
-# - notebooks/2.0-procesamiento_datos_seguridad.ipynb (Pruebas de transformación)
+# Datos de seguridad
+# - notebooks/1.0-exploracion_datos_seguridad.ipynb 
+# - notebooks/2.0-procesamiento_datos_seguridad.ipynb
+
+# Datos de educación y salud
+# - notebooks/1.0-eot-importacion_inegi_edu.ipynb
+# - notebooks/2.0-eot-procesar_datos_edu.ipynb
+
+# Datos de desigualdad
+# - rezago_social.ipynb
+
+# Datos de economía
+# - notebooks/EDA_variables_economicas.ipynb
+# - notebooks/Datos_Proyecto.ipynb
 ```
 
 ## 📊 Diccionarios de Datos
 
 Los diccionarios completos se encuentran en `references/`:
 - `diccionario_datos_seguridad.md` - Documentación completa de datasets de seguridad
+- `diccionario_datos_economia.md` - Documentación completa de datasets de economía
+- `diccionario_datos_educacionysalud.md` - Documentación completa de datasets de educación y salud
+- `diccionario_desigualdad.md` - Documentación completa de datasets de desigualdad
 - Describe estructura de datos raw y procesados
 - Incluye validaciones de calidad y reglas de negocio
 
 ## 📁 Estructura del Proyecto
 
-## 📁 Estructura del Proyecto
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
@@ -179,12 +193,12 @@ Los diccionarios completos se encuentran en `references/`:
 
 ### Pipeline de Datos de Seguridad
 
-1. **Descarga (Raw)**: `datos_seguridad_mexico.py`
+1. **Descarga (Raw)**: 
    - ⬇️  Descarga desde APIs oficiales (INEGI, SESNSP)
    - 💾 Guarda en `data/raw/`
    - 📝 Genera log con metadata completa
 
-2. **Procesamiento (Interim → Processed)**: `procesar_datos_seguridad.py`
+2. **Procesamiento (Interim → Processed)**: 
    - 🧹 Limpia y normaliza datos
    - ✅ Valida calidad (nulos, duplicados, rangos)
    - ➕ Agrega columnas calculadas
@@ -212,6 +226,12 @@ Los diccionarios completos se encuentran en `references/`:
 |--------|-----------|-------------|-----|
 | `datos_seguridad_mexico.py` | `notebooks/` | Descarga de datos de INEGI y SESNSP | `python notebooks/datos_seguridad_mexico.py --token TOKEN` |
 | `procesar_datos_seguridad.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/procesar_datos_seguridad.py` |
+| `importacion_inegi_edu.py` | `notebooks/` | Descarga de datos de INEGI de educación | `python notebooks/importacion_inegi_edu.py --token TOKEN` |
+| `procesado_inegi_edu.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/procesado_inegi_edu.py` |
+| `1_variables_economicas_descarga_datos_crudos.py` | `notebooks/` | Descarga de datos de economía | `python notebooks/1_variables_economicas_descarga_datos_crudos.py` |
+| `2_variables_economicas_procesar_datos_formateados.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/2_variables_economicas_procesar_datos_formateados.py` |
+| `descarga_datos_rezago.py` | `notebooks/` | Descarga de datos de desigualdad | `python notebooks/descarga_datos_rezago.py ` |
+| `procesar_datos_rezago.py.py` | `notebooks/` | Procesamiento y validación de datos | `python notebooks/procesar_datos_rezago.py.py` |
 
 ### Notebooks
 
@@ -220,23 +240,6 @@ Los diccionarios completos se encuentran en `references/`:
 | `1.0-exploracion_datos_seguridad.ipynb` | Exploración inicial y visualizaciones |
 | `2.0-procesamiento_datos_seguridad.ipynb` | Pruebas de transformaciones |
 
-## 📚 Fuentes de Datos
-
-### Datos de Seguridad
-
-1. **Percepción de Inseguridad**
-   - **Fuente**: INEGI - ENVIPE
-   - **Período**: 2011-2025
-   - **Cobertura**: Nacional y 32 estados
-   - **Actualización**: Anual
-   - **API**: https://www.inegi.org.mx/app/api/indicadores/
-
-2. **Incidencia Delictiva**
-   - **Fuente**: SESNSP (Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública)
-   - **Período**: 2015-2025
-   - **Cobertura**: 32 estados
-   - **Actualización**: Mensual
-   - **URL**: https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva
 
 ## 🤝 Contribuciones
 
