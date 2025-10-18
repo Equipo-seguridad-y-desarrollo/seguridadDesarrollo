@@ -71,10 +71,20 @@ create_environment:
 #################################################################################
 
 
-## Make dataset
+## Download raw data from sources
+.PHONY: download
+download: requirements
+	$(PYTHON_INTERPRETER) notebooks/download_data.py
+
+## Process raw data into tidy datasets
+.PHONY: process
+process: requirements
+	$(PYTHON_INTERPRETER) notebooks/process_data.py
+
+## Download and process data (complete pipeline)
 .PHONY: data
-data: requirements
-	$(PYTHON_INTERPRETER) Seguridad y desarrollo/dataset.py
+data: download process
+	@echo "Data pipeline completed successfully"
 
 
 #################################################################################
